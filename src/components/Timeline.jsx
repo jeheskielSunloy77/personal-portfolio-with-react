@@ -1,25 +1,30 @@
 export default function Timeline() {
 	return (
-		<ol class="myContainer items-center sm:flex">
-			<TimeLine
-				title="SMA 1, Ambon"
-				date="Enroled on June 14, 2014"
-				desc="Fugiat tempor cupidatat ut nisi. Ut cupidatat cupidatat velit
-						amet eu mollit et velit est dolore magna aute. Enim"
-			/>
-			<TimeLine
-				title="Satya Wacana Christian University"
-				date="Enroled on August 1, 2017"
-				desc="Fugiat tempor cupidatat ut nisi. Ut cupidatat cupidatat velit
-						amet eu mollit et velit est dolore magna aute. Enim"
-			/>
-			<TimeLine
-				title="KreasiX Internship"
-				date="Started from May 5, 2022"
-				desc="Fugiat tempor cupidatat ut nisi. Ut cupidatat cupidatat velit
-						amet eu mollit et velit est dolore magna aute. Enim"
-			/>
-		</ol>
+		<div className="myContainer">
+			<h1 className="mb-10 text-intro">
+				Educational <span className="text-cyan-500">Timeline</span>
+			</h1>
+			<ol class="items-center sm:flex">
+				<TimeLine
+					title="SMA 1, Ambon"
+					date="Enroled on June 14, 2014"
+					desc="Fugiat tempor cupidatat ut nisi. Ut cupidatat cupidatat velit
+					amet eu mollit et velit est dolore magna aute. Enim"
+				/>
+				<TimeLine
+					title="Satya Wacana Christian University"
+					date="Enroled on August 1, 2017"
+					desc="Fugiat tempor cupidatat ut nisi. Ut cupidatat cupidatat velit
+					amet eu mollit et velit est dolore magna aute. Enim"
+				/>
+				<TimeLine
+					title="KreasiX Internship"
+					date="Started from May 5, 2022"
+					desc="Fugiat tempor cupidatat ut nisi. Ut cupidatat cupidatat velit
+					amet eu mollit et velit est dolore magna aute. Enim"
+				/>
+			</ol>
+		</div>
 	)
 	function TimeLine({ title, date, desc }) {
 		return (
@@ -42,15 +47,11 @@ export default function Timeline() {
 					<div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
 				</div>
 				<div class="mt-3 sm:pr-8">
-					<h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-						{title}
-					</h3>
-					<time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+					<h1 class="text-lg font-semibold text-high">{title}</h1>
+					<time class="block mb-2 text-sm font-normal leading-none text-lowest">
 						{date}
 					</time>
-					<p class="text-base font-normal text-gray-500 dark:text-gray-400">
-						{desc}
-					</p>
+					<p class="text-base font-normal text-low">{desc}</p>
 				</div>
 			</li>
 		)

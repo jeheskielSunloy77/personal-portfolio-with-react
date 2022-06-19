@@ -1,24 +1,35 @@
-export default function Navbar() {
+export default function Navbar({ footerVisibility }) {
 	return (
-		<nav className="shadow-2xl bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg sm:w-80 h-14 rounded-full fixed bottom-5 left-1/2 -translate-x-1/2 flex justify-center items-center">
-			<MenuItem href="/" active />
-			<MenuItem href="/about" />
-			<MenuItem href="/projects" />
-			<MenuItem href="/resume" />
+		<nav
+			style={{ backdropFilter: "blur(20px)" }}
+			className={`${
+				footerVisibility ? "top-5" : "bottom-5"
+			} shadow-xl bg-white bg-opacity-10 backdrop-blur-3xl drop-shadow-lg sm:w-80 h-14 rounded-full fixed left-1/2 -translate-x-1/2 flex justify-center items-center z-30 transition-all duration-700`}
+		>
+			<MenuItem href="#home" active />
+			<MenuItem href="#about" />
+			<MenuItem href="#projects" />
+			<MenuItem href="#resume" />
 		</nav>
 	)
 	function MenuItem({ href, active }) {
 		return (
 			<div
 				className={`${
-					active ? "bg-gray-900" : "bg-gray-500"
-				} w-10 h-10 mx-1 rounded-full bg-opacity-60 backdrop-blur-lg drop-shadow-lg flex justify-center items-center`}
+					active
+						? "bg-gray-900 bg-opacity-80"
+						: "bg-gray-200 bg-opacity-20"
+				} w-10 h-10 mx-1 rounded-full flex justify-center items-center`}
 			>
 				<a href={href}>
-					{href === "/" && (
+					{href === "#home" && (
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							className="h-6 w-6 text-gray-200"
+							className={`${
+								active
+									? "text-gray-200"
+									: "text-gray-800 dark:text-gray-200"
+							} h-6 w-6 `}
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -31,10 +42,14 @@ export default function Navbar() {
 							/>
 						</svg>
 					)}
-					{href === "/about" && (
+					{href === "#about" && (
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							className="h-6 w-6 text-gray-200"
+							className={`${
+								active
+									? "text-gray-200"
+									: "text-gray-800 dark:text-gray-200"
+							} h-6 w-6 `}
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -47,10 +62,14 @@ export default function Navbar() {
 							/>
 						</svg>
 					)}
-					{href === "/projects" && (
+					{href === "#projects" && (
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							className="h-6 w-6 text-gray-200"
+							className={`${
+								active
+									? "text-gray-200"
+									: "text-gray-800 dark:text-gray-200"
+							} h-6 w-6 `}
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -63,8 +82,16 @@ export default function Navbar() {
 							/>
 						</svg>
 					)}
-					{href === "/resume" && (
-						<h1 className="text-gray-200 font-bold">CV</h1>
+					{href === "#resume" && (
+						<h1
+							className={`${
+								active
+									? "text-gray-200"
+									: "text-gray-800 dark:text-gray-200"
+							} font-bold `}
+						>
+							CV
+						</h1>
 					)}
 				</a>
 			</div>
