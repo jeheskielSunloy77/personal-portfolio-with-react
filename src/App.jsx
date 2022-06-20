@@ -1,22 +1,22 @@
 import { useState } from "react"
 import { ParallaxProvider } from "react-scroll-parallax"
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
-import Timeline from "./components/Timeline"
-import Hero from "./components/Hero"
-import Intro from "./components/Intro"
-import About from "./components/About"
-import Skills from "./components/Skills"
-import Tools from "./components/Tools"
-import Projects from "./components/Projects"
-import Contact from "./components/Contact"
-function App() {
+import {
+	Navbar,
+	About,
+	Footer,
+	Timeline,
+	Hero,
+	Intro,
+	Skills,
+	Tools,
+	Projects,
+	Contact,
+} from "./components"
+export default function App() {
 	const [footerVisibility, setFooterVisibility] = useState(false)
 	return (
 		<ParallaxProvider>
-			<div
-				className={`bg-gray-100 dark:bg-gray-900 bg-[url("images/background.svg")]`}
-			>
+			<div className={`bg-gray-100 dark:bg-gray-900`}>
 				<Navbar footerVisibility={footerVisibility} />
 				<Hero />
 				<Intro />
@@ -31,5 +31,3 @@ function App() {
 		</ParallaxProvider>
 	)
 }
-
-export default App

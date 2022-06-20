@@ -1,7 +1,7 @@
 export default function Timeline() {
 	return (
 		<div className="myContainer">
-			<h1 className="mb-10 text-intro">
+			<h1 className="mb-10 text-intro text-center sm:text-left">
 				Educational <span className="text-cyan-500">Timeline</span>
 			</h1>
 			<ol class="items-center sm:flex">

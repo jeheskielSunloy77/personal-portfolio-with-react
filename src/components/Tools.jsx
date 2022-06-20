@@ -3,7 +3,7 @@ import { Card, CardLogo } from "./SkillsnToolsCard"
 export default function Tools() {
 	return (
 		<div className="myContainer">
-			<h1 className="mb-10 text-intro">
+			<h1 className="mb-10 text-intro text-center sm:text-left">
 				I Use This <span className="text-cyan-500">Tools</span>
 			</h1>
 			<div className="smallGrid items-center justify-center">
