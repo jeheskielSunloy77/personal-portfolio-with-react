@@ -1,6 +1,23 @@
-import "./Skills.scss"
+import { useContext } from "react"
+import { AppContext } from "../contexts/AppContext"
 import { Card, CardLogo } from "./SkillsnToolsCard"
 export default function Tools() {
+	const { changeTheme } = useContext(AppContext)
+	const vercelLogo = (
+		<svg
+			className="z-10 transition-all duration-500 w-full rounded-lg"
+			xmlns="http://www.w3.org/2000/svg"
+			width="200"
+			height="200"
+			viewBox="0 0 512 512"
+		>
+			<path
+				fill-rule="evenodd"
+				d="M256,48,496,464H16Z"
+				fill={changeTheme === "dark" ? "#141414" : "#f5f5f5"}
+			/>
+		</svg>
+	)
 	return (
 		<div className="myContainer">
 			<h1 className="mb-10 text-intro text-center sm:text-left">
@@ -41,7 +58,7 @@ export default function Tools() {
 					title="Vercel"
 					subtitle="Hosting Provider"
 					desc="used often"
-					logo={<CardLogo src="src/images/vercel.svg" />}
+					logo={<CardLogo svg={vercelLogo} />}
 				/>
 				<Card
 					title="Canva"

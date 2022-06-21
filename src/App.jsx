@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { ParallaxProvider } from "react-scroll-parallax"
+import useTheme from "./hooks/useTheme"
+import { AppContext } from "./contexts/AppContext"
 import {
 	Navbar,
 	About,
@@ -14,20 +16,32 @@ import {
 } from "./components"
 export default function App() {
 	const [footerVisibility, setFooterVisibility] = useState(false)
+	const [changeTheme, setTheme] = useTheme()
 	return (
-		<ParallaxProvider>
-			<div className={`bg-gray-100 dark:bg-gray-900`}>
-				<Navbar footerVisibility={footerVisibility} />
-				<Hero />
-				<Intro />
-				<About />
-				<Timeline />
-				<Skills />
-				<Tools />
-				<Projects />
-				<Contact />
-				<Footer setFooterVisibility={setFooterVisibility} />
-			</div>
-		</ParallaxProvider>
+		<AppContext.Provider
+			value={{
+				footerVisibility,
+				setFooterVisibility,
+				changeTheme,
+				setTheme,
+			}}
+		>
+			<ParallaxProvider>
+				<div
+					className={`bg-gray-100 dark:bg-gray-900 bg-[url("src/images/background.svg")]`}
+				>
+					<Navbar />
+					<Hero />
+					<Intro />
+					<About />
+					<Timeline />
+					<Skills />
+					<Tools />
+					<Projects />
+					<Contact />
+					<Footer />
+				</div>
+			</ParallaxProvider>
+		</AppContext.Provider>
 	)
 }

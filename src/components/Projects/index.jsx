@@ -1,5 +1,6 @@
 import React from "react"
 import ProjectSlider from "./ProjectSlider"
+import "./ProjectsStyles.scss"
 export default function Projects() {
 	return (
 		<div id="projects" className="myContainer">

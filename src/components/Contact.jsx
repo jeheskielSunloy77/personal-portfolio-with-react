@@ -42,7 +42,7 @@ export default function Contact() {
 					<div className="flex justify-center items-center my-6">
 						<a
 							href="#"
-							className="mx-6 text-gray-600 dark:text-gray-300 hover:text-[#D42E88] transition-all duration-300"
+							className="mx-6 text-gray-600 dark:text-gray-300 hover:text-[#D42E88] hover:dark:text-[#D42E88] transition-all duration-300"
 							aria-label="Instagram"
 						>
 							<svg
@@ -75,7 +75,7 @@ export default function Contact() {
 						</a>
 						<a
 							href="#"
-							className="mx-6 text-gray-600 dark:text-gray-300 hover:text-[#0e76a8] transition-all duration-300"
+							className="mx-6 text-gray-600 dark:text-gray-300 hover:text-[#0e76a8] dark:hover:text-[#0e76a8] transition-all duration-300"
 							aria-label="LinkedIn"
 						>
 							<svg
@@ -90,7 +90,7 @@ export default function Contact() {
 
 						<a
 							href="#"
-							className="mx-6 text-gray-600 dark:text-gray-300 hover:text-[#39569c] transition-all duration-300"
+							className="mx-6 text-gray-600 dark:text-gray-300 hover:text-[#39569c] dark:hover:text-[#39569c] transition-all duration-300"
 							aria-label="Facebook"
 						>
 							<svg
@@ -106,7 +106,7 @@ export default function Contact() {
 						<a
 							href="https://github.com/Redsparrow77"
 							target="_blank"
-							className="mx-6 text-gray-600 dark:text-gray-300 hover:text-white transition-all duration-300"
+							className="mx-6 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-all duration-300"
 							aria-label="Github"
 						>
 							<svg

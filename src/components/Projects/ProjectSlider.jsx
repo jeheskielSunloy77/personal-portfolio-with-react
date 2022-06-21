@@ -11,7 +11,6 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/autoplay"
 import ProjectCard from "./ProjectCard"
-import "./ProjectSlider.css"
 SwiperCore.use([Navigation, Pagination, EffectCoverflow, Autoplay, Scrollbar])
 
 export default function ProjectSlider() {
@@ -24,7 +23,9 @@ export default function ProjectSlider() {
 			autoplay={{ delay: 3000 }}
 			mousewheel={{ invert: false }}
 			autoHeight
-			pagination
+			pagination={{
+				dynamicBullets: true,
+			}}
 		>
 			<div className="text-red-500">
 				<SwiperSlide>

@@ -1,9 +1,9 @@
-import { useState } from "react"
-import useTheme from "../hooks/useTheme"
+import { useState, useContext } from "react"
+import { AppContext } from "../contexts/AppContext"
 import Typewriter from "typewriter-effect"
 export default function Hero() {
+	const { changeTheme, setTheme } = useContext(AppContext)
 	const [introTypewriter, setIntroTypewriter] = useState(true)
-	const [changeTheme, setTheme] = useTheme()
 	return (
 		<div id="home" className="myContainer flex h-screen relative">
 			<div className="text-4xl leading-snug text-gray-900 dark:text-white font-bold flex items-center">
@@ -11,7 +11,7 @@ export default function Hero() {
 					<Typewriter
 						options={{
 							autoStart: true,
-							delay: 40,
+							delay: 30,
 						}}
 						onInit={typewriter => {
 							typewriter
@@ -66,7 +66,7 @@ export default function Hero() {
 				src="src/images/heroImg.png"
 				alt=""
 			/>
-			<div className="flex flex-col justify-center items-center absolute bottom-10 left-0">
+			<div className="flex flex-col justify-center items-center absolute bottom-10 left-3 sm:left-0">
 				{changeTheme === "light" ? (
 					<svg
 						id="sun"
@@ -180,7 +180,7 @@ export default function Hero() {
 				</a>
 			</div>
 			<p
-				className="absolute bottom-10 right-0 cursor-default text-medium text-xs flex flex-row items-center hover:translate-y-6 transition-all duration-300"
+				className="absolute bottom-10 right-3 sm:right-0 cursor-default text-medium text-xs flex flex-row items-center hover:translate-y-6 transition-all duration-300"
 				style={{ writingMode: "vertical-rl" }}
 			>
 				SCROLL DOWN

@@ -14,5 +14,5 @@ export default function useTheme() {
 		root.classList.remove(changeTheme)
 		root.classList.add(theme)
 	}, [theme, changeTheme])
-	return [changeTheme, setTheme]
+	return [changeTheme, setTheme, theme]
 }

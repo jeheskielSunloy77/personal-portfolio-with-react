@@ -4,7 +4,6 @@ import Footer from "./Footer"
 import Hero from "./Hero"
 import Intro from "./Intro"
 import Navbar from "./Navbar"
-import ProjectCard from "./ProjectCard"
 import Projects from "./Projects"
 import Skills from "./Skills"
 import Timeline from "./Timeline"
@@ -17,7 +16,6 @@ export {
 	Hero,
 	Intro,
 	Navbar,
-	ProjectCard,
 	Projects,
 	Skills,
 	Timeline,

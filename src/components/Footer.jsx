@@ -1,6 +1,8 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useContext } from "react"
+import { AppContext } from "../contexts/AppContext"
 import useOnScreen from "../hooks/useOnScreen"
-export default function Footer({ setFooterVisibility }) {
+export default function Footer() {
+	const { setFooterVisibility } = useContext(AppContext)
 	const ref = useRef()
 	const isVisible = useOnScreen(ref)
 	useEffect(() => setFooterVisibility(isVisible), [isVisible])

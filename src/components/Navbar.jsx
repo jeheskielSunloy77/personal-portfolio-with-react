@@ -1,4 +1,7 @@
-export default function Navbar({ footerVisibility }) {
+import { useContext } from "react"
+import { AppContext } from "../contexts/AppContext"
+export default function Navbar() {
+	const { footerVisibility } = useContext(AppContext)
 	return (
 		<nav
 			style={{ backdropFilter: "blur(20px)" }}
