@@ -1,8 +1,8 @@
-import { useContext } from "react"
+import { useContext, useRef } from "react"
 import { AppContext } from "../contexts/AppContext"
 import { ParallaxBanner } from "react-scroll-parallax"
 export default function About() {
-	const { changeTheme } = useContext(AppContext)
+	const { aboutRef, changeTheme } = useContext(AppContext)
 	return (
 		<>
 			<ParallaxBanner
@@ -24,7 +24,7 @@ export default function About() {
 				}
 			>
 				<div
-					id="about"
+					// ref={aboutRef}
 					className="myContainer z-10 absolute inset-0 flex items-center justify-center"
 				>
 					<div className="sm:w-1/2 mx-auto">

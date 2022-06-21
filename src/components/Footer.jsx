@@ -1,16 +1,12 @@
-import { useEffect, useRef, useContext } from "react"
+import { useContext } from "react"
 import { AppContext } from "../contexts/AppContext"
-import useOnScreen from "../hooks/useOnScreen"
 export default function Footer() {
-	const { setFooterVisibility } = useContext(AppContext)
-	const ref = useRef()
-	const isVisible = useOnScreen(ref)
-	useEffect(() => setFooterVisibility(isVisible), [isVisible])
+	const { footerRef } = useContext(AppContext)
 	return (
 		<>
 			<footer
-				ref={ref}
-				className="flex flex-col items-center justify-between px-6 py-4 bg-white dark:bg-gray-800 sm:flex-row"
+				ref={footerRef}
+				className="flex flex-col items-center justify-between px-6 py-4 bg-gray-200 dark:bg-gray-800 sm:flex-row"
 			>
 				<a
 					href="#"
@@ -22,7 +18,7 @@ export default function Footer() {
 				<p className="py-2 text-gray-800 dark:text-white sm:py-0 flex items-center">
 					Build with
 					<img
-						className="w-7 h-7 mx-1"
+						className="w-5 h-5 mx-1"
 						src="src\images\love.svg"
 						alt="love"
 					/>
@@ -31,8 +27,8 @@ export default function Footer() {
 						className="ml-1"
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="-11.5 -10.23174 23 20.46348"
-						width="25px"
-						height="25px"
+						width="18px"
+						height="18px"
 					>
 						<title>React Logo</title>
 						<circle cx="0" cy="0" r="2.05" fill="#61dafb" />
@@ -108,7 +104,7 @@ export default function Footer() {
 					</a>
 
 					<a
-						href="https://github.com/Redsparrow77"
+						href="https://github.com/jeheskielSunloy77"
 						target="_blank"
 						className="mx-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
 						aria-label="Github"

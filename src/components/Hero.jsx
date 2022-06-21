@@ -2,10 +2,14 @@ import { useState, useContext } from "react"
 import { AppContext } from "../contexts/AppContext"
 import Typewriter from "typewriter-effect"
 export default function Hero() {
-	const { changeTheme, setTheme } = useContext(AppContext)
+	const { heroRef, changeTheme, setTheme } = useContext(AppContext)
 	const [introTypewriter, setIntroTypewriter] = useState(true)
 	return (
-		<div id="home" className="myContainer flex h-screen relative">
+		<div
+			id="home"
+			ref={heroRef}
+			className="myContainer flex h-screen relative"
+		>
 			<div className="text-4xl leading-snug text-gray-900 dark:text-white font-bold flex items-center">
 				{introTypewriter ? (
 					<Typewriter
@@ -164,7 +168,7 @@ export default function Hero() {
 				</a>
 
 				<a
-					href="https://github.com/Redsparrow77"
+					href="https://github.com/jeheskielSunloy77"
 					target="_blank"
 					className="my-1 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
 					aria-label="Github"

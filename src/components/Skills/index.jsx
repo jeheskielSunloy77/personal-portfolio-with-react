@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { AppContext } from "../../contexts/AppContext"
 import { Card, CardLogo } from "../SkillsnToolsCard"
 export default function Skills() {
-	const { changeTheme } = useContext(AppContext)
+	const { skillsRef, changeTheme } = useContext(AppContext)
 	const githubLogo = (
 		<svg
 			className="z-10 transition-all duration-500 w-full rounded-lg"
@@ -40,7 +40,7 @@ export default function Skills() {
 		</svg>
 	)
 	return (
-		<div className="myContainer">
+		<div ref={skillsRef} id="skills" className="myContainer">
 			<h1 className="mb-10 text-intro text-center sm:text-left">
 				<span className="text-cyan-500">Skills</span> I Acquired
 			</h1>

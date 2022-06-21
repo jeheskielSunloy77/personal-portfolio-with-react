@@ -1,18 +1,18 @@
 import { useContext } from "react"
 import { AppContext } from "../contexts/AppContext"
 export default function Navbar() {
-	const { footerVisibility } = useContext(AppContext)
+	const { blockVisibility, changeTheme } = useContext(AppContext)
 	return (
 		<nav
-			style={{ backdropFilter: "blur(20px)" }}
-			className={`${
-				footerVisibility ? "top-5" : "bottom-5"
-			} shadow-xl bg-white bg-opacity-10 backdrop-blur-3xl drop-shadow-lg sm:w-80 h-14 rounded-full fixed left-1/2 -translate-x-1/2 flex justify-center items-center z-30 transition-all duration-700`}
+			// style={{ backdropFilter: "blur(20px)" }}
+			className={`${blockVisibility === "footer" ? "top-5" : "bottom-5"} ${
+				changeTheme === "dark" ? "bg-black" : "bg-white"
+			} shadow-xl bg-opacity-10 backdrop-blur-3xl drop-shadow-lg sm:w-80 h-14 rounded-full fixed left-1/2 -translate-x-1/2 flex justify-center items-center z-30 transition-all duration-700`}
 		>
-			<MenuItem href="#home" active />
-			<MenuItem href="#about" />
-			<MenuItem href="#projects" />
-			<MenuItem href="#resume" />
+			<MenuItem href="#home" active={blockVisibility === "hero"} />
+			<MenuItem href="#about" active={blockVisibility === "about"} />
+			<MenuItem href="#skills" active={blockVisibility === "skills"} />
+			<MenuItem href="#projects" active={blockVisibility === "projects"} />
 		</nav>
 	)
 	function MenuItem({ href, active }) {
@@ -32,7 +32,7 @@ export default function Navbar() {
 								active
 									? "text-gray-200"
 									: "text-gray-800 dark:text-gray-200"
-							} h-6 w-6 `}
+							} h-5 w-5 `}
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -47,24 +47,25 @@ export default function Navbar() {
 					)}
 					{href === "#about" && (
 						<svg
-							xmlns="http://www.w3.org/2000/svg"
 							className={`${
 								active
 									? "text-gray-200"
 									: "text-gray-800 dark:text-gray-200"
-							} h-6 w-6 `}
-							fill="none"
+							} h-5 w-5 `}
+							fill="currentColor"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
-							strokeWidth={2}
+							strokeWidth={1}
+							xmlns="http://www.w3.org/2000/svg"
 						>
 							<path
 								strokeLinecap="round"
 								strokeLinejoin="round"
-								d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+								d="M12 2.5a5.5 5.5 0 00-3.096 10.047 9.005 9.005 0 00-5.9 8.18.75.75 0 001.5.045 7.5 7.5 0 0114.993 0 .75.75 0 101.499-.044 9.005 9.005 0 00-5.9-8.181A5.5 5.5 0 0012 2.5zM8 8a4 4 0 118 0 4 4 0 01-8 0z"
 							/>
 						</svg>
 					)}
+
 					{href === "#projects" && (
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +73,7 @@ export default function Navbar() {
 								active
 									? "text-gray-200"
 									: "text-gray-800 dark:text-gray-200"
-							} h-6 w-6 `}
+							} h-5 w-5 `}
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -85,16 +86,25 @@ export default function Navbar() {
 							/>
 						</svg>
 					)}
-					{href === "#resume" && (
-						<h1
+					{href === "#skills" && (
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
 							className={`${
 								active
 									? "text-gray-200"
 									: "text-gray-800 dark:text-gray-200"
-							} font-bold `}
+							} h-5 w-5 `}
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							strokeWidth={2}
 						>
-							CV
-						</h1>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+							/>
+						</svg>
 					)}
 				</a>
 			</div>

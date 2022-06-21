@@ -1,9 +1,11 @@
-import React from "react"
+import { useContext } from "react"
+import { AppContext } from "../../contexts/AppContext"
 import ProjectSlider from "./ProjectSlider"
 import "./ProjectsStyles.scss"
 export default function Projects() {
+	const { projectsRef } = useContext(AppContext)
 	return (
-		<div id="projects" className="myContainer">
+		<div ref={projectsRef} id="projects" className="myContainer">
 			<h1 className="mb-10 text-intro text-center sm:text-left">
 				My Latest <span className="text-cyan-500">Projects</span>
 			</h1>

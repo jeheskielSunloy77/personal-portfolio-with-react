@@ -1,9 +1,10 @@
-import React from "react"
-
+import { useContext } from "react"
+import { AppContext } from "../contexts/AppContext"
 export default function Intro() {
+	const { aboutRef } = useContext(AppContext)
 	return (
 		<>
-			<div className="myContainer">
+			<div ref={aboutRef} id="about" className="myContainer mt-1">
 				<h1 className="text-center text-intro">
 					Let me
 					<span className="text-cyan-500"> intoduce </span>

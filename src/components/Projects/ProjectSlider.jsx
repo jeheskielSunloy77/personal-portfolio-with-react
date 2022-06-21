@@ -41,7 +41,7 @@ export default function ProjectSlider() {
 						}}
 						links={{
 							demo: "https://nextjs-faperta-unipa-prototype.vercel.app/",
-							code: "https://github.com/Redsparrow77/nextjs-faperta-unipa",
+							code: "https://github.com/jeheskielSunloy77/nextjs-faperta-unipa",
 						}}
 					/>
 				</SwiperSlide>
@@ -58,7 +58,7 @@ export default function ProjectSlider() {
 						}}
 						links={{
 							demo: "https://nextjs-faperta-unipa-prototype.vercel.app/",
-							code: "https://github.com/Redsparrow77/nextjs-faperta-unipa",
+							code: "https://github.com/jeheskielSunloy77/nextjs-faperta-unipa",
 						}}
 					/>
 				</SwiperSlide>
@@ -75,7 +75,7 @@ export default function ProjectSlider() {
 						}}
 						links={{
 							demo: "https://nextjs-faperta-unipa-prototype.vercel.app/",
-							code: "https://github.com/Redsparrow77/nextjs-faperta-unipa",
+							code: "https://github.com/jeheskielSunloy77/nextjs-faperta-unipa",
 						}}
 					/>
 				</SwiperSlide>
