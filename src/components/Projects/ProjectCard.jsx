@@ -31,7 +31,7 @@ export default function ProjectCard({ title, desc, img, links, details }) {
 				<h1 className="text-high text-lg mb-2">{title}</h1>
 				<p class="text-low">{desc}</p>
 				<div className="flex mt-4">
-					<a href={links.code}>
+					<a href={links.code} target="_blank">
 						<button
 							type="button"
 							class="text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-cyan-600 dark:hover:bg-cyan-700 focus:outline-none dark:focus:ring-cyan-800"
@@ -39,7 +39,7 @@ export default function ProjectCard({ title, desc, img, links, details }) {
 							View Project
 						</button>
 					</a>
-					<a href={links.demo}>
+					<a href={links.demo} target="_blank">
 						<button
 							type="button"
 							class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-cyan-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"

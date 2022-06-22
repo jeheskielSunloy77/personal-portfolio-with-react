@@ -32,7 +32,8 @@
 		@apply text-gray-400 dark:text-gray-500;
 	}
 }
-html {
+html,
+body {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 	font-family: "Montserrat", sans-serif;

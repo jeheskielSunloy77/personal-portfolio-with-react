@@ -1,16 +1,33 @@
+import { useRef } from "react"
+import emailjs from "@emailjs/browser"
 export default function ModalForm({ setModalForm }) {
-	function sendMessage() {
-		alert("Message sent!")
-		setModalForm(false)
+	const formRef = useRef()
+	function sendMessage(e) {
+		e.preventDefault()
+		emailjs
+			.sendForm(
+				"gmail",
+				"portfolioTemplate",
+				formRef.current,
+				"YxM46gqam9J7VniFJ"
+			)
+			.then(
+				result => {
+					alert("Message sent!")
+					setModalForm(false)
+					console.log(result.text)
+				},
+				error => {
+					console.log(error.text)
+				}
+			)
 	}
 	return (
-		<div
-			class={`fixed z-40 w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 bg-opacity-90 centerAll`}
-		>
+		<div class="fixed z-40 w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 bg-opacity-90 centerAll">
 			<div class="relative p-4 w-full sm:max-w-7xl">
 				<form
-					onSubmit={() => sendMessage()}
-					action=""
+					onSubmit={e => sendMessage(e)}
+					ref={formRef}
 					class="relative bg-white rounded-lg shadow dark:bg-gray-700"
 				>
 					<div class="flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600">

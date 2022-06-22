@@ -10,7 +10,7 @@ export default function Hero() {
 			ref={heroRef}
 			className="myContainer flex h-screen relative"
 		>
-			<div className="text-4xl leading-snug text-gray-900 dark:text-white font-bold flex items-center">
+			<div className="text-4xl leading-snug text-gray-900 dark:text-white font-bold flex items-center transition-all duration-300">
 				{introTypewriter ? (
 					<Typewriter
 						options={{
@@ -105,7 +105,8 @@ export default function Hero() {
 					</svg>
 				)}
 				<a
-					href="#"
+					href="https://www.instagram.com/schlittschuhlaufen_/"
+					target="_blank"
 					className="my-1 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
 					aria-label="Instagram"
 				>
@@ -138,7 +139,8 @@ export default function Hero() {
 					</svg>
 				</a>
 				<a
-					href="#"
+					href="https://www.linkedin.com/in/jeheskiel-ventioky-sunloy-aa28761b1/"
+					target="_blank"
 					className="my-1 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
 					aria-label="LinkedIn"
 				>

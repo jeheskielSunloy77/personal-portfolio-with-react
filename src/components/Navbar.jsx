@@ -4,15 +4,19 @@ export default function Navbar() {
 	const { blockVisibility, changeTheme } = useContext(AppContext)
 	return (
 		<nav
-			// style={{ backdropFilter: "blur(20px)" }}
-			className={`${blockVisibility === "footer" ? "top-5" : "bottom-5"} ${
+			className={`${
+				blockVisibility.includes("footer") ? "top-5" : "bottom-5"
+			} ${
 				changeTheme === "dark" ? "bg-black" : "bg-white"
 			} shadow-xl bg-opacity-10 backdrop-blur-3xl drop-shadow-lg sm:w-80 h-14 rounded-full fixed left-1/2 -translate-x-1/2 flex justify-center items-center z-30 transition-all duration-700`}
 		>
 			<MenuItem href="#home" active={blockVisibility === "hero"} />
 			<MenuItem href="#about" active={blockVisibility === "about"} />
 			<MenuItem href="#skills" active={blockVisibility === "skills"} />
-			<MenuItem href="#projects" active={blockVisibility === "projects"} />
+			<MenuItem
+				href="#projects"
+				active={blockVisibility.includes("projects")}
+			/>
 		</nav>
 	)
 	function MenuItem({ href, active }) {
@@ -21,7 +25,7 @@ export default function Navbar() {
 				className={`${
 					active
 						? "bg-gray-900 bg-opacity-80"
-						: "bg-gray-200 bg-opacity-20"
+						: "bg-opacity-10 bg-gray-900 dark:bg-white dark:bg-opacity-10"
 				} w-10 h-10 mx-1 rounded-full flex justify-center items-center`}
 			>
 				<a href={href}>

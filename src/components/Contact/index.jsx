@@ -1,10 +1,12 @@
 import { useState } from "react"
 import ModalForm from "./ModalForm"
+import ModalCV from "./ModalCV"
 export default function Contact() {
 	const [modalForm, setModalForm] = useState(false)
+	const [modalCV, setModalCV] = useState(false)
 	return (
 		<>
-			<div className="myContainer my-10">
+			<div className="myContainer">
 				<div class="w-full max-w-4xl px-6 py-4 mx-auto rounded-md">
 					<h1 className="mb-10 text-intro text-center">
 						Get in <span className="text-cyan-500">Touch</span>
@@ -38,7 +40,8 @@ export default function Contact() {
 					</p>
 					<div className="flex justify-center items-center my-6">
 						<a
-							href="#"
+							href="https://www.instagram.com/schlittschuhlaufen_/"
+							target="_blank"
 							className="mx-6 text-gray-600 dark:text-gray-300 hover:text-[#D42E88] hover:dark:text-[#D42E88] transition-all duration-300"
 							aria-label="Instagram"
 						>
@@ -71,7 +74,8 @@ export default function Contact() {
 							</svg>
 						</a>
 						<a
-							href="#"
+							href="https://www.linkedin.com/in/jeheskiel-ventioky-sunloy-aa28761b1/"
+							target="_blank"
 							className="mx-6 text-gray-600 dark:text-gray-300 hover:text-[#0e76a8] dark:hover:text-[#0e76a8] transition-all duration-300"
 							aria-label="LinkedIn"
 						>
@@ -87,6 +91,7 @@ export default function Contact() {
 
 						<a
 							href="#"
+							target="_blank"
 							className="mx-6 text-gray-600 dark:text-gray-300 hover:text-[#39569c] dark:hover:text-[#39569c] transition-all duration-300"
 							aria-label="Facebook"
 						>
@@ -99,7 +104,6 @@ export default function Contact() {
 								<path d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z"></path>
 							</svg>
 						</a>
-
 						<a
 							href="https://github.com/jeheskielSunloy77"
 							target="_blank"
@@ -125,6 +129,7 @@ export default function Contact() {
 							Send a Message
 						</button>
 						<button
+							onClick={() => setModalCV(true)}
 							type="button"
 							class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-cyan-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
 						>
@@ -134,6 +139,7 @@ export default function Contact() {
 				</div>
 			</div>
 			{modalForm && <ModalForm setModalForm={setModalForm} />}
+			{modalCV && <ModalCV setModalCV={setModalCV} />}
 		</>
 	)
 }

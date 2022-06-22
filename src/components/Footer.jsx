@@ -41,7 +41,8 @@ export default function Footer() {
 				</p>
 				<div className="flex -mx-2">
 					<a
-						href="#"
+						href="https://www.instagram.com/schlittschuhlaufen_/"
+						target="_blank"
 						className="mx-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
 						aria-label="Instagram"
 					>
@@ -74,7 +75,8 @@ export default function Footer() {
 						</svg>
 					</a>
 					<a
-						href="#"
+						href="https://www.linkedin.com/in/jeheskiel-ventioky-sunloy-aa28761b1/"
+						target="_blank"
 						className="mx-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
 						aria-label="LinkedIn"
 					>
@@ -90,6 +92,7 @@ export default function Footer() {
 
 					<a
 						href="#"
+						target="_blank"
 						className="mx-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
 						aria-label="Facebook"
 					>

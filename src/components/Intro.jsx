@@ -5,13 +5,13 @@ export default function Intro() {
 	return (
 		<>
 			<div ref={aboutRef} id="about" className="myContainer mt-1">
-				<h1 className="text-center text-intro">
+				<h1 className="text-center text-intro mb-4">
 					Let me
 					<span className="text-cyan-500"> intoduce </span>
 					myself
 				</h1>
 				<div className="flex items-center text-medium">
-					<p className="mr-28 text-lg">
+					<p className="sm:mr-28 text-lg text-center sm:text-left">
 						Hey thank you for passing by, my fullname is
 						<span className="mx-1 text-cyan-500 font-semibold">
 							Jeheskiel Ventioky Sunloy

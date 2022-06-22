@@ -5,3 +5,8 @@
 		width: 40px;
 	}
 }
+.card:hover .layerBottom {
+	transition: all 0.5s;
+	transition-delay: 0.5s;
+	display: flex;
+}

@@ -30,7 +30,7 @@ export default function Timeline() {
 		return (
 			<li class="relative mb-6 sm:mb-0">
 				<div class="flex items-center">
-					<div class="flex z-10 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+					<div class="flex z-10 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-gray-200 dark:bg-blue-900 sm:ring-8 dark:ring-gray-800 shrink-0">
 						<svg
 							class="w-3 h-3 text-blue-600 dark:text-blue-300"
 							fill="currentColor"
@@ -47,7 +47,7 @@ export default function Timeline() {
 					<div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
 				</div>
 				<div class="mt-3 sm:pr-8">
-					<h1 class="text-lg font-semibold text-high">{title}</h1>
+					<h1 class="text-md font-semibold text-high">{title}</h1>
 					<time class="block mb-2 text-sm font-normal leading-none text-lowest">
 						{date}
 					</time>
