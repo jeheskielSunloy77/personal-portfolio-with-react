@@ -5,14 +5,14 @@ export default function Tools() {
 	const { changeTheme } = useContext(AppContext)
 	const vercelLogo = (
 		<svg
-			className="z-10 transition-all duration-500 w-full rounded-lg"
+			className="group-hover:w-[40px] z-10 transition-all duration-500 w-full rounded-lg"
 			xmlns="http://www.w3.org/2000/svg"
 			width="200"
 			height="200"
 			viewBox="0 0 512 512"
 		>
 			<path
-				fill-rule="evenodd"
+				fillRule="evenodd"
 				d="M256,48,496,464H16Z"
 				fill={changeTheme === "dark" ? "#141414" : "#f5f5f5"}
 			/>
@@ -28,31 +28,31 @@ export default function Tools() {
 					title="VS Code"
 					subtitle="code edditor"
 					desc="used daily"
-					logo={<CardLogo src="src/images/vscode.svg" />}
+					logo={<CardLogo src="src/images/svg/vscode.svg" />}
 				/>
 				<Card
 					title="Ubuntu"
 					subtitle="operating system"
 					desc="used daily"
-					logo={<CardLogo src="src/images/ubuntu.svg" />}
+					logo={<CardLogo src="src/images/svg/ubuntu.svg" />}
 				/>
 				<Card
 					title="ESlint"
 					subtitle="code analyzer"
 					desc="used daily"
-					logo={<CardLogo src="src/images/eslint.svg" />}
+					logo={<CardLogo src="src/images/svg/eslint.svg" />}
 				/>
 				<Card
 					title="Prettier"
 					subtitle="code formater"
 					desc="used daily"
-					logo={<CardLogo src="src/images/prettier.svg" />}
+					logo={<CardLogo src="src/images/svg/prettier.svg" />}
 				/>
 				<Card
 					title="Thunder Client"
 					subtitle="REST tester"
 					desc="used often"
-					logo={<CardLogo src="src/images/thunderclient.svg" />}
+					logo={<CardLogo src="src/images/svg/thunderclient.svg" />}
 				/>
 				<Card
 					title="Vercel"
@@ -64,7 +64,7 @@ export default function Tools() {
 					title="Canva"
 					subtitle="media edditor"
 					desc="rarely used"
-					logo={<CardLogo src="src/images/canva.svg" />}
+					logo={<CardLogo src="src/images/svg/canva.svg" />}
 				/>
 			</div>
 		</div>

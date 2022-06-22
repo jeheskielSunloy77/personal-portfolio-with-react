@@ -1,0 +1,16 @@
+.shadowBtn::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50px;
+	background: transparent;
+	height: 50%;
+	width: 100%;
+	transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+	filter: blur(8px);
+	transition: 1s ease;
+}
+.shadowBtn:hover::before {
+	background: white;
+	top: 50px;
+}

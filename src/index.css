@@ -53,3 +53,15 @@ h1 {
 	column-gap: 2px;
 	row-gap: 20px;
 }
+.swiper {
+	padding-bottom: 50px !important;
+}
+.swiper-pagination-bullet {
+	background-color: #0891b2 !important;
+	opacity: 0.5 !important;
+	width: 10px !important;
+	height: 10px !important;
+}
+.swiper-pagination-bullet-active {
+	opacity: 1 !important;
+}

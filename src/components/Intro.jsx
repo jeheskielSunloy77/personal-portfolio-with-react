@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { AppContext } from "../contexts/AppContext"
+import SpecialButton from "./buttons/SpecialButton"
 export default function Intro() {
 	const { aboutRef } = useContext(AppContext)
 	return (

@@ -19,7 +19,7 @@ export default function Footer() {
 					Build with
 					<img
 						className="w-5 h-5 mx-1"
-						src="src\images\love.svg"
+						src="src\images\svg\love.svg"
 						alt="love"
 					/>
 					with
@@ -32,7 +32,7 @@ export default function Footer() {
 					>
 						<title>React Logo</title>
 						<circle cx="0" cy="0" r="2.05" fill="#61dafb" />
-						<g stroke="#61dafb" stroke-width="1" fill="none">
+						<g stroke="#61dafb" strokeWidth="1" fill="none">
 							<ellipse rx="11" ry="4.2" />
 							<ellipse rx="11" ry="4.2" transform="rotate(60)" />
 							<ellipse rx="11" ry="4.2" transform="rotate(120)" />

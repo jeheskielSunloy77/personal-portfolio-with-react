@@ -1,9 +1,10 @@
 import { useState, useContext } from "react"
 import { AppContext } from "../contexts/AppContext"
 import Typewriter from "typewriter-effect"
+import SpecialButton from "./buttons/SpecialButton"
 export default function Hero() {
 	const { heroRef, changeTheme, setTheme } = useContext(AppContext)
-	const [introTypewriter, setIntroTypewriter] = useState(true)
+	const [introTypewriter, setIntroTypewriter] = useState(false)
 	return (
 		<div
 			id="home"
@@ -19,12 +20,12 @@ export default function Hero() {
 						}}
 						onInit={typewriter => {
 							typewriter
-								.typeString(`const intro = () => {<br>`)
+								.typeString(`function myWeb() {<br>`)
 								.typeString(`let portfolio = {...myLive}<br>`)
 								.typeString(`console.log(portfolio)<br>`)
 								.typeString(`console.log("WELLCOME!")<br>`)
 								.typeString(`} <br>`)
-								.typeString(`intro()`)
+								.typeString(`myWeb()`)
 								.pauseFor(1000)
 								.callFunction(() => setIntroTypewriter(false))
 								.start()
@@ -62,6 +63,7 @@ export default function Hero() {
 									.start()
 							}}
 						/>
+						<SpecialButton text="EXPLORE" href="#about" />
 					</div>
 				)}
 			</div>

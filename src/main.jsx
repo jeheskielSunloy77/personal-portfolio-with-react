@@ -9,10 +9,10 @@ ReactDOM.render(
 		<div
 			className={`bg-gradient-to-r from-gray-200 to-white dark:from-[#042c41] dark:to-gray-900`}
 		>
-			<div className={` bg-[url("src/images/background.svg")]`}>
-				<App />
-			</div>
+			{/* <div className={` bg-[url("src/images/background/background.svg")]`}> */}
+			<App />
 		</div>
+		{/* </div> */}
 	</React.StrictMode>,
 	document.getElementById("root")
 )

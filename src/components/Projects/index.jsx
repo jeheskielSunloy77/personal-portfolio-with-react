@@ -1,7 +1,6 @@
 import { useContext } from "react"
 import { AppContext } from "../../contexts/AppContext"
 import ProjectSlider from "./ProjectSlider"
-import "./ProjectsStyles.scss"
 export default function Projects() {
 	const { projectsRef } = useContext(AppContext)
 	return (
