@@ -4,33 +4,35 @@ import Typewriter from "typewriter-effect"
 import SpecialButton from "./buttons/SpecialButton"
 export default function Hero() {
 	const { heroRef, changeTheme, setTheme } = useContext(AppContext)
-	const [introTypewriter, setIntroTypewriter] = useState(false)
+	const [introTypewriter, setIntroTypewriter] = useState(true)
 	return (
 		<div
 			id="home"
 			ref={heroRef}
 			className="myContainer flex h-screen relative"
 		>
-			<div className="text-4xl leading-snug text-gray-900 dark:text-white font-bold flex items-center transition-all duration-300">
+			<div className="text-xl sm:text-4xl leading-snug text-gray-900 dark:text-white font-bold flex items-center transition-all duration-300">
 				{introTypewriter ? (
-					<Typewriter
-						options={{
-							autoStart: true,
-							delay: 30,
-						}}
-						onInit={typewriter => {
-							typewriter
-								.typeString(`function myWeb() {<br>`)
-								.typeString(`let portfolio = {...myLive}<br>`)
-								.typeString(`console.log(portfolio)<br>`)
-								.typeString(`console.log("WELLCOME!")<br>`)
-								.typeString(`} <br>`)
-								.typeString(`myWeb()`)
-								.pauseFor(1000)
-								.callFunction(() => setIntroTypewriter(false))
-								.start()
-						}}
-					/>
+					<div className="text-base">
+						<Typewriter
+							options={{
+								autoStart: true,
+								delay: 30,
+							}}
+							onInit={typewriter => {
+								typewriter
+									.typeString(`function myWeb() {<br>`)
+									.typeString(`let portfolio = {...myLive}<br>`)
+									.typeString(`console.log(portfolio)<br>`)
+									.typeString(`console.log("WELLCOME!")<br>`)
+									.typeString(`} <br>`)
+									.typeString(`myWeb()`)
+									.pauseFor(1000)
+									.callFunction(() => setIntroTypewriter(false))
+									.start()
+							}}
+						/>
+					</div>
 				) : (
 					<div>
 						<h1>
@@ -40,29 +42,31 @@ export default function Hero() {
 								Jeheskiel Sunloy
 							</span>
 						</h1>
-						<Typewriter
-							options={{
-								autoStart: true,
-								loop: true,
-							}}
-							onInit={typewriter => {
-								typewriter
-									.typeString(
-										`<span class="text-cyan-500">I am </span>`
-									)
-									.typeString("an IT Student.")
-									.pauseFor(1500)
-									.deleteChars(13)
-									.typeString(" Web Developer.")
-									.pauseFor(1500)
-									.deleteChars(15)
-									.typeString(" Simp for Nex")
-									.deleteChars(13)
-									.typeString(" Full Stack Developer.")
-									.pauseFor(1500)
-									.start()
-							}}
-						/>
+						<div className="text-base">
+							<Typewriter
+								options={{
+									autoStart: true,
+									loop: true,
+								}}
+								onInit={typewriter => {
+									typewriter
+										.typeString(
+											`<span class="text-cyan-500">I am </span>`
+										)
+										.typeString("an IT Student.")
+										.pauseFor(1500)
+										.deleteChars(13)
+										.typeString(" Web Developer.")
+										.pauseFor(1500)
+										.deleteChars(15)
+										.typeString(" Simp for Nex")
+										.deleteChars(13)
+										.typeString(" Full Stack Developer.")
+										.pauseFor(1500)
+										.start()
+								}}
+							/>
+						</div>
 						<SpecialButton text="EXPLORE" href="#about" />
 					</div>
 				)}
