@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Montserrat&display=swap");
-@import url("http://fonts.cdnfonts.com/css/himagsikan");
+@import url(//db.onlinewebfonts.com/c/1db29588408eadbd4406aae9238555eb?family=Consolas);
 @layer components {
 	.myContainer {
 		@apply container mx-auto px-6 py-14;
@@ -36,21 +35,20 @@ html,
 body {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 h1 {
-	font-family: "Kdam Thmor Pro", sans-serif;
+	font-family: "Staatliches", cursive;
 }
 .smallGrid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 	column-gap: 2px;
 	row-gap: 20px;
 }
 @media only screen and (max-width: 640px) {
 	.smallGrid {
-		grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
-		column-gap: 2px;
+		grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
 		row-gap: 10px;
 	}
 }

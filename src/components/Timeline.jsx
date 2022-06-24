@@ -47,7 +47,7 @@ export default function Timeline() {
 					<div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
 				</div>
 				<div className="mt-3 sm:pr-8">
-					<h1 className="text-md font-semibold text-high">{title}</h1>
+					<p className="text-md font-semibold text-high">{title}</p>
 					<time className="block mb-2 text-sm font-normal leading-none text-lowest">
 						{date}
 					</time>

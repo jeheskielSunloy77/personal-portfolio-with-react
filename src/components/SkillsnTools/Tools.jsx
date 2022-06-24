@@ -1,6 +1,6 @@
 import { useContext } from "react"
-import { AppContext } from "../contexts/AppContext"
-import { Card, CardLogo } from "./SkillsnToolsCard"
+import { AppContext } from "../../contexts/AppContext"
+import { Card, CardLogo } from "./Card"
 export default function Tools() {
 	const { changeTheme } = useContext(AppContext)
 	const vercelLogo = (
@@ -59,6 +59,12 @@ export default function Tools() {
 					subtitle="Hosting Provider"
 					desc="used often"
 					logo={<CardLogo svg={vercelLogo} />}
+				/>
+				<Card
+					title="Gimp"
+					subtitle="media edditor"
+					desc="rarely used"
+					logo={<CardLogo src="src/images/svg/gimp.svg" />}
 				/>
 				<Card
 					title="Canva"

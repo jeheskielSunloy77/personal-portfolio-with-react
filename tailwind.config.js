@@ -4,7 +4,10 @@ module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
 		extend: {
-			fontFamily: { himagsikan: "Himagsikan, sans-serif" },
+			fontFamily: {
+				staatliches: "Staatliches, cursive",
+				consolas: "Consolas, sans-serif",
+			},
 		},
 	},
 	plugins: [],

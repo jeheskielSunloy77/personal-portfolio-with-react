@@ -5,9 +5,8 @@ import Hero from "./Hero"
 import Intro from "./Intro"
 import Navbar from "./Navbar"
 import Projects from "./Projects"
-import Skills from "./Skills"
+import SkillsnTools from "./SkillsnTools"
 import Timeline from "./Timeline"
-import Tools from "./Tools"
 
 export {
 	About,
@@ -17,7 +16,6 @@ export {
 	Intro,
 	Navbar,
 	Projects,
-	Skills,
+	SkillsnTools,
 	Timeline,
-	Tools,
 }

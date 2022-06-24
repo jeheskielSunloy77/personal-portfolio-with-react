@@ -9,8 +9,7 @@ import {
 	Timeline,
 	Hero,
 	Intro,
-	Skills,
-	Tools,
+	SkillsnTools,
 	Projects,
 	Contact,
 } from "./components"
@@ -68,8 +67,7 @@ export default function App() {
 			<Intro />
 			<About />
 			<Timeline />
-			<Skills />
-			<Tools />
+			<SkillsnTools />
 			<Projects />
 			<Contact />
 			<Footer />

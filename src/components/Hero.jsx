@@ -11,9 +11,9 @@ export default function Hero() {
 			ref={heroRef}
 			className="myContainer flex h-screen relative"
 		>
-			<div className="text-xl sm:text-4xl leading-snug text-gray-900 dark:text-white font-bold flex items-center transition-all duration-300">
+			<div className="font-staatliches text-4xl leading-snug text-gray-900 dark:text-white font-bold flex items-center transition-all duration-300">
 				{introTypewriter ? (
-					<div className="text-base">
+					<div className="font-consolas">
 						<Typewriter
 							options={{
 								autoStart: true,
@@ -34,7 +34,7 @@ export default function Hero() {
 						/>
 					</div>
 				) : (
-					<div>
+					<div className="text-3xl sm:text-4xl">
 						<h1>
 							Hello There! <br />
 							Im
@@ -42,7 +42,7 @@ export default function Hero() {
 								Jeheskiel Sunloy
 							</span>
 						</h1>
-						<div className="text-base">
+						<div className="text-2xl sm:text-4xl">
 							<Typewriter
 								options={{
 									autoStart: true,

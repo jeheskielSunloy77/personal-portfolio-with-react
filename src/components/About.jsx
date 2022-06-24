@@ -13,7 +13,7 @@ export default function About() {
 						changeTheme === "dark"
 							? [
 									{
-										image: "src/images/background/aboutBackground.jpg",
+										image: "src/images/background/clouds.jpg",
 										speed: -30,
 									},
 							  ]

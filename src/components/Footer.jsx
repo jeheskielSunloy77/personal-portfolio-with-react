@@ -6,7 +6,7 @@ export default function Footer() {
 		<>
 			<footer
 				ref={footerRef}
-				className="flex flex-col items-center justify-between px-6 py-4 bg-gray-200 dark:bg-gray-800 sm:flex-row"
+				className="flex flex-col items-center justify-between px-6 py-4 bg-gray-300 dark:bg-gray-800 sm:flex-row"
 			>
 				<a
 					href="#"
@@ -30,7 +30,6 @@ export default function Footer() {
 						width="18px"
 						height="18px"
 					>
-						<title>React Logo</title>
 						<circle cx="0" cy="0" r="2.05" fill="#61dafb" />
 						<g stroke="#61dafb" strokeWidth="1" fill="none">
 							<ellipse rx="11" ry="4.2" />

@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { AppContext } from "../../contexts/AppContext"
-import { Card, CardLogo } from "../SkillsnToolsCard"
+import { Card, CardLogo } from "./Card"
 export default function Skills() {
 	const { skillsRef, changeTheme } = useContext(AppContext)
 	const githubLogo = (

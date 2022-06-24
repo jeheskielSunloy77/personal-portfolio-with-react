@@ -7,7 +7,7 @@ export default function ProjectCard({ title, desc, img, links, details }) {
 					src={img}
 					alt=""
 				/>
-				<div className="group-hover:translate-x-0 bg-gray-600 opacity-90 transition-all duration-300 ease-out -translate-x-[100%] absolute leading-loose cursor-no-drop text-medium h-full w-full left-0 top-0">
+				<div className="group-hover:translate-x-0 bg-gray-600 opacity-80 transition-all duration-300 ease-out -translate-x-[100%] absolute leading-loose cursor-no-drop text-white h-full w-full left-0 top-0">
 					<ul className="text-center h-full centerAll">
 						<li className="transition-all duration-300 ease-out hover:scale-125">
 							<strong>Status : </strong>

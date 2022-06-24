@@ -10,7 +10,3 @@
 	filter: blur(8px);
 	transition: 1s ease;
 }
-.shadowBtn:hover::before {
-	background: white;
-	top: 50px;
-}

@@ -1,5 +1,7 @@
 import { useRef } from "react"
 import emailjs from "@emailjs/browser"
+import ButtonPrimary from "../buttons/ButtonPrimary"
+import ButtonSecondary from "../buttons/ButtonSecondary"
 export default function ModalForm({ setModalForm }) {
 	const formRef = useRef()
 	function sendMessage(e) {
@@ -62,7 +64,7 @@ export default function ModalForm({ setModalForm }) {
 									</label>
 
 									<input
-										className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+										className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 border-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
 										type="text"
 										name="name"
 										required
@@ -75,7 +77,7 @@ export default function ModalForm({ setModalForm }) {
 									</label>
 
 									<input
-										className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+										className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 border-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
 										type="email"
 										name="email"
 										required
@@ -89,7 +91,7 @@ export default function ModalForm({ setModalForm }) {
 								</label>
 
 								<textarea
-									className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+									className="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 border-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
 									name="message"
 									required
 								></textarea>
@@ -97,19 +99,8 @@ export default function ModalForm({ setModalForm }) {
 						</div>
 					</div>
 					<div className="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
-						<button
-							type="submit"
-							className="text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-cyan-600 dark:hover:bg-cyan-700 focus:outline-none dark:focus:ring-cyan-800"
-						>
-							Send
-						</button>
-						<button
-							onClick={() => setModalForm(false)}
-							type="button"
-							className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-cyan-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-						>
-							Cancel
-						</button>
+						<ButtonPrimary text="Send" />
+						<ButtonSecondary text="Cancel" />
 					</div>
 				</form>
 			</div>
