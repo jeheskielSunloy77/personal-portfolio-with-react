@@ -1,7 +1,7 @@
 import { useState, useContext } from "react"
 import { AppContext } from "../contexts/AppContext"
 import Typewriter from "typewriter-effect"
-import SpecialButton from "./buttons/SpecialButton"
+import ButtonSpecial from "./buttons/ButtonSpecial"
 export default function Hero() {
 	const { heroRef, changeTheme, setTheme } = useContext(AppContext)
 	const [introTypewriter, setIntroTypewriter] = useState(true)
@@ -11,9 +11,9 @@ export default function Hero() {
 			ref={heroRef}
 			className="myContainer flex h-screen relative"
 		>
-			<div className="font-staatliches text-4xl leading-snug text-gray-900 dark:text-white font-bold flex items-center transition-all duration-300">
+			<div className="font-staatliches text-4xl leading-snug text-gray-900 dark:text-white font-bold flex  transition-all duration-300">
 				{introTypewriter ? (
-					<div className="font-consolas">
+					<div className="font-consolas text-xl sm:text-4xl  mt-10">
 						<Typewriter
 							options={{
 								autoStart: true,
@@ -34,7 +34,7 @@ export default function Hero() {
 						/>
 					</div>
 				) : (
-					<div className="text-3xl sm:text-4xl">
+					<div className="text-3xl sm:text-4xl my-auto">
 						<h1>
 							Hello There! <br />
 							Im
@@ -67,7 +67,7 @@ export default function Hero() {
 								}}
 							/>
 						</div>
-						<SpecialButton text="EXPLORE" href="#about" />
+						<ButtonSpecial text="EXPLORE" href="#about" />
 					</div>
 				)}
 			</div>
@@ -161,7 +161,7 @@ export default function Hero() {
 				</a>
 
 				<a
-					href="#"
+					href="https://www.facebook.com/profile.php?id=100007513622251"
 					className="my-1 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
 					aria-label="Facebook"
 				>

@@ -8,12 +8,11 @@ export default function Footer() {
 				ref={footerRef}
 				className="flex flex-col items-center justify-between px-6 py-4 bg-gray-300 dark:bg-gray-800 sm:flex-row"
 			>
-				<a
-					href="#"
-					className="font-himagsikan tracking-[4px] text-xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
-				>
-					.js
-				</a>
+				<img
+					src="src/images/logo.png"
+					className="rounded w-10 h-10 dark:grayscale"
+					alt=""
+				/>
 
 				<p className="py-2 text-gray-800 dark:text-white sm:py-0 flex items-center">
 					Build with
@@ -90,7 +89,7 @@ export default function Footer() {
 					</a>
 
 					<a
-						href="#"
+						href="https://www.facebook.com/profile.php?id=100007513622251"
 						target="_blank"
 						className="mx-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
 						aria-label="Facebook"

@@ -92,7 +92,7 @@ export default function Contact() {
 						</a>
 
 						<a
-							href="#"
+							href="https://www.facebook.com/profile.php?id=100007513622251"
 							target="_blank"
 							className="mx-6 text-gray-600 dark:text-gray-300 hover:text-[#39569c] dark:hover:text-[#39569c] transition-all duration-300"
 							aria-label="Facebook"

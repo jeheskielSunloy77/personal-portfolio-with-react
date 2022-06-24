@@ -41,35 +41,52 @@ export default function ProjectSlider() {
 				</SwiperSlide>
 				<SwiperSlide>
 					<ProjectCard
-						title="Official Faculty Website"
-						desc="Adipisicing nulla culpa reprehenderit adipisicing ullamco non laboris. Eiusmod consectetur consequat proident minim consectetur."
+						title="PWA Weather App"
+						desc="A progressive web application that can be installed on any device that can provide an acurate weather report from all around the world."
 						img="src/images/projects/fapertaUnipa.png"
 						details={{
-							status: "Work on Progress",
-							code: "Private",
-							demo: "Prototype",
-							stack: "Next.js, Mongodb, Tailwindcss",
+							status: "Stable",
+							code: "Public",
+							demo: "Available",
+							stack: "Next.js, Tailwindcss",
 						}}
 						links={{
-							demo: "https://nextjs-faperta-unipa-prototype.vercel.app/",
-							code: "https://github.com/jeheskielSunloy77/nextjs-faperta-unipa",
+							demo: "https://nextjs-weather-app-lemon.vercel.app/",
+							code: "https://github.com/jeheskielSunloy77/nextjs-weather-app",
 						}}
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<ProjectCard
-						title="Official Faculty Website"
-						desc="Adipisicing nulla culpa reprehenderit adipisicing ullamco non laboris. Eiusmod consectetur consequat proident minim consectetur."
+						title="Fullstack Library"
+						desc="A full fledged library app, with CRUD functionality for administrators and a beautifull UI for users."
 						img="src/images/projects/fapertaUnipa.png"
 						details={{
 							status: "Work on Progress",
-							code: "Private",
+							code: "Public",
 							demo: "Prototype",
 							stack: "Next.js, Mongodb, Tailwindcss",
 						}}
 						links={{
-							demo: "https://nextjs-faperta-unipa-prototype.vercel.app/",
-							code: "https://github.com/jeheskielSunloy77/nextjs-faperta-unipa",
+							demo: "",
+							code: "https://github.com/jeheskielSunloy77/",
+						}}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<ProjectCard
+						title="Meme Generator"
+						desc="A basic and simple website that can generate a random meme images and using user input to customize the meme."
+						img="src/images/projects/fapertaUnipa.png"
+						details={{
+							status: "Final",
+							code: "Public",
+							demo: "Prototype",
+							stack: "ReactJS",
+						}}
+						links={{
+							demo: "https://react-meme-generator-eta.vercel.app/",
+							code: "https://github.com/jeheskielSunloy77/react-meme-generator",
 						}}
 					/>
 				</SwiperSlide>
