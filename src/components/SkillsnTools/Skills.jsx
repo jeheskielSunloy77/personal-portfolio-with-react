@@ -51,7 +51,7 @@ export default function Skills() {
 					desc="bread and butter"
 					logo={
 						<CardLogo
-							src="src/images/svg/javascript.svg"
+							src="src/images/icons/javascript.svg"
 							backgroud="bg-[#f7df1e]"
 						/>
 					}
@@ -60,7 +60,7 @@ export default function Skills() {
 					title="ReactJS"
 					subtitle="JS library"
 					desc="first love"
-					logo={<CardLogo src="src/images/svg/react.svg" />}
+					logo={<CardLogo src="src/images/icons/react.svg" />}
 				/>
 
 				<Card
@@ -73,7 +73,7 @@ export default function Skills() {
 					title="Mongodb"
 					subtitle="database"
 					desc="love and hate"
-					logo={<CardLogo src="src/images/svg/mongodb.svg" />}
+					logo={<CardLogo src="src/images/icons/mongodb.svg" />}
 				/>
 				<Card
 					title="Github"
@@ -85,19 +85,19 @@ export default function Skills() {
 					title="NodeJS"
 					subtitle="JS runtime"
 					desc="JS backbone"
-					logo={<CardLogo src="src/images/svg/nodejs.svg" />}
+					logo={<CardLogo src="src/images/icons/nodejs.svg" />}
 				/>
 				<Card
 					title="Tailwind"
 					subtitle="css framework"
 					desc="my secret affair"
-					logo={<CardLogo src="src/images/svg/tailwind.svg" />}
+					logo={<CardLogo src="src/images/icons/tailwind.svg" />}
 				/>
 				<Card
 					title="Sass"
 					subtitle="css preprocessor"
 					desc="sexy.css"
-					logo={<CardLogo src="src/images/svg/sass.svg" />}
+					logo={<CardLogo src="src/images/icons/sass.svg" />}
 				/>
 			</div>
 		</div>

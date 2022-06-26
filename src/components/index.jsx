@@ -1,3 +1,4 @@
+import Loader from "./Loader"
 import About from "./About"
 import Contact from "./Contact"
 import Footer from "./Footer"
@@ -9,6 +10,7 @@ import SkillsnTools from "./SkillsnTools"
 import Timeline from "./Timeline"
 
 export {
+	Loader,
 	About,
 	Contact,
 	Footer,

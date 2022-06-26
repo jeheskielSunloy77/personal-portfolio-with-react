@@ -71,3 +71,15 @@ h1 {
 .swiper-pagination-bullet-active {
 	opacity: 1 !important;
 }
+.functions {
+	color: #d4d3a6;
+}
+.dataType {
+	color: #4a81a9;
+}
+.variables {
+	color: #8dc4dd;
+}
+.strings {
+	color: #bf8470;
+}

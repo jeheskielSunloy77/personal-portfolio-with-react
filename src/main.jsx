@@ -3,16 +3,12 @@ import ReactDOM from "react-dom"
 import "./index.css"
 import App from "./App"
 import "swiper/css/bundle"
-
+import { AppProvider } from "./contexts/AppContext"
 ReactDOM.render(
 	<React.StrictMode>
-		<div
-			className={`bg-gradient-to-r from-gray-200 to-white dark:from-[#042c41] dark:to-gray-900`}
-		>
-			{/* <div className={` bg-[url("src/images/background/background.svg")]`}> */}
+		<AppProvider>
 			<App />
-		</div>
-		{/* </div> */}
+		</AppProvider>
 	</React.StrictMode>,
 	document.getElementById("root")
 )

@@ -1,48 +1,39 @@
-import { useState, useContext } from "react"
+import { useContext } from "react"
 import { AppContext } from "../contexts/AppContext"
 import Typewriter from "typewriter-effect"
 import ButtonSpecial from "./buttons/ButtonSpecial"
 export default function Hero() {
-	const { heroRef, changeTheme, setTheme } = useContext(AppContext)
-	const [introTypewriter, setIntroTypewriter] = useState(true)
+	const { heroRef, changeTheme, setTheme, loader } = useContext(AppContext)
 	return (
 		<div
 			id="home"
 			ref={heroRef}
 			className="myContainer flex h-screen relative"
 		>
+			<IntroTypewriter />
+			<img
+				className="hidden sm:block w-1/2 h-fit my-auto ml-auto"
+				src="src/images/heroImg.png"
+				alt=""
+			/>
+			<SocialIcons />
+			<ScrollDown />
+		</div>
+	)
+
+	function IntroTypewriter() {
+		return (
 			<div className="font-staatliches text-4xl leading-snug text-gray-900 dark:text-white font-bold flex  transition-all duration-300">
-				{introTypewriter ? (
-					<div className="font-consolas text-xl sm:text-4xl  mt-10">
-						<Typewriter
-							options={{
-								autoStart: true,
-								delay: 30,
-							}}
-							onInit={typewriter => {
-								typewriter
-									.typeString(`function myWeb() {<br>`)
-									.typeString(`let portfolio = {...myLive}<br>`)
-									.typeString(`console.log(portfolio)<br>`)
-									.typeString(`console.log("WELLCOME!")<br>`)
-									.typeString(`} <br>`)
-									.typeString(`myWeb()`)
-									.pauseFor(1000)
-									.callFunction(() => setIntroTypewriter(false))
-									.start()
-							}}
-						/>
-					</div>
-				) : (
-					<div className="text-3xl sm:text-4xl my-auto">
-						<h1>
-							Hello There! <br />
-							Im
-							<span className="ml-2 underline decoration-cyan-500 underline-offset-4">
-								Jeheskiel Sunloy
-							</span>
-						</h1>
-						<div className="text-2xl sm:text-4xl">
+				<div className="text-3xl sm:text-4xl my-auto">
+					<h1>
+						Hello There! <br />
+						Im
+						<span className="ml-2 underline decoration-cyan-500 underline-offset-4">
+							Jeheskiel Sunloy
+						</span>
+					</h1>
+					<div className="text-2xl sm:text-4xl">
+						{!loader && (
 							<Typewriter
 								options={{
 									autoStart: true,
@@ -50,6 +41,7 @@ export default function Hero() {
 								}}
 								onInit={typewriter => {
 									typewriter
+										.start()
 										.typeString(
 											`<span class="text-cyan-500">I am </span>`
 										)
@@ -63,19 +55,43 @@ export default function Hero() {
 										.deleteChars(13)
 										.typeString(" Full Stack Developer.")
 										.pauseFor(1500)
-										.start()
 								}}
 							/>
-						</div>
-						<ButtonSpecial text="EXPLORE" href="#about" />
+						)}
 					</div>
-				)}
+					<ButtonSpecial text="EXPLORE" href="#about" />
+				</div>
 			</div>
-			<img
-				className="hidden sm:block w-1/2 h-fit my-auto ml-auto"
-				src="src/images/heroImg.png"
-				alt=""
-			/>
+		)
+	}
+
+	function ScrollDown() {
+		return (
+			<p
+				className="absolute bottom-10 right-3 sm:right-0 cursor-default text-medium text-xs flex flex-row items-center hover:translate-y-6 transition-all duration-300"
+				style={{ writingMode: "vertical-rl" }}
+			>
+				SCROLL DOWN
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					className="h-5 w-5 mt-1"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					strokeWidth={2}
+				>
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						d="M16 17l-4 4m0 0l-4-4m4 4V3"
+					/>
+				</svg>
+			</p>
+		)
+	}
+
+	function SocialIcons() {
+		return (
 			<div className="flex flex-col justify-center items-center absolute bottom-10 left-3 sm:left-0">
 				{changeTheme === "light" ? (
 					<svg
@@ -191,26 +207,6 @@ export default function Hero() {
 					</svg>
 				</a>
 			</div>
-			<p
-				className="absolute bottom-10 right-3 sm:right-0 cursor-default text-medium text-xs flex flex-row items-center hover:translate-y-6 transition-all duration-300"
-				style={{ writingMode: "vertical-rl" }}
-			>
-				SCROLL DOWN
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					className="h-5 w-5 mt-1"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					strokeWidth={2}
-				>
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						d="M16 17l-4 4m0 0l-4-4m4 4V3"
-					/>
-				</svg>
-			</p>
-		</div>
-	)
+		)
+	}
 }

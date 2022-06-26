@@ -35,7 +35,6 @@ export default function ProjectSlider() {
 						}}
 						links={{
 							demo: "https://nextjs-faperta-unipa-prototype.vercel.app/",
-							code: "https://github.com/jeheskielSunloy77/nextjs-faperta-unipa",
 						}}
 					/>
 				</SwiperSlide>
@@ -43,7 +42,7 @@ export default function ProjectSlider() {
 					<ProjectCard
 						title="PWA Weather App"
 						desc="A progressive web application that can be installed on any device that can provide an acurate weather report from all around the world."
-						img="src/images/projects/fapertaUnipa.png"
+						img="src/images/projects/weatherApp.png"
 						details={{
 							status: "Stable",
 							code: "Public",
@@ -60,7 +59,7 @@ export default function ProjectSlider() {
 					<ProjectCard
 						title="Fullstack Library"
 						desc="A full fledged library app, with CRUD functionality for administrators and a beautifull UI for users."
-						img="src/images/projects/fapertaUnipa.png"
+						img="src/images/projects/library.png"
 						details={{
 							status: "Work on Progress",
 							code: "Public",
@@ -68,8 +67,8 @@ export default function ProjectSlider() {
 							stack: "Next.js, Mongodb, Tailwindcss",
 						}}
 						links={{
-							demo: "",
-							code: "https://github.com/jeheskielSunloy77/",
+							demo: "https://nextjs-fullstack-library-with-mongodb.vercel.app/",
+							code: "https://github.com/jeheskielSunloy77/nextjs-fullstack-library-with-mongodb",
 						}}
 					/>
 				</SwiperSlide>
@@ -77,7 +76,7 @@ export default function ProjectSlider() {
 					<ProjectCard
 						title="Meme Generator"
 						desc="A basic and simple website that can generate a random meme images and using user input to customize the meme."
-						img="src/images/projects/fapertaUnipa.png"
+						img="src/images/projects/memeGenerator.png"
 						details={{
 							status: "Final",
 							code: "Public",

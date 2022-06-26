@@ -27,50 +27,50 @@ export default function Tools() {
 				<Card
 					title="VS Code"
 					subtitle="code edditor"
-					desc="used daily"
-					logo={<CardLogo src="src/images/svg/vscode.svg" />}
+					desc="playground"
+					logo={<CardLogo src="src/images/icons/vscode.svg" />}
 				/>
 				<Card
 					title="Ubuntu"
 					subtitle="operating system"
-					desc="used daily"
-					logo={<CardLogo src="src/images/svg/ubuntu.svg" />}
+					desc="work, work, work"
+					logo={<CardLogo src="src/images/icons/ubuntu.svg" />}
 				/>
 				<Card
 					title="ESlint"
 					subtitle="code analyzer"
-					desc="used daily"
-					logo={<CardLogo src="src/images/svg/eslint.svg" />}
+					desc="annoying little thing"
+					logo={<CardLogo src="src/images/icons/eslint.svg" />}
 				/>
 				<Card
 					title="Prettier"
 					subtitle="code formater"
-					desc="used daily"
-					logo={<CardLogo src="src/images/svg/prettier.svg" />}
+					desc="cant live without"
+					logo={<CardLogo src="src/images/icons/prettier.svg" />}
 				/>
 				<Card
 					title="Thunder Client"
 					subtitle="REST tester"
-					desc="used often"
-					logo={<CardLogo src="src/images/svg/thunderclient.svg" />}
+					desc="restless api"
+					logo={<CardLogo src="src/images/icons/thunderclient.svg" />}
 				/>
 				<Card
 					title="Vercel"
 					subtitle="Hosting Provider"
-					desc="used often"
+					desc="easy like 123"
 					logo={<CardLogo svg={vercelLogo} />}
 				/>
 				<Card
 					title="Gimp"
 					subtitle="media edditor"
-					desc="rarely used"
-					logo={<CardLogo src="src/images/svg/gimp.svg" />}
+					desc="mr.underated"
+					logo={<CardLogo src="src/images/icons/gimp.svg" />}
 				/>
 				<Card
 					title="Canva"
 					subtitle="media edditor"
-					desc="rarely used"
-					logo={<CardLogo src="src/images/svg/canva.svg" />}
+					desc="template, copy, paste"
+					logo={<CardLogo src="src/images/icons/canva.svg" />}
 				/>
 			</div>
 		</div>

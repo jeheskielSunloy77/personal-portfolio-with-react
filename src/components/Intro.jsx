@@ -21,8 +21,8 @@ export default function Intro() {
 						<span className="mx-1 text-cyan-500 font-semibold">
 							Satya Wacana Christian University
 						</span>
-						. I am currently 21 years old and i came from Ambon,
-						Indonesia.
+						. I am currently 21 years old and im hailing from Ambon,
+						Indonesia
 					</p>
 					<img
 						className="hidden sm:block w-[800px] ml-auto"

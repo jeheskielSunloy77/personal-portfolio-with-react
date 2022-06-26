@@ -18,7 +18,7 @@ export default function Footer() {
 					Build with
 					<img
 						className="w-5 h-5 mx-1"
-						src="src\images\svg\love.svg"
+						src="src\images\icons\love.svg"
 						alt="love"
 					/>
 					with
