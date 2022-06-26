@@ -2,6 +2,8 @@ import { useContext } from "react"
 import { AppContext } from "../contexts/AppContext"
 import { ParallaxProvider } from "react-scroll-parallax"
 import { ParallaxBanner } from "react-scroll-parallax"
+import BGclouds from "../assets/backgrounds/clouds.jpg"
+import BGmoon from "../assets/backgrounds/moon.jpg"
 export default function About() {
 	const { changeTheme } = useContext(AppContext)
 	return (
@@ -11,9 +13,8 @@ export default function About() {
 					className="aspect-[2/1] h-[500px]"
 					layers={[
 						{
-							image: `src/images/backgrounds/${
-								changeTheme === "dark" ? "clouds" : "moon"
-							}.jpg`,
+							image: changeTheme === "dark" ? BGclouds : BGmoon,
+
 							speed: -30,
 						},
 					]}

@@ -1,5 +1,7 @@
 import { useContext } from "react"
 import { AppContext } from "../contexts/AppContext"
+import loveIcon from "../assets/icons/love.svg"
+import logo from "../assets/icons/logo.png"
 export default function Footer() {
 	const { footerRef } = useContext(AppContext)
 	return (
@@ -9,18 +11,14 @@ export default function Footer() {
 				className="flex flex-col items-center justify-between px-6 py-4 bg-gray-300 dark:bg-gray-800 sm:flex-row"
 			>
 				<img
-					src="src/images/logo.png"
+					src={logo}
 					className="rounded w-10 h-10 dark:grayscale"
 					alt=""
 				/>
 
 				<p className="py-2 text-gray-800 dark:text-white sm:py-0 flex items-center">
 					Build with
-					<img
-						className="w-5 h-5 mx-1"
-						src="src\images\icons\love.svg"
-						alt="love"
-					/>
+					<img className="w-5 h-5 mx-1" src={loveIcon} alt="love" />
 					with
 					<svg
 						className="ml-1"

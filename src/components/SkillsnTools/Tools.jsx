@@ -1,6 +1,13 @@
 import { useContext } from "react"
 import { AppContext } from "../../contexts/AppContext"
 import { Card, CardLogo } from "./Card"
+import vscodeImg from "../../assets/icons/vscode.svg"
+import ubuntuImg from "../../assets/icons/ubuntu.svg"
+import eslintImg from "../../assets/icons/eslint.svg"
+import prettierImg from "../../assets/icons/prettier.svg"
+import thunderclientImg from "../../assets/icons/thunderclient.svg"
+import gimpImg from "../../assets/icons/gimp.svg"
+import canvaImg from "../../assets/icons/canva.svg"
 export default function Tools() {
 	const { changeTheme } = useContext(AppContext)
 	const vercelLogo = (
@@ -28,31 +35,31 @@ export default function Tools() {
 					title="VS Code"
 					subtitle="code edditor"
 					desc="playground"
-					logo={<CardLogo src="src/images/icons/vscode.svg" />}
+					logo={<CardLogo src={vscodeImg} />}
 				/>
 				<Card
 					title="Ubuntu"
 					subtitle="operating system"
 					desc="work, work, work"
-					logo={<CardLogo src="src/images/icons/ubuntu.svg" />}
+					logo={<CardLogo src={ubuntuImg} />}
 				/>
 				<Card
 					title="ESlint"
 					subtitle="code analyzer"
 					desc="annoying little thing"
-					logo={<CardLogo src="src/images/icons/eslint.svg" />}
+					logo={<CardLogo src={eslintImg} />}
 				/>
 				<Card
 					title="Prettier"
 					subtitle="code formater"
 					desc="cant live without"
-					logo={<CardLogo src="src/images/icons/prettier.svg" />}
+					logo={<CardLogo src={prettierImg} />}
 				/>
 				<Card
 					title="Thunder Client"
 					subtitle="REST tester"
 					desc="restless api"
-					logo={<CardLogo src="src/images/icons/thunderclient.svg" />}
+					logo={<CardLogo src={thunderclientImg} />}
 				/>
 				<Card
 					title="Vercel"
@@ -64,13 +71,13 @@ export default function Tools() {
 					title="Gimp"
 					subtitle="media edditor"
 					desc="mr.underated"
-					logo={<CardLogo src="src/images/icons/gimp.svg" />}
+					logo={<CardLogo src={gimpImg} />}
 				/>
 				<Card
 					title="Canva"
 					subtitle="media edditor"
 					desc="template, copy, paste"
-					logo={<CardLogo src="src/images/icons/canva.svg" />}
+					logo={<CardLogo src={canvaImg} />}
 				/>
 			</div>
 		</div>

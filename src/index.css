@@ -42,23 +42,17 @@ h1 {
 }
 .smallGrid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	column-gap: 2px;
 	row-gap: 20px;
 }
 @media only screen and (max-width: 640px) {
 	.smallGrid {
-		grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
 		row-gap: 10px;
 	}
 }
-.largeGrid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
-	column-gap: 2px;
-	row-gap: 20px;
-	justify-content: center;
-}
+
 .swiper {
 	padding-bottom: 50px !important;
 }

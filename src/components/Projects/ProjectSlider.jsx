@@ -1,9 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Pagination, Autoplay } from "swiper"
-
 import "swiper/css"
 import "swiper/css/autoplay"
 import ProjectCard from "./ProjectCard"
+import memeGeneratorImg from "../../assets/projects/memeGenerator.png"
+import fapertaUnipaImg from "../../assets/projects/fapertaUnipa.png"
+import libraryImg from "../../assets/projects/library.png"
+import weatherAppImg from "../../assets/projects/weatherApp.png"
 SwiperCore.use([Pagination, Autoplay])
 export default function ProjectSlider() {
 	return (
@@ -26,7 +29,7 @@ export default function ProjectSlider() {
 					<ProjectCard
 						title="Official Faculty Website"
 						desc="A Fullstack web app for Faculty of Argiculture, Papua University build with Next.js, Tailwindcss and Mongodb."
-						img="src/images/projects/fapertaUnipa.png"
+						img={fapertaUnipaImg}
 						details={{
 							status: "Work on Progress",
 							code: "Private",
@@ -42,7 +45,7 @@ export default function ProjectSlider() {
 					<ProjectCard
 						title="PWA Weather App"
 						desc="A progressive web application that can be installed on any device that can provide an acurate weather report from all around the world."
-						img="src/images/projects/weatherApp.png"
+						img={weatherAppImg}
 						details={{
 							status: "Stable",
 							code: "Public",
@@ -59,7 +62,7 @@ export default function ProjectSlider() {
 					<ProjectCard
 						title="Fullstack Library"
 						desc="A full fledged library app, with CRUD functionality for administrators and a beautifull UI for users."
-						img="src/images/projects/library.png"
+						img={libraryImg}
 						details={{
 							status: "Work on Progress",
 							code: "Public",
@@ -76,7 +79,7 @@ export default function ProjectSlider() {
 					<ProjectCard
 						title="Meme Generator"
 						desc="A basic and simple website that can generate a random meme images and using user input to customize the meme."
-						img="src/images/projects/memeGenerator.png"
+						img={memeGeneratorImg}
 						details={{
 							status: "Final",
 							code: "Public",

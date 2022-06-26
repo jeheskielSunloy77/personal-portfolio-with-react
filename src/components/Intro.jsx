@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { AppContext } from "../contexts/AppContext"
+import myAvatar from "../assets/images/myAvatar.png"
 export default function Intro() {
 	const { aboutRef } = useContext(AppContext)
 	return (
@@ -26,7 +27,7 @@ export default function Intro() {
 					</p>
 					<img
 						className="hidden sm:block w-[800px] ml-auto"
-						src="src/images/myAvatar.png"
+						src={myAvatar}
 						alt="introImg"
 					/>
 				</div>

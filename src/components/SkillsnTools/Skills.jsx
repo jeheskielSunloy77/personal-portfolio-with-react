@@ -1,6 +1,14 @@
 import { useContext } from "react"
 import { AppContext } from "../../contexts/AppContext"
 import { Card, CardLogo } from "./Card"
+
+import javascriptImg from "../../assets/icons/javascript.svg"
+import reactImg from "../../assets/icons/react.svg"
+import mongodbImg from "../../assets/icons/mongodb.svg"
+import nodejsImg from "../../assets/icons/nodejs.svg"
+import tailwindImg from "../../assets/icons/tailwind.svg"
+import sassImg from "../../assets/icons/sass.svg"
+
 export default function Skills() {
 	const { skillsRef, changeTheme } = useContext(AppContext)
 	const githubLogo = (
@@ -39,6 +47,7 @@ export default function Skills() {
 			</g>
 		</svg>
 	)
+
 	return (
 		<div ref={skillsRef} id="skills" className="myContainer">
 			<h1 className="mb-10 text-intro text-center sm:text-left">
@@ -49,18 +58,13 @@ export default function Skills() {
 					title="Javascript"
 					subtitle="programing language"
 					desc="bread and butter"
-					logo={
-						<CardLogo
-							src="src/images/icons/javascript.svg"
-							backgroud="bg-[#f7df1e]"
-						/>
-					}
+					logo={<CardLogo src={javascriptImg} backgroud="bg-[#f7df1e]" />}
 				/>
 				<Card
 					title="ReactJS"
 					subtitle="JS library"
 					desc="first love"
-					logo={<CardLogo src="src/images/icons/react.svg" />}
+					logo={<CardLogo src={reactImg} />}
 				/>
 
 				<Card
@@ -73,7 +77,7 @@ export default function Skills() {
 					title="Mongodb"
 					subtitle="database"
 					desc="love and hate"
-					logo={<CardLogo src="src/images/icons/mongodb.svg" />}
+					logo={<CardLogo src={mongodbImg} />}
 				/>
 				<Card
 					title="Github"
@@ -85,19 +89,19 @@ export default function Skills() {
 					title="NodeJS"
 					subtitle="JS runtime"
 					desc="JS backbone"
-					logo={<CardLogo src="src/images/icons/nodejs.svg" />}
+					logo={<CardLogo src={nodejsImg} />}
 				/>
 				<Card
 					title="Tailwind"
 					subtitle="css framework"
 					desc="my secret affair"
-					logo={<CardLogo src="src/images/icons/tailwind.svg" />}
+					logo={<CardLogo src={tailwindImg} />}
 				/>
 				<Card
 					title="Sass"
 					subtitle="css preprocessor"
 					desc="sexy.css"
-					logo={<CardLogo src="src/images/icons/sass.svg" />}
+					logo={<CardLogo src={sassImg} />}
 				/>
 			</div>
 		</div>

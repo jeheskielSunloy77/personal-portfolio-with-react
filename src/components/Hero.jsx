@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { AppContext } from "../contexts/AppContext"
 import Typewriter from "typewriter-effect"
 import ButtonSpecial from "./buttons/ButtonSpecial"
+import heroImg from "../assets/images/heroImg.png"
 export default function Hero() {
 	const { heroRef, changeTheme, setTheme, loader } = useContext(AppContext)
 	return (
@@ -13,7 +14,7 @@ export default function Hero() {
 			<IntroTypewriter />
 			<img
 				className="hidden sm:block w-1/2 h-fit my-auto ml-auto"
-				src="src/images/heroImg.png"
+				src={heroImg}
 				alt=""
 			/>
 			<SocialIcons />
