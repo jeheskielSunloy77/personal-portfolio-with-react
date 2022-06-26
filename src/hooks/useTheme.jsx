@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react"
 export default function useTheme() {
-	function getInitialState() {
-		let data = ""
-		if (typeof window !== "undefined") {
-			data = localStorage.getItem("theme")
-		}
-		return data
-	}
-	const [theme, setTheme] = useState(getInitialState())
+	// function getInitialState() {
+	// 	let data = ""
+	// 	if (typeof window !== "undefined") {
+	// 		data = localStorage.getItem("theme")
+	// 	}
+	// 	return data
+	// }
+	const [theme, setTheme] = useState("dark")
 	const changeTheme = theme === "light" ? "dark" : "light"
 	useEffect(() => {
 		const root = window.document.documentElement

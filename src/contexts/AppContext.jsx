@@ -2,7 +2,7 @@ import { createContext } from "react"
 import { useState, useEffect, useRef } from "react"
 import useTheme from "../hooks/useTheme"
 import useOnScreen from "../hooks/useOnScreen"
-import background from "../assets/backgrounds/background.svg"
+// import background from "../assets/backgrounds/background.svg"
 export const AppContext = createContext([])
 
 export function AppProvider({ children }) {
@@ -60,9 +60,9 @@ export function AppProvider({ children }) {
 			<div
 				className={`bg-gradient-to-r from-gray-200 to-white dark:from-[#042c41] dark:to-gray-900`}
 			>
-				<div style={{ backgroundImage: `url(${background})` }}>
-					{children}
-				</div>
+				{/* <div style={{ backgroundImage: `url(${background})` }}> */}
+				{children}
+				{/* </div> */}
 			</div>
 		</AppContext.Provider>
 	)

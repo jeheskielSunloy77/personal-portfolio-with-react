@@ -6,12 +6,12 @@ export default function Intro() {
 	return (
 		<>
 			<div ref={aboutRef} id="about" className="myContainer mt-1">
-				<h1 className="text-center text-intro mb-4">
+				<h1 className="text-center text-intro">
 					Let me
 					<span className="text-cyan-500"> intoduce </span>
 					myself
 				</h1>
-				<div className="flex items-center text-medium">
+				<div className="flex flex-col-reverse sm:flex-row items-center text-medium">
 					<p className="sm:mr-28 text-lg text-center sm:text-left">
 						Hey thank you for passing by, my fullname is
 						<span className="mx-1 text-cyan-500 font-semibold">
@@ -26,7 +26,7 @@ export default function Intro() {
 						Indonesia
 					</p>
 					<img
-						className="hidden sm:block w-[800px] ml-auto"
+						className=" sm:block sm:w-[800px] mx-auto sm:ml-auto my-4 sm:my-0"
 						src={myAvatar}
 						alt="introImg"
 					/>
