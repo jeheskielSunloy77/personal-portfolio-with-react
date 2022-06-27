@@ -20,8 +20,8 @@ export default function ModalForm({ setModalCV }) {
 						className="w-full h-[80vh]"
 						src={
 							isEnglish
-								? "https://drive.google.com/file/d/1_404x3_Va2sK9dXvzl-5-6Hapen2IRsa/preview"
-								: "https://drive.google.com/file/d/15SWJ0GRuWTCll0luQ8ooBwQJD3g14OTm/preview"
+								? "https://drive.google.com/file/d/1rz3SwnyUlNnLSeyvSA3_2MZoQec8lvZB/preview"
+								: "https://drive.google.com/file/d/1cR0Kbh4vH0qad-VF2um5o4MGZJaDYwBR/preview"
 						}
 						allow="autoplay"
 					></iframe>

@@ -8,20 +8,17 @@ export default function Timeline() {
 				<TimeLine
 					title="SMA 1, Ambon"
 					date="Enroled on June 14, 2014"
-					desc="Fugiat tempor cupidatat ut nisi. Ut cupidatat cupidatat velit
-					amet eu mollit et velit est dolore magna aute. Enim"
+					desc="I have a regular times at high school, im not the brightest person in the class but im not the slowest either."
 				/>
 				<TimeLine
 					title="Satya Wacana Christian University"
 					date="Enroled on August 1, 2017"
-					desc="Fugiat tempor cupidatat ut nisi. Ut cupidatat cupidatat velit
-					amet eu mollit et velit est dolore magna aute. Enim"
+					desc="I am a student of the Faculty of Information and Technology, majoring Informatics Engineering with the latest GPA of 3.1"
 				/>
 				<TimeLine
 					title="KreasiX Internship"
 					date="Started from May 5, 2022"
-					desc="Fugiat tempor cupidatat ut nisi. Ut cupidatat cupidatat velit
-					amet eu mollit et velit est dolore magna aute. Enim"
+					desc="My first internship experience, one of the project i did during my internship was to build a backend for the company website using Node.js and Firebase"
 				/>
 			</ol>
 		</div>
