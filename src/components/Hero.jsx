@@ -162,7 +162,7 @@ export default function Hero() {
 					</svg>
 				</a>
 				<a
-					href="https://www.linkedin.com/in/jeheskiel-ventioky-sunloy-aa28761b1/"
+					href="https://linkedin.com/in/jeheskiel-ventioky-sunloy"
 					target="_blank"
 					className="my-1 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
 					aria-label="LinkedIn"

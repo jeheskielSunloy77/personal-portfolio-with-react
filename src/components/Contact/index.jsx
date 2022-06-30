@@ -95,7 +95,7 @@ export default function Contact() {
 					</svg>
 				</a>
 				<a
-					href="https://www.linkedin.com/in/jeheskiel-ventioky-sunloy-aa28761b1/"
+					href="https://linkedin.com/in/jeheskiel-ventioky-sunloy"
 					target="_blank"
 					className="mx-6 text-gray-600 dark:text-gray-300 hover:text-[#0e76a8] dark:hover:text-[#0e76a8] transition-all duration-300"
 					aria-label="LinkedIn"

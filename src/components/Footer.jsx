@@ -71,7 +71,7 @@ export default function Footer() {
 						</svg>
 					</a>
 					<a
-						href="https://www.linkedin.com/in/jeheskiel-ventioky-sunloy-aa28761b1/"
+						href="https://linkedin.com/in/jeheskiel-ventioky-sunloy"
 						target="_blank"
 						className="mx-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
 						aria-label="LinkedIn"

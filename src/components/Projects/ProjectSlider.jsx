@@ -37,7 +37,7 @@ export default function ProjectSlider() {
 							stack: "Next.js, Mongodb, Tailwindcss",
 						}}
 						links={{
-							demo: "https://nextjs-faperta-unipa-prototype.vercel.app/",
+							demo: "https://faperta-unipa-prototype.vercel.app/",
 						}}
 					/>
 				</SwiperSlide>
