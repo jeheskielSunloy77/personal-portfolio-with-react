@@ -4,7 +4,7 @@ import { Card, CardLogo } from "./Card"
 import vscodeImg from "../../assets/icons/vscode.svg"
 import ubuntuImg from "../../assets/icons/ubuntu.svg"
 import eslintImg from "../../assets/icons/eslint.svg"
-import prettierImg from "../../assets/icons/prettier.svg"
+import auth0Img from "../../assets/icons/auth0.svg"
 import thunderclientImg from "../../assets/icons/thunderclient.svg"
 import gimpImg from "../../assets/icons/gimp.svg"
 import canvaImg from "../../assets/icons/canva.svg"
@@ -50,10 +50,10 @@ export default function Tools() {
 					logo={<CardLogo src={eslintImg} />}
 				/>
 				<Card
-					title="Prettier"
-					subtitle="code formater"
-					desc="cant live without"
-					logo={<CardLogo src={prettierImg} />}
+					title="Auth0"
+					subtitle="authentication platform"
+					desc="guardian angel"
+					logo={<CardLogo src={auth0Img} />}
 				/>
 				<Card
 					title="Thunder Client"

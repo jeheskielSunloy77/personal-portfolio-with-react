@@ -5,7 +5,8 @@ import { Card, CardLogo } from "./Card"
 import javascriptImg from "../../assets/icons/javascript.svg"
 import reactImg from "../../assets/icons/react.svg"
 import mongodbImg from "../../assets/icons/mongodb.svg"
-import nodejsImg from "../../assets/icons/nodejs.svg"
+// import nodejsImg from "../../assets/icons/nodejs.svg"
+import mysqlImg from "../../assets/icons/mysql.svg"
 import tailwindImg from "../../assets/icons/tailwind.svg"
 import sassImg from "../../assets/icons/sass.svg"
 
@@ -80,16 +81,16 @@ export default function Skills() {
 					logo={<CardLogo src={mongodbImg} />}
 				/>
 				<Card
+					title="Mysql"
+					subtitle="database"
+					desc="old reliable"
+					logo={<CardLogo src={mysqlImg} />}
+				/>
+				<Card
 					title="Github"
 					subtitle="version control"
 					desc="pull, push, commit"
 					logo={<CardLogo svg={githubLogo} />}
-				/>
-				<Card
-					title="NodeJS"
-					subtitle="JS runtime"
-					desc="JS backbone"
-					logo={<CardLogo src={nodejsImg} />}
 				/>
 				<Card
 					title="Tailwind"
