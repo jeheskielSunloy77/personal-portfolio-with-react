@@ -11,7 +11,7 @@ export default function Loader() {
 				<Typewriter
 					options={{
 						autoStart: true,
-						delay: 30,
+						delay: 10,
 					}}
 					onInit={typewriter => {
 						typewriter
