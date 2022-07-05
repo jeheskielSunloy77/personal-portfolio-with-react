@@ -28,7 +28,6 @@ export default function ModalForm({ setModalForm }) {
 		<div className="fixed z-40 w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 bg-opacity-90 centerAll">
 			<div className="relative p-4 w-full sm:max-w-7xl">
 				<form
-					onSubmit={e => sendMessage(e)}
 					ref={formRef}
 					className="relative bg-white rounded-lg shadow dark:bg-gray-700"
 				>
@@ -99,7 +98,7 @@ export default function ModalForm({ setModalForm }) {
 						</div>
 					</div>
 					<div className="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
-						<ButtonPrimary text="Send" />
+						<ButtonPrimary text="Send" 	onClick={e => sendMessage(e)} />
 						<ButtonSecondary text="Cancel" />
 					</div>
 				</form>
