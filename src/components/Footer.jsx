@@ -3,16 +3,17 @@ import { AppContext } from "../contexts/AppContext"
 import loveIcon from "../assets/icons/love.svg"
 import logo from "../assets/icons/logo.png"
 export default function Footer() {
-	const { footerRef } = useContext(AppContext)
+	const { footerRef, changeTheme } = useContext(AppContext)
+
 	return (
 		<>
 			<footer
 				ref={footerRef}
-				className="flex flex-col items-center justify-between px-6 py-4 bg-gray-300 dark:bg-gray-800 sm:flex-row"
+				className="flex flex-col items-center justify-between px-6 py-2 bg-white dark:bg-gray-800 sm:flex-row"
 			>
 				<img
 					src={logo}
-					className="rounded w-10 h-10 dark:grayscale"
+					className="rounded w-14 h-14 dark:grayscale"
 					alt=""
 				/>
 
@@ -27,8 +28,17 @@ export default function Footer() {
 						width="18px"
 						height="18px"
 					>
-						<circle cx="0" cy="0" r="2.05" fill="#61dafb" />
-						<g stroke="#61dafb" strokeWidth="1" fill="none">
+						<circle
+							cx="0"
+							cy="0"
+							r="2.05"
+							fill={changeTheme === "dark" ? "#2096b7" : "#61dafb"}
+						/>
+						<g
+							stroke={changeTheme === "dark" ? "#2096b7" : "#61dafb"}
+							strokeWidth="1"
+							fill="none"
+						>
 							<ellipse rx="11" ry="4.2" />
 							<ellipse rx="11" ry="4.2" transform="rotate(60)" />
 							<ellipse rx="11" ry="4.2" transform="rotate(120)" />

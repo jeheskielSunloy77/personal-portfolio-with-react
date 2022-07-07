@@ -6,8 +6,8 @@ export function Card({ title, subtitle, desc, logo }) {
 				<h1 className="font-semibold m-0 p-0 text-high text-xl text-center">
 					{title}
 				</h1>
-				<p className="text-lowest text-center text-xs">{subtitle}</p>
-				<p className="text-low text-base text-center">{desc}</p>
+				<p className="text-low text-center text-xs">{subtitle}</p>
+				<p className="text-medium text-base text-center">{desc}</p>
 			</div>
 			{logo}
 		</div>
