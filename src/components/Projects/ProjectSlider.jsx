@@ -34,7 +34,7 @@ export default function ProjectSlider() {
 							status: "Work on Progress",
 							code: "Private",
 							demo: "Prototype",
-							stack: "Next.js, Mongodb, Tailwindcss",
+							stack: "Next.js, Mongodb, Auth0, Tailwindcss",
 						}}
 						links={{
 							demo: "https://faperta-unipa-prototype.vercel.app/",
