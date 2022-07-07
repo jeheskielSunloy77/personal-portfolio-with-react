@@ -12,6 +12,7 @@ import {
 	Projects,
 	Contact,
 } from "./components"
+import Contributions from "./components/Contributions"
 export default function App() {
 	const { loader } = useContext(AppContext)
 	return (
@@ -27,6 +28,7 @@ export default function App() {
 				<Timeline />
 				<SkillsnTools />
 				<Projects />
+				<Contributions />
 				<Contact />
 				<Footer />
 			</div>
