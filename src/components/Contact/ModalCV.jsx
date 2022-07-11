@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from 'react'
 export default function ModalForm({ setModalCV }) {
 	const [isEnglish, setIsEnglish] = useState(true)
 	return (
@@ -20,8 +20,8 @@ export default function ModalForm({ setModalCV }) {
 						className="w-full h-[80vh]"
 						src={
 							isEnglish
-								? "https://drive.google.com/file/d/1rz3SwnyUlNnLSeyvSA3_2MZoQec8lvZB/preview"
-								: "https://drive.google.com/file/d/1cR0Kbh4vH0qad-VF2um5o4MGZJaDYwBR/preview"
+								? 'https://drive.google.com/file/d/1aBvJngg3DyNmai9I_HoqA3cDmJ4uUzLL/preview'
+								: 'https://drive.google.com/file/d/1kxQ5yxB-KRIhBbQS83vcOGBO5G8LXZjT/preview'
 						}
 						allow="autoplay"
 					></iframe>
