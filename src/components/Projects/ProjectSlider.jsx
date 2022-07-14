@@ -5,6 +5,7 @@ import "swiper/css/autoplay"
 import ProjectCard from "./ProjectCard"
 import memeGeneratorImg from "../../assets/projects/memeGenerator.png"
 import fapertaUnipaImg from "../../assets/projects/fapertaUnipa.png"
+import iaknKupangImg from "../../assets/projects/iaknKupang.png"
 import libraryImg from "../../assets/projects/library.png"
 import weatherAppImg from "../../assets/projects/weatherApp.png"
 SwiperCore.use([Pagination, Autoplay])
@@ -38,6 +39,22 @@ export default function ProjectSlider() {
 						}}
 						links={{
 							demo: "https://faperta-unipa-prototype.vercel.app/",
+						}}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<ProjectCard
+						title="Student Information System"
+						desc="An information system for IAKN Kupang university student, Build with Next.js, Postgresql, Supabase, and Tailwindcss."
+						img={iaknKupangImg}
+						details={{
+							status: "Work on Progress",
+							code: "Private",
+							demo: "Prototype",
+							stack: "Next.js, Postgresql, Supabase, Tailwindcss",
+						}}
+						links={{
+							demo: "http://nextjs-iakn-kupang.vercel.app/",
 						}}
 					/>
 				</SwiperSlide>

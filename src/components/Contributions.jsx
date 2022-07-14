@@ -1,6 +1,6 @@
-import React from 'react'
-import GitHubCalendar from 'react-github-calendar'
-import ReactTooltip from 'react-tooltip'
+import React from "react"
+import GitHubCalendar from "react-github-calendar"
+import ReactTooltip from "react-tooltip"
 
 export default function Contributions() {
 	function selectLastHalfYear(contributions) {
@@ -19,39 +19,44 @@ export default function Contributions() {
 		})
 	}
 	return (
-		<div className="centerAll text-white">
-			<div className="hidden sm:flex">
-				<GitHubCalendar
-					username="jeheskielSunloy77"
-					blockMargin={6}
-					blockSize={18}
-					theme={{
-						level0: '#113b4b',
-						level1: '#0e7490',
-						level2: '#06b6d4',
-						level3: '#67e8f9',
-						level4: '#cffafe',
-					}}
-				>
-					<ReactTooltip html />
-				</GitHubCalendar>
-			</div>
-			<div className="flex sm:hidden px-4">
-				<GitHubCalendar
-					username="jeheskielSunloy77"
-					transformData={selectLastHalfYear}
-					blockMargin={6}
-					blockSize={20}
-					theme={{
-						level0: '#113b4b',
-						level1: '#0e7490',
-						level2: '#06b6d4',
-						level3: '#67e8f9',
-						level4: '#cffafe',
-					}}
-				>
-					<ReactTooltip html />
-				</GitHubCalendar>
+		<div className="myContainer">
+			<h1 className="mb-10 text-intro text-center sm:text-left">
+				Github <span className="text-cyan-500">Calender</span>
+			</h1>
+			<div className="centerAll text-white">
+				<div className="hidden sm:flex">
+					<GitHubCalendar
+						username="jeheskielSunloy77"
+						blockMargin={6}
+						blockSize={18}
+						theme={{
+							level0: "#113b4b",
+							level1: "#0e7490",
+							level2: "#06b6d4",
+							level3: "#67e8f9",
+							level4: "#cffafe",
+						}}
+					>
+						<ReactTooltip html />
+					</GitHubCalendar>
+				</div>
+				<div className="flex sm:hidden px-4">
+					<GitHubCalendar
+						username="jeheskielSunloy77"
+						transformData={selectLastHalfYear}
+						blockMargin={6}
+						blockSize={20}
+						theme={{
+							level0: "#113b4b",
+							level1: "#0e7490",
+							level2: "#06b6d4",
+							level3: "#67e8f9",
+							level4: "#cffafe",
+						}}
+					>
+						<ReactTooltip html />
+					</GitHubCalendar>
+				</div>
 			</div>
 		</div>
 	)
