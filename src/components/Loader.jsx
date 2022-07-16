@@ -19,16 +19,16 @@ export default function Loader() {
                 `<span class="text-purple-600">while</span><span class="text-purple-600">(</span><span class="text-[#8dc4dd]">alive</span><span class="text-purple-600">)</span><span class="text-purple-600">{</span><br>`
               )
               .typeString(
-                `<span class="text-[$d4d3a6]">eat</span><span class="text-blue-600">()</span><br>`
+                `<span class="text-[$d4d3a6] ml-16">eat</span><span class="text-blue-600">()</span><br>`
               )
               .typeString(
-                `<span class="text-[$d4d3a6]">sleep</span><span class="text-blue-600">()</span><br>`
+                `<span class="text-[$d4d3a6] ml-16">sleep</span><span class="text-blue-600">()</span><br>`
               )
               .typeString(
-                `<span class="text-[$d4d3a6]">code</span><span class="text-blue-600">()</span><br>`
+                `<span class="text-[$d4d3a6] ml-16">code</span><span class="text-blue-600">()</span><br>`
               )
               .typeString(
-                `<span class="text-[$d4d3a6]">repeat</span><span class="text-blue-600">()</span><br>`
+                `<span class="text-[$d4d3a6] ml-16">repeat</span><span class="text-blue-600">()</span><br>`
               )
               .typeString(`<span class="text-purple-600">}</span>`)
               .pauseFor(1000)
