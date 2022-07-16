@@ -7,11 +7,11 @@ export default function ModalForm({ setModalCV }) {
         <div className='relative bg-gray-200 rounded-lg shadow dark:bg-gray-800'>
           <div className='flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600'>
             <h3 className='text-xl font-medium text-high'>View My Resume</h3>
-            {isEnglish ? (
-              <IndonesianIcon setIsEnglish={setIsEnglish} />
-            ) : (
-              <EnglishIcon setIsEnglish={setIsEnglish} />
-            )}
+
+            <IndonesianIcon setIsEnglish={setIsEnglish} />
+
+            <EnglishIcon setIsEnglish={setIsEnglish} />
+
             <ButtonClose setModalCV={setModalCV} />
           </div>
           <iframe
@@ -31,7 +31,9 @@ export default function ModalForm({ setModalCV }) {
     return (
       <svg
         onClick={() => setIsEnglish(false)}
-        className='w-10 ml-8 rounded hover:scale-110 hover:shadow-xl transition-all duration-300'
+        className={`${
+          isEnglish && "grayscale"
+        } w-10 ml-4 rounded hover:scale-110 hover:filter-none hover:shadow-xl transition-all duration-300`}
         xmlns='http://www.w3.org/2000/svg'
         id='flag-icons-id'
         viewBox='0 0 640 480'
@@ -48,7 +50,9 @@ export default function ModalForm({ setModalCV }) {
     return (
       <svg
         onClick={() => setIsEnglish(true)}
-        className='w-10 ml-8 rounded hover:scale-110 hover:shadow-xl transition-all duration-300'
+        className={`${
+          !isEnglish && "grayscale"
+        } w-10 ml-4 rounded hover:scale-110 hover:filter-none hover:shadow-xl transition-all duration-300`}
         xmlns='http://www.w3.org/2000/svg'
         id='flag-icons-gb'
         viewBox='0 0 640 480'
