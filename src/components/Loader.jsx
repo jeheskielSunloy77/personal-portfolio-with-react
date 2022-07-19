@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { AppContext } from "../contexts/AppContext"
+import { AppContext } from "../utils/AppContext"
 import Typewriter from "typewriter-effect"
 export default function Loader() {
   const { setLoader } = useContext(AppContext)

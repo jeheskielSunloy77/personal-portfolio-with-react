@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { AppContext } from "../../contexts/AppContext"
+import { AppContext } from "../../utils/AppContext"
 import { Card, CardLogo } from "./Card"
 
 import javascriptImg from "../../assets/icons/javascript.svg"
@@ -22,6 +22,7 @@ import canvaImg from "../../assets/icons/canva.svg"
 
 export default function SkillsnTools() {
   const { skillsRef, changeTheme } = useContext(AppContext)
+
   const githubLogo = (
     <svg
       className='group-hover:w-[40px] z-10 transition-all duration-500 w-full rounded-lg'
@@ -73,7 +74,6 @@ export default function SkillsnTools() {
       />
     </svg>
   )
-
   return (
     <div ref={skillsRef} id='skills' className='myContainer'>
       <h1 className='mb-10 text-intro text-center sm:text-left'>

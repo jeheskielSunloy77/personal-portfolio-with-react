@@ -51,7 +51,7 @@ export default function ProjectSlider() {
               status: "Work on Progress",
               code: "Private",
               demo: "Prototype",
-              stack: "Next.js, Postgresql, Supabase, Tailwindcss",
+              stack: "Next.js, Typescript, Postgresql, Supabase, Tailwindcss",
             }}
             links={{
               demo: "http://nextjs-iakn-kupang.vercel.app/",
