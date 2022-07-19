@@ -4,6 +4,7 @@ import "./index.css"
 import App from "./App"
 import "swiper/css/bundle"
 import { AppProvider } from "./utils/AppContext"
+
 ReactDOM.render(
   <React.StrictMode>
     <AppProvider>
