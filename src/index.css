@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+	.myContainer {
+		@apply container mx-auto px-6 py-14;
+	}
+	.centerAll {
+		@apply flex flex-col justify-center items-center;
+	}
+	.sectionPrimary {
+		@apply bg-white dark:bg-gray-900 py-5;
+	}
+	.sectionSecondary {
+		@apply bg-gray-100 dark:bg-gray-800 py-5;
+	}
+	.text-intro {
+		@apply text-gray-900 dark:text-gray-100 text-2xl sm:text-4xl font-semibold;
+	}
+	.text-high {
+		@apply text-gray-900 dark:text-gray-100;
+	}
+	.text-medium {
+		@apply text-gray-700 dark:text-gray-200;
+	}
+	.text-low {
+		@apply text-gray-500 dark:text-gray-400;
+	}
+	.text-lowest {
+		@apply text-gray-400 dark:text-gray-500;
+	}
+}
+html,
+body {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	font-family: "Roboto", sans-serif;
+}
+h1 {
+	font-family: "Staatliches", cursive;
+}
+.smallGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	column-gap: 2px;
+	row-gap: 20px;
+}
+@media only screen and (max-width: 640px) {
+	.smallGrid {
+		grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+		row-gap: 10px;
+	}
+}
+
+.swiper {
+	padding-bottom: 50px !important;
+}
+.swiper-pagination-bullet {
+	background-color: #0891b2 !important;
+	opacity: 0.5 !important;
+	width: 10px !important;
+	height: 10px !important;
+}
+.swiper-pagination-bullet-active {
+	opacity: 1 !important;
+}
+
+
