@@ -18,7 +18,8 @@ import thunderclientImg from '../../assets/icons/thunderclient.svg'
 import ubuntuImg from '../../assets/icons/ubuntu.svg'
 import vscodeImg from '../../assets/icons/vscode.svg'
 // import gimpImg from "../../assets/icons/gimp.svg"
-import canvaImg from '../../assets/icons/canva.svg'
+// import canvaImg from '../../assets/icons/canva.svg'
+import jestImg from '../../assets/icons/jest.svg'
 
 const SkillsNTools = () => {
 	const { skillsRef, changeTheme } = useContext(AppContext)
@@ -188,10 +189,10 @@ const SkillsNTools = () => {
 					logo={<CardLogo svg={vercelLogo} />}
 				/>
 				<Card
-					title='Canva'
-					subtitle='media edditor'
-					desc='template, copy, paste'
-					logo={<CardLogo src={canvaImg} />}
+					title='Jest'
+					subtitle='Unit Testing'
+					desc='Green is fun'
+					logo={<CardLogo src={jestImg} />}
 				/>
 			</div>
 		</div>
