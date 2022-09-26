@@ -13,7 +13,7 @@ export const Card = ({ title, subtitle, desc, logo }: Card) => (
 	</div>
 )
 
-export const CardLogo = ({ src, backgroud, svg }: CardLogo) => (
+export const CardLogo = ({ src, backgroud, svg, className }: CardLogo) => (
 	<div
 		className={`${
 			backgroud ? backgroud : 'bg-gray-200 dark:bg-gray-800 p-5'
@@ -25,7 +25,10 @@ export const CardLogo = ({ src, backgroud, svg }: CardLogo) => (
 			<img
 				src={src}
 				alt='Skill or Tool Logo'
-				className='sm:group-hover:w-[40px] z-10 transition-all duration-500 w-full rounded-lg'
+				className={
+					className +
+					' sm:group-hover:w-[40px] z-10 transition-all duration-500 w-full rounded-lg  object-contain'
+				}
 			/>
 		)}
 	</div>
@@ -40,4 +43,5 @@ interface CardLogo {
 	src?: string
 	backgroud?: string
 	svg?: ReactNode
+	className?: string
 }

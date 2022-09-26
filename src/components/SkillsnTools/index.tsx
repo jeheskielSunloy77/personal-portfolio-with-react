@@ -15,6 +15,7 @@ import typescriptImg from '../../assets/icons/typescript.svg'
 import antdImg from '../../assets/icons/antd.svg'
 import auth0Img from '../../assets/icons/auth0.svg'
 import eslintImg from '../../assets/icons/eslint.svg'
+import ginImg from '../../assets/icons/gin.png'
 import goImg from '../../assets/icons/go.svg'
 import supabaseImg from '../../assets/icons/supabase.svg'
 import thunderclientImg from '../../assets/icons/thunderclient.svg'
@@ -22,7 +23,10 @@ import ubuntuImg from '../../assets/icons/ubuntu.svg'
 import vscodeImg from '../../assets/icons/vscode.svg'
 // import gimpImg from "../../assets/icons/gimp.svg"
 // import canvaImg from '../../assets/icons/canva.svg'
+import SwiperCore, { Autoplay, FreeMode } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import jestImg from '../../assets/icons/jest.svg'
+SwiperCore.use([Autoplay, FreeMode])
 
 const SkillsNTools = () => {
 	const { skillsRef, changeTheme } = useContext(AppContext)
@@ -97,142 +101,223 @@ const SkillsNTools = () => {
 				<br />
 				And <span className='text-cyan-500'>Tools</span> I Use
 			</h1>
-			<div className='smallGrid items-center justify-center'>
-				<Card
-					title='Javascript'
-					subtitle='programing language'
-					desc='bread and butter'
-					logo={<CardLogo src={javascriptImg} backgroud='bg-[#f7df1e]' />}
-				/>
-				<Card
-					title='ReactJS'
-					subtitle='JS library'
-					desc='first love'
-					logo={<CardLogo src={reactImg} />}
-				/>
-
-				<Card
-					title='Next.js'
-					subtitle='fullstack framework'
-					desc='all you need'
-					logo={<CardLogo svg={nextjsLogo} />}
-				/>
-				<Card
-					title='Typescript'
-					subtitle='programing language'
-					desc='stockholm syndrome'
-					logo={<CardLogo src={typescriptImg} backgroud='bg-[#3178c6]' />}
-				/>
-				<Card
-					title='Go'
-					subtitle='programing language'
-					desc='Its Go !Golang'
-					logo={<CardLogo src={goImg} />}
-				/>
-				<Card
-					title='Mongodb'
-					subtitle='database'
-					desc='love and hate'
-					logo={<CardLogo src={mongodbImg} />}
-				/>
-				<Card
-					title='Firebase'
-					subtitle='Backend Service'
-					desc='fire and forget'
-					logo={<CardLogo src={firebaseImg} />}
-				/>
-				<Card
-					title='PostgreSQL'
-					subtitle='database'
-					desc='old reliable'
-					logo={<CardLogo src={postgresqlImg} />}
-				/>
-				<Card
-					title='NodeJS'
-					subtitle='JS runtime'
-					desc='JS backbone'
-					logo={<CardLogo src={nodejsImg} />}
-				/>
-				<Card
-					title='ExpressJS'
-					subtitle='Backend Framework'
-					desc='Easy Backend'
-					logo={<CardLogo svg={expressLogo} />}
-				/>
-				<Card
-					title='Tailwind'
-					subtitle='css framework'
-					desc='my secret affair'
-					logo={<CardLogo src={tailwindImg} />}
-				/>
-				<Card
-					title='Ant Design'
-					subtitle='CSS Library'
-					desc='Reactive UI'
-					logo={<CardLogo src={antdImg} />}
-				/>
-				<Card
-					title='Sass'
-					subtitle='css preprocessor'
-					desc='sexy.css'
-					logo={<CardLogo src={sassImg} />}
-				/>
-
-				<Card
-					title='VS Code'
-					subtitle='code edditor'
-					desc='playground'
-					logo={<CardLogo src={vscodeImg} />}
-				/>
-				<Card
-					title='Ubuntu'
-					subtitle='operating system'
-					desc='work, work, work'
-					logo={<CardLogo src={ubuntuImg} />}
-				/>
-				<Card
-					title='Github'
-					subtitle='version control'
-					desc='pull, push, commit'
-					logo={<CardLogo svg={githubLogo} />}
-				/>
-				<Card
-					title='ESlint'
-					subtitle='code analyzer'
-					desc='annoying little thing'
-					logo={<CardLogo src={eslintImg} />}
-				/>
-				<Card
-					title='Supabase'
-					subtitle='Backend Service'
-					desc="shouldn't be free"
-					logo={<CardLogo src={supabaseImg} />}
-				/>
-				<Card
-					title='Auth0'
-					subtitle='authentication platform'
-					desc='guardian angel'
-					logo={<CardLogo src={auth0Img} />}
-				/>
-				<Card
-					title='Thunder Client'
-					subtitle='REST tester'
-					desc='restless api'
-					logo={<CardLogo src={thunderclientImg} />}
-				/>
-				<Card
-					title='Vercel'
-					subtitle='Hosting Provider'
-					desc='easy like 123'
-					logo={<CardLogo svg={vercelLogo} />}
-				/>
-				<Card
-					title='Jest'
-					subtitle='Unit Testing'
-					desc='Green is fun'
-					logo={<CardLogo src={jestImg} />}
-				/>
-			</div>
+			<Swiper
+				effect='fade'
+				loop
+				slidesPerView={9}
+				speed={10000}
+				freeMode={true}
+				autoplay={{
+					delay: 0,
+					waitForTransition: false,
+					pauseOnMouseEnter: true,
+					disableOnInteraction: false,
+				}}
+				mousewheel={{ invert: false }}
+				autoHeight
+			>
+				<SwiperSlide>
+					<Card
+						title='Javascript'
+						subtitle='programing language'
+						desc='bread and butter'
+						logo={<CardLogo src={javascriptImg} backgroud='bg-[#f7df1e]' />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='ReactJS'
+						subtitle='JS library'
+						desc='first love'
+						logo={<CardLogo src={reactImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Next.js'
+						subtitle='fullstack framework'
+						desc='all you need'
+						logo={<CardLogo svg={nextjsLogo} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Typescript'
+						subtitle='programing language'
+						desc='stockholm syndrome'
+						logo={<CardLogo src={typescriptImg} backgroud='bg-[#3178c6]' />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Go'
+						subtitle='programing language'
+						desc='Its Go !Golang'
+						logo={<CardLogo src={goImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Mongodb'
+						subtitle='database'
+						desc='love and hate'
+						logo={<CardLogo src={mongodbImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Firebase'
+						subtitle='Backend Service'
+						desc='fire and forget'
+						logo={<CardLogo src={firebaseImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='PostgreSQL'
+						subtitle='database'
+						desc='old reliable'
+						logo={<CardLogo src={postgresqlImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='NodeJS'
+						subtitle='JS runtime'
+						desc='JS backbone'
+						logo={<CardLogo src={nodejsImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='ExpressJS'
+						subtitle='Backend Framework'
+						desc='Easy Backend'
+						logo={<CardLogo svg={expressLogo} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Gin'
+						subtitle='Web Framework'
+						desc='Go In The Back'
+						logo={<CardLogo src={ginImg} className='h-[110px]' />}
+					/>
+				</SwiperSlide>
+			</Swiper>
+			<Swiper
+				effect='fade'
+				loop
+				slidesPerView={9}
+				speed={10000}
+				freeMode={true}
+				autoplay={{
+					delay: 0,
+					reverseDirection: true,
+					waitForTransition: false,
+					pauseOnMouseEnter: true,
+					disableOnInteraction: false,
+				}}
+				mousewheel={{ invert: false }}
+				autoHeight
+			>
+				<SwiperSlide>
+					<Card
+						title='Tailwind'
+						subtitle='css framework'
+						desc='my secret affair'
+						logo={<CardLogo src={tailwindImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Ant Design'
+						subtitle='CSS Library'
+						desc='Reactive UI'
+						logo={<CardLogo src={antdImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Sass'
+						subtitle='css preprocessor'
+						desc='sexy.css'
+						logo={<CardLogo src={sassImg} />}
+					/>
+				</SwiperSlide>{' '}
+				<SwiperSlide>
+					<Card
+						title='VS Code'
+						subtitle='code edditor'
+						desc='playground'
+						logo={<CardLogo src={vscodeImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Ubuntu'
+						subtitle='operating system'
+						desc='work, work, work'
+						logo={<CardLogo src={ubuntuImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Github'
+						subtitle='version control'
+						desc='pull, push, commit'
+						logo={<CardLogo svg={githubLogo} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='ESlint'
+						subtitle='code analyzer'
+						desc='annoying little thing'
+						logo={<CardLogo src={eslintImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Supabase'
+						subtitle='Backend Service'
+						desc="shouldn't be free"
+						logo={<CardLogo src={supabaseImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Auth0'
+						subtitle='authentication platform'
+						desc='guardian angel'
+						logo={<CardLogo src={auth0Img} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Thunder Client'
+						subtitle='REST tester'
+						desc='restless api'
+						logo={<CardLogo src={thunderclientImg} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Vercel'
+						subtitle='Hosting Provider'
+						desc='easy like 123'
+						logo={<CardLogo svg={vercelLogo} />}
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<Card
+						title='Jest'
+						subtitle='Unit Testing'
+						desc='Green is fun'
+						logo={<CardLogo src={jestImg} />}
+					/>
+				</SwiperSlide>
+			</Swiper>
 		</div>
 	)
 }

@@ -6,7 +6,7 @@ const Timeline = () => (
 		<ol className='items-center sm:flex'>
 			<TimeLineList
 				title='SMA 1, Ambon'
-				date='Enroled on June 14, 2014'
+				date='2014 - 2017'
 				desc='I have a regular times at high school, im not the brightest person in the class but im not the slowest either.'
 			/>
 			<TimeLineList
@@ -16,8 +16,13 @@ const Timeline = () => (
 			/>
 			<TimeLineList
 				title='KreasiX Internship'
-				date='Started from May 5, 2022'
+				date='May 5 - July 21, 2022'
 				desc='My first internship experience, one of the project i did during my internship was to build a backend for the company website using Node.js and Firebase'
+			/>
+			<TimeLineList
+				title='Refactory Bootcamp'
+				date='August 8 - September 18, 2022'
+				desc='A 6-week intensive bootcamp to implement my skills of web development using ReactJS and Go, i got an opertunity to work with a real work project and mentored by a great senior engineer.'
 			/>
 		</ol>
 	</div>

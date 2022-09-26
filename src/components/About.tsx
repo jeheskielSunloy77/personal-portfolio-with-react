@@ -36,14 +36,15 @@ const Text = () => (
 			<p className='text-medium text-lg'>
 				My
 				<span className='mx-1 text-cyan-500 font-semibold'>passion</span>
-				is programing, i've been coding for a couple of years but i just seriously
-				started to jump into the programing world about 6 month ago. my weapon of
-				choice is
-				<span className='mx-1 text-cyan-500 font-semibold'>Javascript</span>
-				and i am currently married to
+				is programing, i've been seriously started to jump into the programing world
+				about 6 month ago and i am absolutly loving it. My weapon of choice is
+				<span className='mx-1 text-cyan-500 font-semibold'>Typescript and Go.</span>
+				I am currently married to
 				<span className='mx-1 text-cyan-500 font-semibold'>ReactJS</span>. I also
-				have work with other frameworks such as
-				<span className='mx-1 text-cyan-500 font-semibold'>Express & Next.js</span>
+				like to work with other frameworks such as
+				<span className='mx-1 text-cyan-500 font-semibold'>
+					Express, Next.js and Gin
+				</span>
 			</p>
 		</div>
 	</div>

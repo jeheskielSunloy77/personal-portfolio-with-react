@@ -61,13 +61,30 @@ const ProjectSlider = () => (
 			</SwiperSlide>
 			<SwiperSlide>
 				<ProjectCard
+					title='CRUD App'
+					desc='A simple CRUD application with Antd on the frontend and using mockapi.io to handle the resources.'
+					img={memeGeneratorImg}
+					details={{
+						status: 'Final',
+						code: 'Public',
+						demo: 'Production Available',
+						stack: 'ReactJS, Tailwindcss, Antd',
+					}}
+					links={{
+						demo: 'https://dataon-project.vercel.app/',
+						code: 'https://github.com/jeheskielSunloy77/dataon-project',
+					}}
+				/>
+			</SwiperSlide>
+			<SwiperSlide>
+				<ProjectCard
 					title='PWA Weather App'
 					desc='A progressive web application that can be installed on any device that can provide an acurate weather report from all around the world.'
 					img={weatherAppImg}
 					details={{
 						status: 'Stable',
 						code: 'Public',
-						demo: 'Available',
+						demo: 'Production Available',
 						stack: 'Next.js, Typescript, Tailwindcss',
 					}}
 					links={{
@@ -102,7 +119,7 @@ const ProjectSlider = () => (
 					details={{
 						status: 'Final',
 						code: 'Public',
-						demo: 'Prototype',
+						demo: 'Available',
 						stack: 'ReactJS',
 					}}
 					links={{
