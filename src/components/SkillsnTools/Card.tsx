@@ -25,6 +25,7 @@ export const CardLogo = ({ src, backgroud, svg, className }: CardLogo) => (
 			<img
 				src={src}
 				alt='Skill or Tool Logo'
+				loading='lazy'
 				className={
 					className +
 					' sm:group-hover:w-[40px] z-10 transition-all duration-500 w-full rounded-lg  object-contain'

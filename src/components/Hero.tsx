@@ -16,7 +16,7 @@ const Hero = () => {
 				width='744'
 				height='558'
 				src={heroImg}
-				alt=''
+				alt='hero-image'
 			/>
 			<SocialIcons />
 			<ScrollDown />

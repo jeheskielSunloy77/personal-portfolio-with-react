@@ -32,6 +32,7 @@ const Intro = () => {
 						height='603'
 						src={myAvatar}
 						alt='introImg'
+						loading='lazy'
 					/>
 				</div>
 			</div>

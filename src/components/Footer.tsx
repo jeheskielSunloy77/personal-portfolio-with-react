@@ -13,11 +13,16 @@ const Footer = () => {
 				ref={footerRef}
 				className='flex flex-col items-center justify-between px-6 py-2 bg-white dark:bg-gray-800 sm:flex-row'
 			>
-				<img src={logo} className='rounded w-14 h-14 dark:grayscale' alt='' />
+				<img
+					src={logo}
+					className='rounded w-14 h-14 dark:grayscale'
+					alt='logo-footer'
+					loading='lazy'
+				/>
 
 				<p className='py-2 text-gray-800 dark:text-white sm:py-0 flex items-center'>
 					Build with
-					<img className='w-5 h-5 mx-1' src={loveIcon} alt='love' />
+					<img className='w-5 h-5 mx-1' src={loveIcon} alt='love' loading='lazy' />
 					with
 					<svg
 						className='ml-1'

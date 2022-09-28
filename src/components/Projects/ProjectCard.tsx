@@ -45,7 +45,8 @@ const ProjectImage = ({ img, details }: ProjectImage) => (
 		<img
 			className='group-hover:scale-125 transition-transform duration-300 ease-out w-full h-full'
 			src={img}
-			alt=''
+			loading='lazy'
+			alt='project-image'
 			width='495'
 			height='350'
 		/>
