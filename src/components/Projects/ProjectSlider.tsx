@@ -2,6 +2,7 @@ import SwiperCore, { Autoplay, Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import crudAppImg from '../../assets/projects/crudApp.webp'
 import fapertaUnipaImg from '../../assets/projects/fapertaUnipa.webp'
 import iaknKupangImg from '../../assets/projects/iaknKupang.webp'
 import libraryImg from '../../assets/projects/library.webp'
@@ -63,7 +64,7 @@ const ProjectSlider = () => (
 				<ProjectCard
 					title='CRUD App'
 					desc='A simple CRUD application with Antd on the frontend and using mockapi.io to handle the resources.'
-					img={memeGeneratorImg}
+					img={crudAppImg}
 					details={{
 						status: 'Final',
 						code: 'Public',
