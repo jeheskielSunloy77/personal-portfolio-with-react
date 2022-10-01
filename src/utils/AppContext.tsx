@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useEffect, useRef, useState } from 'react'
 import useOnScreen from '../hooks/useOnScreen'
 import useTheme from '../hooks/useTheme'
+
 // import background from "../assets/backgrounds/background.svg"
 export const AppContext = createContext<AppContext>([])
 
@@ -43,6 +44,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 		isProjectsVisible,
 		isFooterVisible,
 	])
+
 	return (
 		<AppContext.Provider
 			value={{
@@ -59,7 +61,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
 			}}
 		>
 			<div
-				className={`bg-gradient-to-r from-gray-200 to-white dark:from-[#042c41] dark:to-gray-900`}
+				className={
+					'bg-gradient-to-r from-gray-200 to-white dark:from-[#042c41] dark:to-gray-900'
+				}
 			>
 				{/* <div style={{ backgroundImage: `url(${background})` }}> */}
 				{children}
