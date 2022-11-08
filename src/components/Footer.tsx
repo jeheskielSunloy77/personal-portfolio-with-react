@@ -11,7 +11,7 @@ const Footer = () => {
 		<>
 			<footer
 				ref={footerRef}
-				className='flex flex-col items-center justify-between px-6 py-2 bg-white dark:bg-gray-800 sm:flex-row'
+				className='flex flex-col items-center justify-between px-6 py-2 sm:flex-row'
 			>
 				<img
 					src={logo}

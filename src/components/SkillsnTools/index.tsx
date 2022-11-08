@@ -10,6 +10,7 @@ import {
 	AntdIcon,
 	AstroIcon,
 	Auth0Icon,
+	DockerIcon,
 	DynamicIcons,
 	EslintIcon,
 	FireBaseIcon,
@@ -21,6 +22,7 @@ import {
 	NodejsIcon,
 	PostgresIcon,
 	ReactIcon,
+	ReduxIcon,
 	SassIcon,
 	SupabaseIcon,
 	TailwindIcon,
@@ -113,6 +115,18 @@ const SkillsNTools = () => {
 				</SwiperSlide>
 				<SwiperSlide className='flex'>
 					<Card
+						title='Docker'
+						subtitle='Developer Tool'
+						desc='Dockerize Everything'
+						logo={<CardLogo svg={DockerIcon} />}
+					/>
+					<Card
+						title='Redux'
+						subtitle='React Library'
+						desc='Store, State, Dispatch'
+						logo={<CardLogo svg={ReduxIcon} />}
+					/>
+					<Card
 						title='NodeJS'
 						subtitle='JS runtime'
 						desc='JS backbone'
@@ -153,18 +167,6 @@ const SkillsNTools = () => {
 						subtitle='Programing Language'
 						desc='stockholm syndrome'
 						logo={<CardLogo svg={TypescriptIcon} backgroud='bg-[#3178c6]' />}
-					/>
-					<Card
-						title='Go'
-						subtitle='Programing Language'
-						desc='Its Go !Golang'
-						logo={<CardLogo svg={GoIcon} />}
-					/>
-					<Card
-						title='Mongodb'
-						subtitle='Database'
-						desc='love and hate'
-						logo={<CardLogo svg={MongodbIcon} />}
 					/>
 				</SwiperSlide>
 			</Swiper>

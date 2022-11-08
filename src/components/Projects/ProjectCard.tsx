@@ -52,19 +52,19 @@ const ProjectImage = ({ img, details }: ProjectImage) => (
 		/>
 		<div className='group-hover:translate-x-0 bg-gray-600 opacity-80 transition-all duration-300 ease-out -translate-x-[100%] absolute leading-loose cursor-no-drop text-white h-full w-full left-0 top-0'>
 			<ul className='text-center h-full centerAll'>
-				<li className='transition-all duration-300 ease-out hover:scale-125'>
+				<li>
 					<strong>Status : </strong>
 					{details.status}
 				</li>
-				<li className='transition-all duration-300 ease-out hover:scale-125'>
+				<li>
 					<strong>Live Demo : </strong>
 					{details.demo}
 				</li>
-				<li className='transition-all duration-300 ease-out hover:scale-125'>
+				<li>
 					<strong>Source Code : </strong>
 					{details.code}
 				</li>
-				<li className='transition-all duration-300 ease-out hover:scale-125'>
+				<li>
 					<strong>Stack: </strong>
 					{details.stack}
 				</li>
