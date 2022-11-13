@@ -1,7 +1,7 @@
 import { lazy, Suspense, useContext } from 'react'
 import { Hero, Loader, Navbar } from './components'
 import { AppContext } from './utils/AppContext'
-// lazy load Intro
+// import background from "../assets/backgrounds/background.svg"
 const Intro = lazy(() => import('./components/Intro'))
 const About = lazy(() => import('./components/About'))
 const Timeline = lazy(() => import('./components/Timeline'))
@@ -17,7 +17,8 @@ export default function App() {
 	if (loading) return <Loader />
 
 	return (
-		<>
+		<div className='bg-gradient-to-r from-gray-200 to-white dark:from-[#042c41] dark:to-black'>
+			{/* <div style={{ backgroundImage: `url(${background})` }}> */}
 			<Navbar />
 			<Hero />
 			<Suspense fallback={<span>Loading...</span>}>
@@ -44,6 +45,7 @@ export default function App() {
 			<Suspense fallback={<span>Loading...</span>}>
 				<Footer />
 			</Suspense>
-		</>
+			{/* </div> */}
+		</div>
 	)
 }

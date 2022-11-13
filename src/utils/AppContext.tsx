@@ -8,7 +8,6 @@ import {
 import useTheme from '../hooks/useTheme'
 import { SetBoolean, SetString } from './types'
 
-// import background from "../assets/backgrounds/background.svg"
 export const AppContext = createContext<AppContext>({} as AppContext)
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
@@ -27,15 +26,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 				setLoading,
 			}}
 		>
-			<div
-				className={
-					'bg-gradient-to-r from-gray-200 to-white dark:from-[#042c41] dark:to-gray-900'
-				}
-			>
-				{/* <div style={{ backgroundImage: `url(${background})` }}> */}
-				{children}
-				{/* </div> */}
-			</div>
+			{children}
 		</AppContext.Provider>
 	)
 }

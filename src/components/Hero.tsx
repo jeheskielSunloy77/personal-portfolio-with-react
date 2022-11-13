@@ -200,16 +200,13 @@ const IntroTypewriter = () => {
 									.typeString('an IT Student.')
 									.pauseFor(1500)
 									.deleteChars(13)
-									.typeString(' Web Developer.')
+									.typeString(' Full Stack Developer.')
 									.pauseFor(1500)
-									.deleteChars(15)
+									.deleteChars(21)
 									.typeString(' Gopher.')
 									.pauseFor(1500)
 									.deleteChars(8)
 									.typeString(' Simp for SolidJS.')
-									.changeDeleteSpeed(10)
-									.deleteChars(17)
-									.typeString(' Full Stack Developer.')
 									.pauseFor(1500)
 							}}
 						/>

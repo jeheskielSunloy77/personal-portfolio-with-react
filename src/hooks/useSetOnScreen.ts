@@ -3,7 +3,7 @@ import { AppContext } from '../utils/AppContext'
 import useOnScreen from './useOnScreen'
 
 const useSetOnScreen = (page: string) => {
-	const ref: any = useRef()
+	const ref = useRef(null)
 	const isVisible = useOnScreen(ref)
 	const { setBlockVisibility } = useContext(AppContext)
 	useEffect(() => {

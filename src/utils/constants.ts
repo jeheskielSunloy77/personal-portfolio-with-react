@@ -26,6 +26,7 @@ export const socialLinks = {
 	github: 'https://github.com/jeheskielSunloy77',
 	linkedin: 'https://www.linkedin.com/in/jeheskiel-ventioky-sunloy/',
 }
+
 export const cvLinks = {
 	english: '',
 	bahasa: '',
