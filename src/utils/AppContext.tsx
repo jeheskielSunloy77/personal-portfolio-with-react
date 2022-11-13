@@ -1,63 +1,30 @@
-import { createContext, ReactNode, useEffect, useRef, useState } from 'react'
-import useOnScreen from '../hooks/useOnScreen'
+import {
+	createContext,
+	Dispatch,
+	ReactNode,
+	SetStateAction,
+	useState,
+} from 'react'
 import useTheme from '../hooks/useTheme'
+import { SetBoolean, SetString } from './types'
 
 // import background from "../assets/backgrounds/background.svg"
-export const AppContext = createContext<AppContext>([])
+export const AppContext = createContext<AppContext>({} as AppContext)
 
-export function AppProvider({ children }: { children: ReactNode }) {
-	const [blockVisibility, setBlockVisibility] = useState<string | string[] | []>(
-		[]
-	)
-	const [loader, setLoader] = useState(true)
-	const [changeTheme, setTheme] = useTheme()
-	const heroRef = useRef()
-	const aboutRef = useRef()
-	const skillsRef = useRef()
-	const projectsRef = useRef()
-	const footerRef = useRef()
-	const isHeroVisible = useOnScreen(heroRef)
-	const isAboutVisible = useOnScreen(aboutRef)
-	const isSkillsVisible = useOnScreen(skillsRef)
-	const isProjectsVisible = useOnScreen(projectsRef)
-	const isFooterVisible = useOnScreen(footerRef)
-	useEffect(() => {
-		setBlockVisibility((prev) => {
-			if (isHeroVisible) {
-				return 'hero'
-			} else if (isAboutVisible) {
-				return 'about'
-			} else if (isSkillsVisible) {
-				return 'skills'
-			} else if (isFooterVisible) {
-				return [prev, 'footer']
-			} else if (isProjectsVisible) {
-				return 'projects'
-			} else {
-				return []
-			}
-		})
-	}, [
-		isHeroVisible,
-		isAboutVisible,
-		isSkillsVisible,
-		isProjectsVisible,
-		isFooterVisible,
-	])
+export const AppProvider = ({ children }: { children: ReactNode }) => {
+	const [blockVisibility, setBlockVisibility] = useState<string[]>([])
+	const [loading, setLoading] = useState(true)
+	const { changeTheme, setTheme } = useTheme()
 
 	return (
 		<AppContext.Provider
 			value={{
-				heroRef,
-				aboutRef,
-				skillsRef,
-				projectsRef,
-				footerRef,
 				blockVisibility,
+				setBlockVisibility,
 				changeTheme,
 				setTheme,
-				loader,
-				setLoader,
+				loading,
+				setLoading,
 			}}
 		>
 			<div
@@ -71,4 +38,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
 			</div>
 		</AppContext.Provider>
 	)
+}
+interface AppContext {
+	setBlockVisibility: Dispatch<SetStateAction<string[]>>
+	blockVisibility: string[]
+	changeTheme: string
+	setTheme: SetString
+	loading: boolean
+	setLoading: SetBoolean
 }

@@ -1,12 +1,11 @@
-import { useContext } from 'react'
-import { AppContext } from '../../utils/AppContext'
+import useSetOnScreen from '../../hooks/useSetOnScreen'
 import ProjectSlider from './ProjectSlider'
 
 const Projects = () => {
-	const { projectsRef } = useContext(AppContext)
+	const ref = useSetOnScreen('projects')
 
 	return (
-		<div ref={projectsRef} id='projects' className='myContainer'>
+		<div ref={ref} id='projects' className='myContainer'>
 			<h1 className='mb-10 text-intro text-center sm:text-left'>
 				My Latest <span className='text-cyan-500'>Projects</span>
 			</h1>

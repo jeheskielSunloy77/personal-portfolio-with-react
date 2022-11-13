@@ -3,7 +3,7 @@ import Typewriter from 'typewriter-effect'
 import { AppContext } from '../utils/AppContext'
 
 const Loader = () => {
-	const { setLoader } = useContext(AppContext)
+	const { setLoading } = useContext(AppContext)
 
 	return (
 		<div className='font-consolas text-xl sm:text-4xl text-[#C6C6C6] bg-[#1E1E1E] h-screen w-screen fixed z-50 centerAll'>
@@ -32,7 +32,7 @@ const Loader = () => {
 							)
 							.typeString('<span class="text-purple-600">}</span>')
 							.pauseFor(1000)
-							.callFunction(() => setLoader(false))
+							.callFunction(() => setLoading(false))
 							.start()
 					}}
 				/>

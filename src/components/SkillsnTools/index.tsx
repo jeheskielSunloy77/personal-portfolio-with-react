@@ -5,7 +5,8 @@ import { Card, CardLogo } from './Card'
 // import canvaImg from '../../assets/icons/canva.svg'
 import SwiperCore, { Autoplay, FreeMode } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import ginImg from '../../assets/icons/gin.png'
+import ginImg from '../../assets/icons/gin.webp'
+import useSetOnScreen from '../../hooks/useSetOnScreen'
 import {
 	AntdIcon,
 	AstroIcon,
@@ -34,12 +35,13 @@ import {
 SwiperCore.use([Autoplay, FreeMode])
 
 const SkillsNTools = () => {
-	const { skillsRef, changeTheme } = useContext(AppContext)
+	const ref = useSetOnScreen('skills')
+	const { changeTheme } = useContext(AppContext)
 	const { ExpressIcon, GithubIcon, NextjsIcon, VercelIcon } =
 		DynamicIcons(changeTheme)
 
 	return (
-		<div ref={skillsRef} id='skills' className='myContainer'>
+		<div ref={ref} id='skills' className='myContainer'>
 			<h1 className='mb-10 text-intro text-center sm:text-left'>
 				<span className='text-cyan-500'>Skills</span> I Have
 				<br />
