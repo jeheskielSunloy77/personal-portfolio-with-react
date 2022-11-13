@@ -1,15 +1,16 @@
 import { useContext } from 'react'
 import Typewriter from 'typewriter-effect'
 import heroImg from '../assets/images/heroImg.webp'
+import useSetOnScreen from '../hooks/useSetOnScreen'
 import { AppContext } from '../utils/AppContext'
 import { socialLinks } from '../utils/constants'
 import ButtonSpecial from './buttons/ButtonSpecial'
 
 const Hero = () => {
-	const { heroRef } = useContext(AppContext)
+	const ref = useSetOnScreen('hero')
 
 	return (
-		<div id='home' ref={heroRef} className='myContainer flex h-screen relative'>
+		<div id='home' ref={ref} className='myContainer flex h-screen relative'>
 			<IntroTypewriter />
 			<img
 				className='hidden sm:block w-1/2 h-fit my-auto ml-auto'
@@ -173,7 +174,7 @@ const SocialIcons = () => {
 }
 
 const IntroTypewriter = () => {
-	const { loader } = useContext(AppContext)
+	const { loading } = useContext(AppContext)
 
 	return (
 		<div className='font-staatliches text-4xl leading-snug text-gray-900 dark:text-white font-bold flex  transition-all duration-300'>
@@ -186,7 +187,7 @@ const IntroTypewriter = () => {
 					</span>
 				</h1>
 				<div className='text-2xl sm:text-4xl'>
-					{!loader && (
+					{!loading && (
 						<Typewriter
 							options={{
 								autoStart: true,

@@ -11,10 +11,10 @@ const Navbar = () => {
 				changeTheme === 'dark' ? 'bg-black' : 'bg-white'
 			} shadow-xl bg-opacity-10 backdrop-blur-3xl drop-shadow-lg sm:w-80 h-14 rounded-full fixed left-1/2 -translate-x-1/2 flex justify-center items-center z-30 transition-all duration-700`}
 		>
-			<MenuItem href='#home' active={blockVisibility === 'hero'} />
-			<MenuItem href='#about' active={blockVisibility === 'about'} />
-			<MenuItem href='#skills' active={blockVisibility === 'skills'} />
-			<MenuItem href='#projects' active={blockVisibility.includes('projects')} />
+			<MenuItem href='#home' active={blockVisibility[0] === 'hero'} />
+			<MenuItem href='#about' active={blockVisibility[0] === 'about'} />
+			<MenuItem href='#skills' active={blockVisibility[0] === 'skills'} />
+			<MenuItem href='#projects' active={blockVisibility[0] === 'projects'} />
 		</nav>
 	)
 }
