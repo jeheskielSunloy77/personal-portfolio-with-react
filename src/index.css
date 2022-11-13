@@ -34,10 +34,10 @@ html,
 body {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
-	font-family: "Roboto", sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 h1 {
-	font-family: "Staatliches", cursive;
+	font-family: 'Staatliches', cursive;
 }
 .smallGrid {
 	display: grid;
@@ -64,5 +64,3 @@ h1 {
 .swiper-pagination-bullet-active {
 	opacity: 1 !important;
 }
-
-

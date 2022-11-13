@@ -1,16 +1,18 @@
 import { useContext } from 'react'
 import logo from '../assets/icons/logo.webp'
 import loveIcon from '../assets/icons/love.svg'
+import useSetOnScreen from '../hooks/useSetOnScreen'
 import { AppContext } from '../utils/AppContext'
 import { socialLinks } from '../utils/constants'
 
 const Footer = () => {
-	const { footerRef, changeTheme } = useContext(AppContext)
+	const ref = useSetOnScreen('footer')
+	const { changeTheme } = useContext(AppContext)
 
 	return (
 		<>
 			<footer
-				ref={footerRef}
+				ref={ref}
 				className='flex flex-col items-center justify-between px-6 py-2 sm:flex-row'
 			>
 				<img

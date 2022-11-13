@@ -1,13 +1,12 @@
-import { useContext } from 'react'
 import myAvatar from '../assets/images/myAvatar.webp'
-import { AppContext } from '../utils/AppContext'
+import useSetOnScreen from '../hooks/useSetOnScreen'
 
 const Intro = () => {
-	const { aboutRef } = useContext(AppContext)
+	const ref = useSetOnScreen('about')
 
 	return (
 		<>
-			<div ref={aboutRef} id='about' className='myContainer mt-1'>
+			<div ref={ref} id='about' className='myContainer mt-1'>
 				<h1 className='text-center text-intro'>
 					Let me
 					<span className='text-cyan-500'> intoduce </span>
