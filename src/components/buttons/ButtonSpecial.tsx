@@ -2,7 +2,7 @@ import { Href } from 'src/utils/types'
 
 const ButtonSpecial = ({ text, href }: ButtonSpecial) => (
 	<a href={href}>
-		<button className='shadowBtn hover:before:top-12 hover:before:bg-black dark:hover:before:bg-white text-xl sm:text-3xl h-fit py-1 px-3 mt-2 border-2 border-solid dark:border-white border-black dark:text-white text-black hover:bg-black dark:hover:bg-white dark:hover:text-black hover:text-white transition-all duration-1000 ease-linear rounded-lg relative cursor-pointer'>
+		<button className='relative px-3 py-1 mt-2 text-2xl font-bold leading-snug text-black transition-all duration-1000 ease-linear border-2 border-black border-solid rounded-md cursor-pointer shadowBtn hover:before:top-12 font-staatliches dark:text-white hover:before:bg-black dark:hover:before:bg-white h-fit dark:border-white hover:bg-black dark:hover:bg-white dark:hover:text-black hover:text-white'>
 			{text}
 		</button>
 		<style>{`.shadowBtn::before {
