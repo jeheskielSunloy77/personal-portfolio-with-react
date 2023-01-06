@@ -10,14 +10,15 @@ const Hero = () => {
 	const ref = useSetOnScreen('hero')
 
 	return (
-		<div id='home' ref={ref} className='myContainer flex h-screen relative'>
+		<div id='home' ref={ref} className='relative flex h-screen myContainer'>
 			<IntroTypewriter />
 			<img
-				className='hidden sm:block w-1/2 h-fit my-auto ml-auto'
-				width='744'
-				height='558'
+				className='hidden my-auto ml-auto sm:block'
+				width='500'
+				height='500'
 				src={heroImg}
 				alt='hero-image'
+				loading='lazy'
 			/>
 			<SocialIcons />
 			<ScrollDown />
@@ -27,13 +28,13 @@ const Hero = () => {
 
 const ScrollDown = () => (
 	<p
-		className='absolute bottom-10 right-3 sm:right-0 cursor-default text-medium text-xs flex flex-row items-center hover:translate-y-6 transition-all duration-300'
+		className='absolute flex flex-row items-center text-xs transition-all duration-300 cursor-default bottom-10 right-3 sm:right-0 text-medium hover:translate-y-6'
 		style={{ writingMode: 'vertical-rl' }}
 	>
 		SCROLL DOWN
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
-			className='animate-bounce h-5 w-5 mt-2'
+			className='w-5 h-5 mt-2 animate-bounce'
 			fill='none'
 			viewBox='0 0 24 24'
 			stroke='currentColor'
@@ -52,7 +53,7 @@ const SocialIcons = () => {
 	const { changeTheme, setTheme } = useContext(AppContext)
 
 	return (
-		<div className='flex flex-col justify-center items-center absolute bottom-10 left-3 sm:left-0'>
+		<div className='absolute flex flex-col items-center justify-center bottom-10 left-3 sm:left-0'>
 			{changeTheme === 'light' ? (
 				<svg
 					id='sun'
@@ -61,7 +62,7 @@ const SocialIcons = () => {
 						setTheme(changeTheme)
 						localStorage.setItem('theme', 'light')
 					}}
-					className='cursor-pointer my-1 h-5 w-5 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white'
+					className='w-5 h-5 my-1 text-gray-600 cursor-pointer dark:text-gray-300 hover:text-black dark:hover:text-white'
 					viewBox='0 0 20 20'
 					fill='currentColor'
 				>
@@ -79,7 +80,7 @@ const SocialIcons = () => {
 						setTheme(changeTheme)
 						localStorage.setItem('theme', 'dark')
 					}}
-					className='cursor-pointer my-1 h-5 w-5 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white'
+					className='w-5 h-5 my-1 text-gray-600 cursor-pointer dark:text-gray-300 hover:text-black dark:hover:text-white'
 					viewBox='0 0 20 20'
 					fill='currentColor'
 				>
@@ -177,41 +178,50 @@ const IntroTypewriter = () => {
 	const { loading } = useContext(AppContext)
 
 	return (
-		<div className='font-staatliches text-4xl leading-snug text-gray-900 dark:text-white font-bold flex  transition-all duration-300'>
-			<div className='text-3xl sm:text-4xl my-auto'>
-				<h1>
-					Hello There! <br />
-					Im
-					<span className='ml-2 underline decoration-cyan-500 underline-offset-4'>
-						Jeheskiel Sunloy
-					</span>
-				</h1>
-				<div className='text-2xl sm:text-4xl'>
-					{!loading && (
-						<Typewriter
-							options={{
-								autoStart: true,
-								loop: true,
-							}}
-							onInit={(typewriter) => {
-								typewriter
-									.start()
-									.typeString('<span class="text-cyan-500">I am </span>')
-									.typeString('an IT Student.')
-									.pauseFor(1500)
-									.deleteChars(13)
-									.typeString(' Full Stack Developer.')
-									.pauseFor(1500)
-									.deleteChars(21)
-									.typeString(' Gopher.')
-									.pauseFor(1500)
-									.deleteChars(8)
-									.typeString(' Simp for SolidJS.')
-									.pauseFor(1500)
-							}}
-						/>
-					)}
+		<div className='flex max-w-xl my-auto h-fit'>
+			<div className='my-auto'>
+				<div className='font-bold leading-snug text-gray-900 transition-all duration-300 font-staatliches dark:text-white '>
+					<h3 className='text-2xl'>Hello There!</h3>
+					<h2 className='text-4xl'>
+						Im
+						<span className='ml-2 underline decoration-cyan-500 underline-offset-4'>
+							Jeheskiel Sunloy
+						</span>
+					</h2>
+
+					<div className='text-3xl'>
+						{!loading && (
+							<Typewriter
+								options={{
+									autoStart: true,
+									loop: true,
+								}}
+								onInit={(typewriter) => {
+									typewriter
+										.start()
+										.typeString('<span class="text-cyan-500">I am </span>')
+										.typeString('an IT Student.')
+										.pauseFor(1500)
+										.deleteChars(13)
+										.typeString(' Full Stack Developer.')
+										.pauseFor(1500)
+										.deleteChars(21)
+										.typeString(' Gopher.')
+										.pauseFor(1500)
+										.deleteChars(8)
+										.typeString(' Simp for SolidJS.')
+										.pauseFor(1500)
+								}}
+							/>
+						)}
+					</div>
 				</div>
+				<p className='text-md text-medium'>
+					Hey thank you for passing by, my fullname is Jeheskiel Ventioky Sunloy but
+					my friends call me Jay. I am a student majoring Informatics Engineering at
+					Satya Wacana Christian University. I am currently 21 years old and im
+					hailing from Ambon, Indonesia
+				</p>
 				<ButtonSpecial text='EXPLORE' href='#about' />
 			</div>
 		</div>
