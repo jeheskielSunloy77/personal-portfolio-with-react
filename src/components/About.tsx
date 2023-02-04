@@ -6,7 +6,7 @@ import useSetOnScreen from '../hooks/useSetOnScreen'
 import { AppContext } from '../utils/AppContext'
 
 const About = () => {
-	const { changeTheme } = useContext(AppContext)
+	const { theme } = useContext(AppContext)
 	const ref = useSetOnScreen('about')
 
 	return (
@@ -16,7 +16,7 @@ const About = () => {
 					className='aspect-[2/1] h-[500px]'
 					layers={[
 						{
-							image: changeTheme === 'dark' ? BGclouds : BGmoon,
+							image: theme === 'light' ? BGclouds : BGmoon,
 
 							speed: -30,
 						},
@@ -42,7 +42,7 @@ const Text = () => (
 				about 6 month ago and i am absolutly loving it. My weapon of choice is
 				<span className='mx-1 font-semibold text-cyan-500'>Typescript and Go.</span>
 				I am currently married to
-				<span className='mx-1 font-semibold text-cyan-500'>ReactJS</span>. I also
+				<span className='mx-1 font-semibold text-cyan-500'>ReactJS</span> but i also
 				like to work with other frameworks such as
 				<span className='mx-1 font-semibold text-cyan-500'>
 					Express, Next.js and Gin
