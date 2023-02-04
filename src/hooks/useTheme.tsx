@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 
 const useTheme = () => {
-	const [theme, setTheme] = useState<Theme>('light')
+	const [theme, setTheme] = useState<Theme>('dark')
 
 	useEffect(() => {
 		setTheme((localStorage.getItem('theme') as Theme) || 'light')
