@@ -9,6 +9,7 @@ SwiperCore.use([Pagination, Autoplay])
 
 const ProjectSlider = () => (
 	<Swiper
+		className='w-fit'
 		effect='fade'
 		loop
 		autoplay={{
@@ -25,6 +26,7 @@ const ProjectSlider = () => (
 		{projects.map((project, index) => (
 			<SwiperSlide key={index}>
 				<ProjectCard
+					badge={project.badge}
 					title={project.title}
 					desc={project.desc}
 					img={project.img}

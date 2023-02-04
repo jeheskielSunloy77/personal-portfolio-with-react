@@ -19,8 +19,17 @@ type OnSubmitAnchor = FormEventHandler<HTMLAnchorElement>
 type OnSubmitForm = FormEventHandler<HTMLElement> | undefined
 type Href = Url['href']
 type RefDiv = RefObject<HTMLDivElement>
+type ComponentColors =
+	| 'primary'
+	| 'secondary'
+	| 'accent'
+	| 'error'
+	| 'warning'
+	| 'success'
+	| 'info'
 
 export type {
+	ComponentColors,
 	SetBoolean,
 	SetString,
 	SetNumber,

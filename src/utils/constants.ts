@@ -52,6 +52,9 @@ export const projects = [
 		links: {
 			demo: 'http://nextjs-iakn-kupang.vercel.app/',
 		},
+		badge: {
+			text: 'Active Dev',
+		},
 	},
 	{
 		title: 'Ecommerce Web Scraper',

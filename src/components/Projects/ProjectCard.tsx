@@ -1,13 +1,35 @@
-const ProjectCard = ({ title, desc, img, links, details }: MainProps) => (
+import { ComponentColors } from 'src/utils/types'
+import Badge from '../Badge'
+
+const ProjectCard = ({
+	title,
+	desc,
+	img,
+	links,
+	details,
+	badge,
+}: MainProps) => (
 	<div className='bg-gray-200 dark:bg-gray-800 rounded-lg mx-auto h-[500px] sm:h-[350px] sm:w-[900px] flex flex-col sm:flex-row justify-center items-center shadow-2xl'>
 		<ProjectImage img={img} details={details} />
-		<ProjectDescriptions title={title} desc={desc} links={links} />
+		<ProjectDescriptions title={title} desc={desc} links={links} badge={badge} />
 	</div>
 )
 
-const ProjectDescriptions = ({ title, desc, links }: ProjectDescriptions) => (
+const ProjectDescriptions = ({
+	title,
+	desc,
+	links,
+	badge,
+}: ProjectDescriptions) => (
 	<div className='product-details sm:w-[45%] h-1/2 sm:h-full text-left overflow-hidden px-4 sm:px-10 flex flex-col justify-center'>
-		<h1 className='text-high text-lg mb-2'>{title}</h1>
+		<h1 className='flex items-center gap-2 mb-2 text-lg text-high'>
+			{title}
+			{badge && (
+				<Badge color={badge.color} className='animate-pulse'>
+					{badge.text}
+				</Badge>
+			)}
+		</h1>
 		<p className='text-low'>{desc}</p>
 		<div className='flex mt-4'>
 			{links.code ? (
@@ -43,7 +65,7 @@ const ProjectDescriptions = ({ title, desc, links }: ProjectDescriptions) => (
 const ProjectImage = ({ img, details }: ProjectImage) => (
 	<div className='group w-full sm:w-[55%] h-1/2 sm:h-full transition-all duration-300 ease-out relative overflow-hidden'>
 		<img
-			className='group-hover:scale-125 transition-transform duration-300 ease-out w-full h-full'
+			className='w-full h-full transition-transform duration-300 ease-out group-hover:scale-125'
 			src={img}
 			loading='lazy'
 			alt='project-image'
@@ -51,7 +73,7 @@ const ProjectImage = ({ img, details }: ProjectImage) => (
 			height='350'
 		/>
 		<div className='group-hover:translate-x-0 bg-gray-600 opacity-80 transition-all duration-300 ease-out -translate-x-[100%] absolute leading-loose cursor-no-drop text-white h-full w-full left-0 top-0'>
-			<ul className='text-center h-full centerAll'>
+			<ul className='h-full text-center centerAll'>
 				<li>
 					<strong>Status : </strong>
 					{details.status}
@@ -72,17 +94,19 @@ const ProjectImage = ({ img, details }: ProjectImage) => (
 		</div>
 	</div>
 )
-type ProjectLinks = {
+interface ProjectLinks {
 	code?: string
 	demo?: string
 }
-type ProjectDetails = {
+interface ProjectDetails extends ProjectLinks {
 	status: string
-	demo: string
-	code: string
 	stack: string
 }
 interface ProjectDescriptions {
+	badge?: {
+		text: string
+		color?: ComponentColors
+	}
 	title: string
 	desc: string
 	links: ProjectLinks
@@ -92,12 +116,6 @@ interface ProjectImage {
 	img: string
 	details: ProjectDetails
 }
-interface MainProps {
-	title: string
-	desc: string
-	img: string
-	links: ProjectLinks
-	details: ProjectDetails
-}
+interface MainProps extends ProjectDescriptions, ProjectImage {}
 
 export default ProjectCard

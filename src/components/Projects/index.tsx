@@ -6,7 +6,7 @@ const Projects = () => {
 
 	return (
 		<div ref={ref} id='projects' className='myContainer'>
-			<h1 className='mb-10 text-intro text-center sm:text-left'>
+			<h1 className='mb-10 text-center text-intro sm:text-left'>
 				My Latest <span className='text-cyan-500'>Projects</span>
 			</h1>
 			<div className='flex items-center justify-center'>
