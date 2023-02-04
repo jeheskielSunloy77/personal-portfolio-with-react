@@ -7,7 +7,7 @@ import { socialLinks } from '../utils/constants'
 
 const Footer = () => {
 	const ref = useSetOnScreen('footer')
-	const { changeTheme } = useContext(AppContext)
+	const { theme } = useContext(AppContext)
 
 	return (
 		<>
@@ -22,7 +22,7 @@ const Footer = () => {
 					loading='lazy'
 				/>
 
-				<p className='py-2 text-gray-800 dark:text-white sm:py-0 flex items-center'>
+				<p className='flex items-center py-2 text-gray-800 dark:text-white sm:py-0'>
 					Build with
 					<img className='w-5 h-5 mx-1' src={loveIcon} alt='love' loading='lazy' />
 					with
@@ -37,10 +37,10 @@ const Footer = () => {
 							cx='0'
 							cy='0'
 							r='2.05'
-							fill={changeTheme === 'dark' ? '#2096b7' : '#61dafb'}
+							fill={theme === 'light' ? '#2096b7' : '#61dafb'}
 						/>
 						<g
-							stroke={changeTheme === 'dark' ? '#2096b7' : '#61dafb'}
+							stroke={theme === 'light' ? '#2096b7' : '#61dafb'}
 							strokeWidth='1'
 							fill='none'
 						>

@@ -3,12 +3,12 @@ import { AppContext } from '../utils/AppContext'
 import { Href } from '../utils/types'
 
 const Navbar = () => {
-	const { blockVisibility, changeTheme } = useContext(AppContext)
+	const { blockVisibility, theme } = useContext(AppContext)
 
 	return (
 		<nav
 			className={`${blockVisibility.includes('footer') ? 'top-5' : 'bottom-5'} ${
-				changeTheme === 'dark' ? 'bg-black' : 'bg-white'
+				theme === 'light' ? 'bg-black' : 'bg-white'
 			} shadow-xl bg-opacity-10 backdrop-blur-3xl drop-shadow-lg sm:w-80 h-14 rounded-full fixed left-1/2 -translate-x-1/2 flex justify-center items-center z-30 transition-all duration-700`}
 		>
 			<MenuItem href='#home' active={blockVisibility[0] === 'hero'} />
