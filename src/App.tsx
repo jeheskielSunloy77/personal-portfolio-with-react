@@ -1,11 +1,10 @@
 import { lazy, Suspense, useContext } from 'react'
 import { Hero, Loader, Navbar } from './components'
+import SkillsSlideshowTest from './components/SkillsSlideshowTest'
 import { AppContext } from './utils/AppContext'
-// import background from "../assets/backgrounds/background.svg"
-// const Intro = lazy(() => import('./components/Intro'))
+// import background from "./assets/backgrounds/background.svg"
 const About = lazy(() => import('./components/About'))
 const Timeline = lazy(() => import('./components/Timeline'))
-const SkillsnTools = lazy(() => import('./components/SkillsnTools'))
 const Projects = lazy(() => import('./components/Projects'))
 const Contributions = lazy(() => import('./components/Contributions'))
 const Contact = lazy(() => import('./components/Contact'))
@@ -20,13 +19,9 @@ export default function App() {
 		<div className='bg-gradient-to-r from-gray-200 to-white dark:from-[#042c41] dark:to-black'>
 			{/* <div style={{ backgroundImage: `url(${background})` }}> */}
 			<Navbar />
-
 			<div className='from-gray-300 to-white dark:from-[#042c41] dark:to-black bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]'>
 				<Hero />
 			</div>
-			{/* <Suspense fallback={<span>Loading...</span>}>
-				<Intro />
-			</Suspense> */}
 			<Suspense fallback={<span>Loading...</span>}>
 				<About />
 			</Suspense>
@@ -34,7 +29,7 @@ export default function App() {
 				<Timeline />
 			</Suspense>
 			<Suspense fallback={<span>Loading...</span>}>
-				<SkillsnTools />
+				<SkillsSlideshowTest />
 			</Suspense>
 			<Suspense fallback={<span>Loading...</span>}>
 				<Projects />
@@ -48,6 +43,7 @@ export default function App() {
 			<Suspense fallback={<span>Loading...</span>}>
 				<Footer />
 			</Suspense>
+			{/* <TestCard /> */}
 			{/* </div> */}
 		</div>
 	)
