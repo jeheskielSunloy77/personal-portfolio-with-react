@@ -1,6 +1,6 @@
 const Timeline = () => (
 	<div className='myContainer'>
-		<h1 className='mb-10 text-intro text-center sm:text-left'>
+		<h1 className='mb-10 text-center text-intro sm:text-left'>
 			Educational <span className='text-cyan-500'>Timeline</span>
 		</h1>
 		<ol className='items-center sm:flex'>
@@ -30,9 +30,9 @@ const Timeline = () => (
 const TimeLineList = ({ title, date, desc }: TimeLineList) => (
 	<li className='relative mb-6 sm:mb-0'>
 		<div className='flex items-center'>
-			<div className='flex z-10 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-gray-200 dark:bg-blue-900 sm:ring-8 dark:ring-gray-800 shrink-0'>
+			<div className='z-10 flex items-center justify-center w-6 h-6 rounded-full bg-cyan-200 ring-0 ring-gray-200 dark:bg-cyan-900 sm:ring-8 dark:ring-gray-800 shrink-0'>
 				<svg
-					className='w-3 h-3 text-blue-600 dark:text-blue-300'
+					className='w-3 h-3 text-cyan-600 dark:text-cyan-300'
 					fill='currentColor'
 					viewBox='0 0 20 20'
 					xmlns='http://www.w3.org/2000/svg'
@@ -47,11 +47,11 @@ const TimeLineList = ({ title, date, desc }: TimeLineList) => (
 			<div className='hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700'></div>
 		</div>
 		<div className='mt-3 sm:pr-8'>
-			<p className='text-md font-semibold text-high'>{title}</p>
-			<time className='block mb-2 text-sm font-normal leading-none text-lowest'>
+			<p className='font-semibold text-md text-high'>{title}</p>
+			<time className='block mb-2 text-sm font-normal leading-none text-lightest'>
 				{date}
 			</time>
-			<p className='text-base font-normal text-low'>{desc}</p>
+			<p className='text-base font-normal text-light'>{desc}</p>
 		</div>
 	</li>
 )

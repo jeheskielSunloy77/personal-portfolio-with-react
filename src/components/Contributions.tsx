@@ -1,59 +1,45 @@
-import { CalendarData } from 'react-activity-calendar'
+import { useContext } from 'react'
 import GitHubCalendar from 'react-github-calendar'
 import ReactTooltip from 'react-tooltip'
+import { AppContext } from '../utils/AppContext'
 
 const Contributions = () => {
-	const selectLastHalfYear = (contributions: CalendarData) => {
-		const currentYear = new Date().getFullYear()
-		const currentMonth = new Date().getMonth()
-		const shownMonths = 6
-
-		return contributions.filter((day) => {
-			const date = new Date(day.date)
-			const monthOfDay = date.getMonth()
-
-			return (
-				date.getFullYear() === currentYear &&
-				monthOfDay > currentMonth - shownMonths &&
-				monthOfDay <= currentMonth
-			)
-		})
-	}
+	const { theme } = useContext(AppContext)
+	const isDark = theme === 'dark'
 
 	return (
 		<div className='myContainer'>
-			<h1 className='mb-10 text-intro text-center sm:text-left'>
+			<h1 className='mb-10 text-center text-intro sm:text-left'>
 				Github <span className='text-cyan-500'>Calender</span>
 			</h1>
-			<div className='centerAll text-white'>
+			<div className='text-light centerAll'>
 				<div className='hidden sm:flex'>
 					<GitHubCalendar
 						username='jeheskielSunloy77'
 						blockMargin={6}
 						blockSize={18}
 						theme={{
-							level0: '#113b4b',
-							level1: '#0e7490',
-							level2: '#06b6d4',
-							level3: '#67e8f9',
-							level4: '#cffafe',
+							level0: isDark ? '#113b4b' : '#ebedf0',
+							level1: isDark ? '#0e7490' : '#7dd3fc',
+							level2: isDark ? '#06b6d4' : '#38bdf8',
+							level3: isDark ? '#67e8f9' : '#0ea5e9',
+							level4: isDark ? '#cffafe' : '#0284c7',
 						}}
 					>
 						<ReactTooltip html />
 					</GitHubCalendar>
 				</div>
-				<div className='flex sm:hidden px-4'>
+				<div className='flex px-4 sm:hidden'>
 					<GitHubCalendar
 						username='jeheskielSunloy77'
-						transformData={selectLastHalfYear}
 						blockMargin={6}
 						blockSize={20}
 						theme={{
-							level0: '#113b4b',
-							level1: '#0e7490',
-							level2: '#06b6d4',
-							level3: '#67e8f9',
-							level4: '#cffafe',
+							level0: isDark ? '#113b4b' : '#ebedf0',
+							level1: isDark ? '#0e7490' : '#7dd3fc',
+							level2: isDark ? '#06b6d4' : '#38bdf8',
+							level3: isDark ? '#67e8f9' : '#0ea5e9',
+							level4: isDark ? '#cffafe' : '#0284c7',
 						}}
 					>
 						<ReactTooltip html />

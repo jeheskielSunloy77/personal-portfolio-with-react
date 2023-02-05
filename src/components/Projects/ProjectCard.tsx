@@ -30,7 +30,7 @@ const ProjectDescriptions = ({
 				</Badge>
 			)}
 		</h1>
-		<p className='text-low'>{desc}</p>
+		<p className='text-light'>{desc}</p>
 		<div className='flex mt-4'>
 			{links.code ? (
 				<a href={links.code} target='_blank' rel='noreferrer'>
