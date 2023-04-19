@@ -14,9 +14,9 @@ const Hero = () => {
 			<div className='flex items-center'>
 				<div className='w-full px-6 py-4 rounded-md h-fit bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 dark:bg-opacity-30 '>
 					<div className='relative w-full max-w-lg'>
-						<div className='absolute top-0 bg-purple-300 rounded-full dark:bg-purple-900 -left-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob'></div>
-						<div className='absolute top-0 bg-yellow-300 rounded-full dark:bg-yellow-900 -right-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000'></div>
-						<div className='absolute bg-pink-300 rounded-full dark:bg-pink-900 -bottom-8 left-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000'></div>
+						<div className='absolute top-0 bg-purple-300 rounded-full dark:bg-lime-900 -left-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob'></div>
+						<div className='absolute top-0 bg-yellow-300 rounded-full dark:bg-teal-900 -right-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000'></div>
+						<div className='absolute bg-pink-300 rounded-full dark:bg-emerald-900 -bottom-8 left-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000'></div>
 						<div className='relative'>
 							<IntroTypewriter />
 						</div>

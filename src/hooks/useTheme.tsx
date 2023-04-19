@@ -4,7 +4,8 @@ const useTheme = () => {
 	const [theme, setTheme] = useState<Theme>('dark')
 
 	useEffect(() => {
-		setTheme((localStorage.getItem('theme') as Theme) || 'light')
+		const storedTheme = localStorage.getItem('theme') as Theme | null
+		storedTheme && setTheme(storedTheme)
 	}, [])
 
 	const themeToSwitch = theme === 'dark' ? 'light' : 'dark'

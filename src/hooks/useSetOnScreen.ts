@@ -1,19 +1,29 @@
-import { useContext, useEffect, useRef } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { AppContext } from '../utils/AppContext'
-import useOnScreen from './useOnScreen'
 
-const useSetOnScreen = (page: string) => {
-	const ref = useRef(null)
-	const isVisible = useOnScreen(ref)
+export default function useSetOnScreen<T = HTMLDivElement>(page: string) {
+	const ref = useRef<T>(null)
+	const [isIntersecting, setIntersecting] = useState(false)
+
+	const observer = new IntersectionObserver(([entry]) =>
+		setIntersecting(entry.isIntersecting)
+	)
+
+	useEffect(() => {
+		observer.observe(ref.current as HTMLElement)
+
+		return () => {
+			observer.disconnect()
+		}
+	}, [])
+
 	const { setBlockVisibility } = useContext(AppContext)
 	useEffect(() => {
 		setBlockVisibility((prev) => {
-			if (isVisible && !prev.includes(page)) return [...prev, page]
+			if (isIntersecting && !prev.includes(page)) return [...prev, page]
 			else return prev.filter((item) => item !== page)
 		})
-	}, [isVisible])
+	}, [isIntersecting])
 
 	return ref
 }
-
-export default useSetOnScreen
