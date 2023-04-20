@@ -3,7 +3,7 @@ const Timeline = () => (
 		<h1 className='mb-10 text-center text-intro sm:text-left'>
 			Educational <span className='text-cyan-500'>Timeline</span>
 		</h1>
-		<ol className='items-center sm:flex'>
+		<ol className='items-center sm:flex justify-center'>
 			<TimeLineList
 				title='SMA 1, Ambon'
 				date='2014 - 2017'
@@ -28,7 +28,7 @@ const Timeline = () => (
 	</div>
 )
 const TimeLineList = ({ title, date, desc }: TimeLineList) => (
-	<li className='relative mb-6 sm:mb-0'>
+	<li className='relative mb-6 sm:mb-0 h-36'>
 		<div className='flex items-center'>
 			<div className='z-10 flex items-center justify-center w-6 h-6 rounded-full bg-cyan-200 ring-0 ring-gray-200 dark:bg-cyan-900 sm:ring-8 dark:ring-gray-800 shrink-0'>
 				<svg

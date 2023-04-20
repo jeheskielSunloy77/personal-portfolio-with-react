@@ -1,17 +1,15 @@
-import { ComponentColors } from 'src/utils/types'
+import { ComponentColors, Project } from 'src/utils/types'
 import Badge from '../Badge'
 
-const ProjectCard = ({
-	title,
-	desc,
-	img,
-	links,
-	details,
-	badge,
-}: MainProps) => (
+const ProjectCard = ({ project }: { project: Project }) => (
 	<div className='bg-gray-200 dark:bg-gray-800 rounded-lg mx-auto h-[500px] sm:h-[350px] sm:w-[900px] flex flex-col sm:flex-row justify-center items-center shadow-2xl'>
-		<ProjectImage img={img} details={details} />
-		<ProjectDescriptions title={title} desc={desc} links={links} badge={badge} />
+		<ProjectImage img={project.img} details={project.details} />
+		<ProjectDescriptions
+			title={project.title}
+			desc={project.desc}
+			links={project.links}
+			badge={project.badge}
+		/>
 	</div>
 )
 
@@ -20,7 +18,7 @@ const ProjectDescriptions = ({
 	desc,
 	links,
 	badge,
-}: ProjectDescriptions) => (
+}: Pick<Project, 'title' | 'desc' | 'links' | 'badge'>) => (
 	<div className='product-details sm:w-[45%] h-1/2 sm:h-full text-left overflow-hidden px-4 sm:px-10 flex flex-col justify-center'>
 		<h1 className='flex items-center gap-2 mb-2 text-lg text-high'>
 			{title}
@@ -50,19 +48,45 @@ const ProjectDescriptions = ({
 					Private Project
 				</button>
 			)}
-			<a href={links.demo} target='_blank' rel='noreferrer'>
+			{links.demo ? (
+				<a href={links.demo} target='_blank' rel='noreferrer'>
+					<button
+						type='button'
+						className='py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-cyan-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700'
+					>
+						Live Demo
+					</button>
+				</a>
+			) : (
 				<button
 					type='button'
-					className='py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-cyan-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700'
+					disabled
+					className='py-2.5 px-5 mr-2 mb-2 text-sm cursor-not-allowed  font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-cyan-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700'
 				>
-					Live Demo
+					Unavailable
 				</button>
-			</a>
+			)}
 		</div>
 	</div>
 )
 
-const ProjectImage = ({ img, details }: ProjectImage) => (
+const statusColor: Record<Project['details']['status'], ComponentColors> = {
+	'Work on Progress': 'warning',
+	Final: 'accent',
+	Stable: 'primary',
+	Discontinued: 'error',
+}
+const demoColor: Record<Project['details']['demo'], ComponentColors> = {
+	Available: 'primary',
+	Prototype: 'warning',
+	Unavailable: 'error',
+}
+const codeColor: Record<Project['details']['code'], ComponentColors> = {
+	Private: 'error',
+	Public: 'accent',
+}
+
+const ProjectImage = ({ img, details }: Pick<Project, 'img' | 'details'>) => (
 	<div className='group w-full sm:w-[55%] h-1/2 sm:h-full transition-all duration-300 ease-out relative overflow-hidden'>
 		<img
 			className='w-full h-full transition-transform duration-300 ease-out group-hover:scale-125'
@@ -72,50 +96,33 @@ const ProjectImage = ({ img, details }: ProjectImage) => (
 			width='495'
 			height='350'
 		/>
-		<div className='group-hover:translate-x-0 bg-gray-600 opacity-80 transition-all duration-300 ease-out -translate-x-[100%] absolute leading-loose cursor-no-drop text-white h-full w-full left-0 top-0'>
+		<div className='group-hover:translate-x-0 bg-gray-900 bg-opacity-95 transition-all duration-300 ease-out -translate-x-[100%] absolute leading-loose cursor-no-drop text-white h-full w-full left-0 top-0'>
 			<ul className='h-full text-center centerAll'>
 				<li>
 					<strong>Status : </strong>
-					{details.status}
+					<Badge color={statusColor[details.status]}>{details.status}</Badge>
 				</li>
 				<li>
 					<strong>Live Demo : </strong>
-					{details.demo}
+					<Badge color={demoColor[details.demo]}>{details.demo}</Badge>
 				</li>
 				<li>
 					<strong>Source Code : </strong>
-					{details.code}
+					<Badge color={codeColor[details.code]}>{details.code}</Badge>
 				</li>
 				<li>
 					<strong>Stack: </strong>
-					{details.stack}
+					<div className='flex gap-1'>
+						{details.stack.map((stack, i) => (
+							<Badge key={i} color={stack.badgeColor}>
+								{stack.name}
+							</Badge>
+						))}
+					</div>
 				</li>
 			</ul>
 		</div>
 	</div>
 )
-interface ProjectLinks {
-	code?: string
-	demo?: string
-}
-interface ProjectDetails extends ProjectLinks {
-	status: string
-	stack: string
-}
-interface ProjectDescriptions {
-	badge?: {
-		text: string
-		color?: ComponentColors
-	}
-	title: string
-	desc: string
-	links: ProjectLinks
-}
-
-interface ProjectImage {
-	img: string
-	details: ProjectDetails
-}
-interface MainProps extends ProjectDescriptions, ProjectImage {}
 
 export default ProjectCard

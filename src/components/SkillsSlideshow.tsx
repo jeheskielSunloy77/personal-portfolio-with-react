@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import useSetOnScreen from '../hooks/useSetOnScreen'
 import { AppContext } from '../utils/AppContext'
 
-export default function SkillsSlideshowTest() {
+export default function SkillsSlideshow() {
 	const ref = useSetOnScreen('skills')
 	const { theme } = useContext(AppContext)
 

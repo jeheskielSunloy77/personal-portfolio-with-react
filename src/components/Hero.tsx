@@ -206,6 +206,7 @@ const IntroTypewriter = () => {
 								options={{
 									autoStart: true,
 									loop: true,
+									deleteSpeed: 5,
 								}}
 								onInit={(typewriter) => {
 									typewriter
@@ -217,10 +218,10 @@ const IntroTypewriter = () => {
 										.typeString(' Full Stack Developer.')
 										.pauseFor(1500)
 										.deleteChars(21)
-										.typeString(' Gopher.')
+										.typeString(' Cross-Platform Developer.')
 										.pauseFor(1500)
-										.deleteChars(8)
-										.typeString(' Simp for SolidJS.')
+										.deleteChars(26)
+										.typeString(' Gopher.')
 										.pauseFor(1500)
 								}}
 							/>

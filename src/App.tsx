@@ -1,6 +1,6 @@
 import { lazy, Suspense, useContext } from 'react'
 import { Hero, Loader, Navbar } from './components'
-import SkillsSlideshowTest from './components/SkillsSlideshowTest'
+import SkillsSlideshow from './components/SkillsSlideshow'
 import { AppContext } from './utils/AppContext'
 // import background from "./assets/backgrounds/background.svg"
 const About = lazy(() => import('./components/About'))
@@ -29,7 +29,7 @@ export default function App() {
 				<Timeline />
 			</Suspense>
 			<Suspense fallback={<span>Loading...</span>}>
-				<SkillsSlideshowTest />
+				<SkillsSlideshow />
 			</Suspense>
 			<Suspense fallback={<span>Loading...</span>}>
 				<Projects />
@@ -43,7 +43,6 @@ export default function App() {
 			<Suspense fallback={<span>Loading...</span>}>
 				<Footer />
 			</Suspense>
-			{/* <TestCard /> */}
 			{/* </div> */}
 		</div>
 	)

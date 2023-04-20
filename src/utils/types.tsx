@@ -28,7 +28,28 @@ type ComponentColors =
 	| 'success'
 	| 'info'
 
+interface Project {
+	title: string
+	desc: string
+	img: string
+	details: {
+		status: 'Stable' | 'Work on Progress' | 'Final' | 'Discontinued'
+		demo: 'Available' | 'Prototype' | 'Unavailable'
+		code: 'Public' | 'Private'
+		stack: {
+			name: string
+			badgeColor: ComponentColors
+		}[]
+	}
+	links: {
+		demo?: string
+		code?: string
+	}
+	badge?: { text: string; color?: ComponentColors }
+}
+
 export type {
+	Project,
 	ComponentColors,
 	SetBoolean,
 	SetString,

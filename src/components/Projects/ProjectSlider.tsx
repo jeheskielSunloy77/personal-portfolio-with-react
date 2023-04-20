@@ -25,14 +25,7 @@ const ProjectSlider = () => (
 	>
 		{projects.map((project, index) => (
 			<SwiperSlide key={index}>
-				<ProjectCard
-					badge={project.badge}
-					title={project.title}
-					desc={project.desc}
-					img={project.img}
-					details={project.details}
-					links={project.links}
-				/>
+				<ProjectCard project={project} />
 			</SwiperSlide>
 		))}
 	</Swiper>
