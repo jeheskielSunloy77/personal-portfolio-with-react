@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useContext } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import Typewriter from 'typewriter-effect'
 import heroImg from '../assets/images/heroImg.webp'
 import useSetOnScreen from '../hooks/useSetOnScreen'
@@ -9,6 +9,38 @@ import ButtonSpecial from './buttons/ButtonSpecial'
 
 const Hero = () => {
 	const ref = useSetOnScreen('hero')
+
+	const leftEye = useRef(null)
+	const rightEye = useRef(null)
+	const [angleDegress, setAngleDegrees] = useState(0)
+
+	const angle = (cx: number, cy: number, ex: number, ey: number) => {
+		const dy = ey - cy
+		const dx = ex - cx
+		const rad = Math.atan2(dy, dx)
+		const deg = rad * (180 / Math.PI)
+
+		return deg
+	}
+
+	useEffect(() => {
+		const handleMouseMove = (event: any) => {
+			const mouseX = event.clientX
+			const mouseY = event.clientY
+			const anchor = document.querySelector('#anchor-image')
+			if (!anchor) return
+			const rect = anchor.getBoundingClientRect()
+			const anchorX = rect.left + rect.width / 2
+			const anchorY = rect.top + rect.height / 2
+			const resAngle = angle(anchorX, anchorY, mouseX, mouseY)
+			setAngleDegrees(90 + resAngle)
+		}
+		document.addEventListener('mousemove', handleMouseMove)
+
+		return () => {
+			document.removeEventListener('mousemove', handleMouseMove)
+		}
+	}, [])
 
 	return (
 		<div id='home' ref={ref} className='relative flex h-screen myContainer'>
@@ -29,17 +61,39 @@ const Hero = () => {
 					</div>
 				</div>
 			</motion.div>
-			<motion.img
+			<motion.div
 				transition={{ duration: 1.5, type: 'spring' }}
 				initial={{ x: 50, y: 50, opacity: 0 }}
 				animate={{ x: 0, y: 0, opacity: 1 }}
-				className='hidden my-auto ml-auto sm:block '
-				width='500'
-				height='500'
-				src={heroImg}
-				alt='hero-image'
-				loading='lazy'
-			/>
+				className='relative hidden my-auto ml-auto sm:block'
+			>
+				<img
+					id='anchor-image'
+					width='500'
+					height='500'
+					src={heroImg}
+					alt='hero-image'
+					loading='lazy'
+				/>
+				<div
+					ref={leftEye}
+					style={{
+						transform: `rotate(${angleDegress}deg)`,
+					}}
+					className='w-10 h-10 flex items-start justify-center absolute md:top-28 md:right-16 lg:top-40 lg:right-28'
+				>
+					<div className='rounded-full bg-red-900 w-6 h-6' />
+				</div>
+				<div
+					className='w-10 h-10 flex items-start justify-center absolute md:top-28 md:left-40 lg:top-40 lg:left-60'
+					ref={rightEye}
+					style={{
+						transform: `rotate(${angleDegress}deg)`,
+					}}
+				>
+					<div className='rounded-full bg-red-900 w-6 h-6' />
+				</div>
+			</motion.div>
 			<SocialIcons />
 			<ScrollDown />
 		</div>

@@ -8,6 +8,7 @@ import { AppProvider } from './utils/AppContext'
 ReactDOM.render(
 	<React.StrictMode>
 		<AppProvider>
+			{/* <TestPage /> */}
 			<App />
 		</AppProvider>
 	</React.StrictMode>,
