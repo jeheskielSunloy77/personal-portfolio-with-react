@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { useContext } from 'react'
 import { AppContext } from '../utils/AppContext'
 import { Href } from '../utils/types'
@@ -6,8 +7,10 @@ const Navbar = () => {
 	const { blockVisibility, theme } = useContext(AppContext)
 
 	return (
-		<nav
-			className={`${blockVisibility.includes('footer') ? 'top-5' : 'bottom-5'} ${
+		<motion.nav
+			initial={{ bottom: '20px' }}
+			animate={blockVisibility.includes('footer') ? { top: '20px' } : undefined}
+			className={`${
 				theme === 'light' ? 'bg-black' : 'bg-white'
 			} shadow-xl bg-opacity-10 backdrop-blur-3xl drop-shadow-lg sm:w-80 h-14 rounded-full fixed left-1/2 -translate-x-1/2 flex justify-center items-center z-30 transition-all duration-700`}
 		>
@@ -15,7 +18,7 @@ const Navbar = () => {
 			<MenuItem href='#about' active={blockVisibility[0] === 'about'} />
 			<MenuItem href='#skills' active={blockVisibility[0] === 'skills'} />
 			<MenuItem href='#projects' active={blockVisibility[0] === 'projects'} />
-		</nav>
+		</motion.nav>
 	)
 }
 

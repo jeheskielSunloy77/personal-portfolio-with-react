@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { lazy, ReactNode, Suspense, useContext } from 'react'
-import { Hero, Loader, Navbar } from './components'
+import { Hero, Navbar } from './components'
 import SkillsSlideshow from './components/SkillsSlideshow'
 import { AppContext } from './utils/AppContext'
 // import background from "./assets/backgrounds/background.svg"
@@ -14,7 +14,7 @@ const Footer = lazy(() => import('./components/Footer'))
 export default function App() {
 	const { loading } = useContext(AppContext)
 
-	if (loading) return <Loader />
+	// if (loading) return <Loader />
 
 	return (
 		<div className='bg-gradient-to-r from-gray-200 to-white dark:from-[#042c41] dark:to-black'>
