@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { useContext } from 'react'
 import useSetOnScreen from '../hooks/useSetOnScreen'
 import { AppContext } from '../utils/AppContext'
@@ -8,10 +9,30 @@ export default function SkillsSlideshow() {
 
 	return (
 		<div ref={ref} id='skills' className='myContainer'>
-			<h1 className='mb-10 text-center text-intro sm:text-left'>
-				<span className='text-cyan-500'>Skills</span> I Have
-				<br />
-				And <span className='text-cyan-500'>Tools</span> I Use
+			<h1 className='text-center text-intro sm:text-left flex gap-2'>
+				<motion.div
+					initial={{ x: -50 }}
+					whileInView={{ x: 0 }}
+					transition={{ duration: 1 }}
+					viewport={{ once: true }}
+					className='text-cyan-500'
+				>
+					Skills
+				</motion.div>{' '}
+				I Have
+			</h1>
+			<h1 className='mb-10 text-center text-intro sm:text-left flex gap-2'>
+				And{' '}
+				<motion.div
+					initial={{ y: 50 }}
+					whileInView={{ y: 0 }}
+					transition={{ duration: 1 }}
+					viewport={{ once: true }}
+					className='text-cyan-500'
+				>
+					Tools
+				</motion.div>{' '}
+				I Use
 			</h1>
 			<article className='flex flex-col gap-4 m-auto max-w-[100vw]'>
 				<div className='flex gap-4 overflow-hidden marquee'>

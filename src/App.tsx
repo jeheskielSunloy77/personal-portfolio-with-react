@@ -1,4 +1,5 @@
-import { lazy, Suspense, useContext } from 'react'
+import { motion } from 'framer-motion'
+import { lazy, ReactNode, Suspense, useContext } from 'react'
 import { Hero, Loader, Navbar } from './components'
 import SkillsSlideshow from './components/SkillsSlideshow'
 import { AppContext } from './utils/AppContext'
@@ -26,19 +27,29 @@ export default function App() {
 				<About />
 			</Suspense>
 			<Suspense fallback={<span>Loading...</span>}>
-				<Timeline />
+				<AnimatedSection>
+					<Timeline />
+				</AnimatedSection>
 			</Suspense>
 			<Suspense fallback={<span>Loading...</span>}>
-				<SkillsSlideshow />
+				<AnimatedSection>
+					<SkillsSlideshow />
+				</AnimatedSection>
 			</Suspense>
 			<Suspense fallback={<span>Loading...</span>}>
-				<Projects />
+				<AnimatedSection>
+					<Projects />
+				</AnimatedSection>
 			</Suspense>
 			<Suspense fallback={<span>Loading...</span>}>
-				<Contributions />
+				<AnimatedSection>
+					<Contributions />
+				</AnimatedSection>
 			</Suspense>
 			<Suspense fallback={<span>Loading...</span>}>
-				<Contact />
+				<AnimatedSection>
+					<Contact />
+				</AnimatedSection>
 			</Suspense>
 			<Suspense fallback={<span>Loading...</span>}>
 				<Footer />
@@ -47,3 +58,14 @@ export default function App() {
 		</div>
 	)
 }
+
+const AnimatedSection = ({ children }: { children: ReactNode }) => (
+	<motion.div
+		initial={{ y: 50, opacity: 0 }}
+		transition={{ duration: 1, type: 'spring' }}
+		whileInView={{ y: 0, opacity: 1 }}
+		viewport={{ once: true }}
+	>
+		{children}
+	</motion.div>
+)

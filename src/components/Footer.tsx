@@ -23,10 +23,15 @@ const Footer = () => {
 
 			<p className='flex items-center py-2 text-gray-800 dark:text-white sm:py-0'>
 				Build with
-				<img className='w-5 h-5 mx-1' src={loveIcon} alt='love' loading='lazy' />
+				<img
+					className='w-5 h-5 mx-1  animate-pulse'
+					src={loveIcon}
+					alt='love'
+					loading='lazy'
+				/>
 				with
 				<svg
-					className='ml-1'
+					className='ml-1 hover:rotate-[360deg] transition-transform duration-1000'
 					xmlns='http://www.w3.org/2000/svg'
 					viewBox='-11.5 -10.23174 23 20.46348'
 					width='18px'
@@ -58,7 +63,7 @@ const Footer = () => {
 					rel='noreferrer'
 				>
 					<svg
-						className='w-5 h-5 fill-current'
+						className='w-5 h-5 fill-current hover:rotate-[360deg] transition-transform duration-1000'
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
 						viewBox='0 0 169.063 169.063'
@@ -93,7 +98,7 @@ const Footer = () => {
 					rel='noreferrer'
 				>
 					<svg
-						className='w-5 h-5 fill-current'
+						className='w-5 h-5 fill-current hover:rotate-[360deg] transition-transform duration-1000'
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
 						viewBox='0 0 50 50'
@@ -110,7 +115,7 @@ const Footer = () => {
 					rel='noreferrer'
 				>
 					<svg
-						className='w-5 h-5 fill-current'
+						className='w-5 h-5 fill-current hover:rotate-[360deg] transition-transform duration-1000'
 						viewBox='0 0 24 24'
 						fill='none'
 						xmlns='http://www.w3.org/2000/svg'
@@ -127,7 +132,7 @@ const Footer = () => {
 					rel='noreferrer'
 				>
 					<svg
-						className='w-5 h-5 fill-current'
+						className='w-5 h-5 fill-current hover:rotate-[360deg] transition-transform duration-1000'
 						viewBox='0 0 24 24'
 						fill='none'
 						xmlns='http://www.w3.org/2000/svg'

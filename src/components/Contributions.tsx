@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { useContext } from 'react'
 import GitHubCalendar from 'react-github-calendar'
 import ReactTooltip from 'react-tooltip'
@@ -9,8 +10,17 @@ const Contributions = () => {
 
 	return (
 		<div className='myContainer'>
-			<h1 className='mb-10 text-center text-intro sm:text-left'>
-				Github <span className='text-cyan-500'>Calender</span>
+			<h1 className='mb-10 flex gap-2 text-center text-intro sm:text-left'>
+				<motion.div
+					transition={{ duration: 1 }}
+					initial={{ x: -50 }}
+					whileInView={{ x: 0 }}
+					viewport={{ once: true }}
+					className='text-cyan-500'
+				>
+					Github
+				</motion.div>
+				Calendar
 			</h1>
 			<div className='text-light centerAll'>
 				<div className='hidden sm:flex'>

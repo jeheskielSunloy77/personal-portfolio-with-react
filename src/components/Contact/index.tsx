@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { socialLinks } from '../../utils/constants'
 import ButtonPrimary from '../buttons/ButtonPrimary'
@@ -28,8 +29,17 @@ const Contact = () => {
 }
 const Text = () => (
 	<>
-		<h1 className='mb-10 text-intro text-center'>
-			Get in <span className='text-cyan-500'>Touch</span>
+		<h1 className='flex gap-2 mb-10 text-intro justify-center'>
+			Get in
+			<motion.div
+				initial={{ y: -50 }}
+				whileInView={{ y: 0 }}
+				transition={{ duration: 1 }}
+				viewport={{ once: true }}
+				className='text-cyan-500'
+			>
+				Touch
+			</motion.div>
 		</h1>
 		<p className='text-medium text-lg text-center'>
 			<span className='mx-1 text-cyan-500 font-semibold'>Thank you</span>

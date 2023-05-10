@@ -1,7 +1,17 @@
+import { motion } from 'framer-motion'
 const Timeline = () => (
 	<div className='myContainer'>
-		<h1 className='mb-10 text-center text-intro sm:text-left'>
-			Educational <span className='text-cyan-500'>Timeline</span>
+		<h1 className='mb-10 text-center text-intro sm:text-left flex gap-2'>
+			Educational
+			<motion.div
+				initial={{ x: 50 }}
+				whileInView={{ x: 0 }}
+				viewport={{ once: true }}
+				className='text-cyan-500'
+				transition={{ duration: 1 }}
+			>
+				Timeline
+			</motion.div>
 		</h1>
 		<ol className='items-center sm:flex justify-center'>
 			<TimeLineList
