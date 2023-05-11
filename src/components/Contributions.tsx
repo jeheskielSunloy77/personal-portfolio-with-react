@@ -1,12 +1,31 @@
 import { motion } from 'framer-motion'
-import { useContext } from 'react'
+import { ComponentProps, useContext } from 'react'
 import GitHubCalendar from 'react-github-calendar'
 import ReactTooltip from 'react-tooltip'
 import { AppContext } from '../utils/AppContext'
 
+type TransformData = ComponentProps<typeof GitHubCalendar>['transformData']
+
 const Contributions = () => {
 	const { theme } = useContext(AppContext)
 	const isDark = theme === 'dark'
+
+	const selectLastHalfYear: TransformData = (contributions) => {
+		const currentYear = new Date().getFullYear()
+		const currentMonth = new Date().getMonth()
+		const shownMonths = 6
+
+		return contributions.filter((activity) => {
+			const date = new Date(activity.date)
+			const monthOfDay = date.getMonth()
+
+			return (
+				date.getFullYear() === currentYear &&
+				monthOfDay > currentMonth - shownMonths &&
+				monthOfDay <= currentMonth
+			)
+		})
+	}
 
 	return (
 		<div className='myContainer'>
@@ -43,7 +62,8 @@ const Contributions = () => {
 					<GitHubCalendar
 						username='jeheskielSunloy77'
 						blockMargin={6}
-						blockSize={20}
+						blockSize={18}
+						transformData={selectLastHalfYear}
 						theme={{
 							level0: isDark ? '#113b4b' : '#ebedf0',
 							level1: isDark ? '#0e7490' : '#7dd3fc',
