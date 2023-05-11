@@ -1,7 +1,9 @@
+/* eslint-disable indent */
 import { motion } from 'framer-motion'
 import { useContext, useEffect, useRef, useState } from 'react'
 import Typewriter from 'typewriter-effect'
-import heroImg from '../assets/images/heroImg.webp'
+import gopherNoseImage from '../assets/images/gopher-nose.webp'
+import gopherImage from '../assets/images/gopher.webp'
 import useSetOnScreen from '../hooks/useSetOnScreen'
 import { AppContext } from '../utils/AppContext'
 import { socialLinks } from '../utils/constants'
@@ -9,38 +11,6 @@ import ButtonSpecial from './buttons/ButtonSpecial'
 
 const Hero = () => {
 	const ref = useSetOnScreen('hero')
-
-	const leftEye = useRef(null)
-	const rightEye = useRef(null)
-	const [angleDegress, setAngleDegrees] = useState(0)
-
-	const angle = (cx: number, cy: number, ex: number, ey: number) => {
-		const dy = ey - cy
-		const dx = ex - cx
-		const rad = Math.atan2(dy, dx)
-		const deg = rad * (180 / Math.PI)
-
-		return deg
-	}
-
-	useEffect(() => {
-		const handleMouseMove = (event: any) => {
-			const mouseX = event.clientX
-			const mouseY = event.clientY
-			const anchor = document.querySelector('#anchor-image')
-			if (!anchor) return
-			const rect = anchor.getBoundingClientRect()
-			const anchorX = rect.left + rect.width / 2
-			const anchorY = rect.top + rect.height / 2
-			const resAngle = angle(anchorX, anchorY, mouseX, mouseY)
-			setAngleDegrees(90 + resAngle)
-		}
-		document.addEventListener('mousemove', handleMouseMove)
-
-		return () => {
-			document.removeEventListener('mousemove', handleMouseMove)
-		}
-	}, [])
 
 	return (
 		<div id='home' ref={ref} className='relative flex h-screen myContainer'>
@@ -61,42 +31,164 @@ const Hero = () => {
 					</div>
 				</div>
 			</motion.div>
+			<HeroImage />
+			<SocialIcons />
+			<ScrollDown />
+		</div>
+	)
+}
+
+const shakeNoseAnimation = {
+	rotate: [0, 10, -10, 10, -10, 10, -10, 0],
+	y: [0, -1, 1, -1, 1, -1, 1, 0],
+}
+
+const HeroImage = () => {
+	const [isLoaded, setIsLoaded] = useState(false)
+	const [shakeNose, setShakeNose] = useState(false)
+	const [showDialogueBox, setShowDialogueBox] = useState(true)
+	const [timesHited, setTimesHited] = useState(0)
+	const [dialogueBox, setDialogueBox] = useState({
+		text: 'Hello World!',
+		delay: 2,
+		duration: 0.5,
+	})
+	const leftEye = useRef(null)
+	const rightEye = useRef(null)
+	const [angleDegress, setAngleDegrees] = useState(0)
+
+	const angle = (cx: number, cy: number, ex: number, ey: number) => {
+		const dy = ey - cy
+		const dx = ex - cx
+		const rad = Math.atan2(dy, dx)
+		const deg = rad * (180 / Math.PI)
+
+		return deg
+	}
+
+	useEffect(() => {
+		const handleMouseMove = (event: MouseEvent) => {
+			const mouseX = event.clientX
+			const mouseY = event.clientY
+			const anchor = document.querySelector('#anchor-image')
+			if (!anchor) return
+			const rect = anchor.getBoundingClientRect()
+			const anchorX = rect.left + rect.width / 2
+			const anchorY = rect.top + rect.height / 2
+			const resAngle = angle(anchorX, anchorY, mouseX, mouseY)
+			setAngleDegrees(90 + resAngle)
+		}
+		document.addEventListener('mousemove', handleMouseMove)
+
+		return () => {
+			document.removeEventListener('mousemove', handleMouseMove)
+		}
+	}, [])
+
+	useEffect(() => {
+		if (!showDialogueBox) return
+		const timer = setTimeout(
+			() => {
+				setShowDialogueBox(false)
+			},
+			timesHited === 0 ? 3000 : 2000
+		)
+
+		return () => clearTimeout(timer)
+	}, [showDialogueBox])
+
+	const popDialogue = (text: string) => {
+		setDialogueBox((prev) => ({ ...prev, text, delay: 0 }))
+		setShowDialogueBox(true)
+		setTimesHited((prev) => prev + 1)
+	}
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setShakeNose(true)
+			setTimeout(() => {
+				setShakeNose(false)
+			}, 500)
+		}, 5000)
+
+		return () => clearTimeout(timer)
+	}, [shakeNose])
+
+	return (
+		<>
 			<motion.div
 				transition={{ duration: 1.5, type: 'spring' }}
 				initial={{ x: 50, y: 50, opacity: 0 }}
 				animate={{ x: 0, y: 0, opacity: 1 }}
 				className='relative hidden my-auto ml-auto sm:block'
 			>
-				<img
-					id='anchor-image'
-					width='500'
-					height='500'
-					src={heroImg}
-					alt='hero-image'
-					loading='lazy'
-				/>
 				<div
-					ref={leftEye}
-					style={{
-						transform: `rotate(${angleDegress}deg)`,
-					}}
-					className='w-10 h-10 flex items-start justify-center absolute md:top-28 md:right-16 lg:top-40 lg:right-28'
+					onClick={() =>
+						popDialogue(
+							timesHited === 0
+								? 'Ouch!'
+								: timesHited === 1
+								? 'Stop It!'
+								: 'Please Dont!'
+						)
+					}
 				>
-					<div className='rounded-full bg-red-900 w-6 h-6' />
-				</div>
-				<div
-					className='w-10 h-10 flex items-start justify-center absolute md:top-28 md:left-40 lg:top-40 lg:left-60'
-					ref={rightEye}
-					style={{
-						transform: `rotate(${angleDegress}deg)`,
-					}}
-				>
-					<div className='rounded-full bg-red-900 w-6 h-6' />
+					<img
+						onLoad={() => setIsLoaded(true)}
+						id='anchor-image'
+						width='500'
+						height='500'
+						src={gopherImage}
+						alt='hero-image'
+						loading='lazy'
+						className='z-[1000]'
+					/>
+					{isLoaded && (
+						<>
+							<div
+								ref={leftEye}
+								style={{
+									transform: `rotate(${angleDegress}deg)`,
+								}}
+								className='w-10 h-10 lg:w-14 lg:h-14 flex items-start justify-center absolute md:top-28 md:right-16 xl:top-40 xl:right-24 lg:top-36 lg:right-24'
+							>
+								<div className='rounded-full bg-red-900 w-6 h-6 lg:w-10 lg:h-10 hover:scale-90 transition-transform' />
+							</div>
+							<div
+								className='w-10 h-10 lg:w-14 lg:h-14 flex items-start justify-center absolute md:top-28 md:left-40 lg:top-36 lg:left-52 xl:top-40 xl:left-56'
+								ref={rightEye}
+								style={{
+									transform: `rotate(${angleDegress}deg)`,
+								}}
+							>
+								<div className='rounded-full bg-red-900 w-6 h-6 lg:w-10 lg:h-10 hover:scale-90 transition-transform' />
+							</div>
+							<motion.img
+								animate={shakeNose ? shakeNoseAnimation : undefined}
+								whileHover={shakeNoseAnimation}
+								src={gopherNoseImage}
+								alt='gopher nose'
+								className='flex items-start justify-center lg:w-5 lg:h-5 md:w-[14px] md:h-[14px] absolute md:top-[134px] md:left-[210px] xl:top-48 xl:left-[308px] lg:top-[180px] lg:left-[284px]'
+							/>
+							<motion.div
+								initial={{ y: 100, opacity: 0 }}
+								animate={
+									showDialogueBox ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
+								}
+								transition={{
+									delay: dialogueBox.delay,
+									duration: dialogueBox.duration,
+								}}
+								className='bg-gray-200 dark:bg-gray-800 px-4 py-2 absolute top-0 right-0 rounded-md w-32 text-center'
+							>
+								{dialogueBox.text}
+								<div className='w-0 h-0 border-solid border-[10px_10px_0_10px]  border-[#1f2937_transparent_transparent_transparent] absolute -bottom-2 left-4' />
+							</motion.div>
+						</>
+					)}
 				</div>
 			</motion.div>
-			<SocialIcons />
-			<ScrollDown />
-		</div>
+		</>
 	)
 }
 
@@ -289,9 +381,9 @@ const IntroTypewriter = () => {
 										.typeString(' Full Stack Developer.')
 										.pauseFor(1500)
 										.deleteChars(21)
-										.typeString(' Cross-Platform Developer.')
+										.typeString(' Mobile Developer.')
 										.pauseFor(1500)
-										.deleteChars(26)
+										.deleteChars(18)
 										.typeString(' Gopher.')
 										.pauseFor(1500)
 								}}
