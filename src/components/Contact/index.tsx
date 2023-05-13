@@ -1,14 +1,24 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import useModal from '../../hooks/useModal'
 import { socialLinks } from '../../utils/constants'
-import ButtonPrimary from '../buttons/ButtonPrimary'
-import ButtonSecondary from '../buttons/ButtonSecondary'
+import Button from '../buttons/Button'
 import ModalCV from './ModalCV'
 import ModalForm from './ModalForm'
 
 const Contact = () => {
-	const [modalForm, setModalForm] = useState(false)
-	const [modalCV, setModalCV] = useState(false)
+	const { isClosing, toggleModal } = useModal()
+	const [modal, setModal] = useState<'form' | 'cv' | null>(null)
+
+	const closeModal = () => {
+		setModal(null)
+		toggleModal()
+	}
+
+	const openModal = (modal: 'form' | 'cv') => {
+		setModal(modal)
+		toggleModal()
+	}
 
 	return (
 		<>
@@ -17,13 +27,19 @@ const Contact = () => {
 					<Text />
 					<SocialIcons />
 					<div className='flex justify-center items-center mt-4'>
-						<ButtonPrimary text='Send a Message' onClick={() => setModalForm(true)} />
-						<ButtonSecondary text='View Resume' onClick={() => setModalCV(true)} />
+						<Button onClick={() => openModal('form')}>Send a Message</Button>
+						<Button color='secondary' onClick={() => openModal('cv')}>
+							View Resume
+						</Button>
 					</div>
 				</div>
 			</div>
-			{modalForm && <ModalForm setModalForm={setModalForm} />}
-			{modalCV && <ModalCV setModalCV={setModalCV} />}
+			{modal === 'form' && (
+				<ModalForm toggleModal={closeModal} isClosing={isClosing} />
+			)}
+			{modal === 'cv' && (
+				<ModalCV toggleModal={closeModal} isClosing={isClosing} />
+			)}
 		</>
 	)
 }

@@ -1,34 +1,35 @@
 import { useState } from 'react'
 import { SetBoolean } from 'src/utils/types'
+import Modal, { ModalProps } from '../Modal'
 
-export default function ModalForm({ setModalCV }: { setModalCV: SetBoolean }) {
+type ModalCvProps = Pick<ModalProps, 'toggleModal' | 'isClosing'>
+
+export default function ModalCv({ toggleModal, isClosing }: ModalCvProps) {
 	const [isEnglish, setIsEnglish] = useState(true)
 
 	return (
-		<div className='fixed z-40 w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 bg-opacity-60 centerAll'>
-			<div className='relative p-4 w-full sm:max-w-7xl'>
-				<div className='relative bg-gray-200 rounded-lg shadow dark:bg-gray-800'>
-					<div className='flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600'>
-						<h3 className='text-xl font-medium text-high'>View My Resume</h3>
-
-						<IndonesianIcon setIsEnglish={setIsEnglish} isEnglish={isEnglish} />
-
-						<EnglishIcon setIsEnglish={setIsEnglish} isEnglish={isEnglish} />
-
-						<ButtonClose setModalCV={setModalCV} />
-					</div>
-					<iframe
-						className='w-full h-[80vh]'
-						src={
-							isEnglish
-								? 'https://drive.google.com/file/d/1vcc4JOOs2O_wKsfI82Jdt67xdyqtgDhC/preview'
-								: 'https://drive.google.com/file/d/1rJMMV74ujvS8pQcRxIIb7-NmuTx3bjLI/preview'
-						}
-						allow='autoplay'
-					></iframe>
-				</div>
-			</div>
-		</div>
+		<Modal
+			className='sm:w-[60vw]'
+			isClosing={isClosing}
+			toggleModal={toggleModal}
+			title={
+				<>
+					<h3 className='text-xl font-medium text-high'>View My Resume</h3>
+					<IndonesianIcon setIsEnglish={setIsEnglish} isEnglish={isEnglish} />
+					<EnglishIcon setIsEnglish={setIsEnglish} isEnglish={isEnglish} />
+				</>
+			}
+		>
+			<iframe
+				className='w-full h-[80vh]'
+				src={
+					isEnglish
+						? 'https://drive.google.com/file/d/1vcc4JOOs2O_wKsfI82Jdt67xdyqtgDhC/preview'
+						: 'https://drive.google.com/file/d/1rJMMV74ujvS8pQcRxIIb7-NmuTx3bjLI/preview'
+				}
+				allow='autoplay'
+			></iframe>
+		</Modal>
 	)
 }
 
@@ -73,26 +74,6 @@ const EnglishIcon = ({ setIsEnglish, isEnglish }: LanguageIcon) => (
 	</svg>
 )
 
-const ButtonClose = ({ setModalCV }: { setModalCV: SetBoolean }) => (
-	<button
-		onClick={() => setModalCV(false)}
-		type='button'
-		className='text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white'
-	>
-		<svg
-			className='w-5 h-5'
-			fill='currentColor'
-			viewBox='0 0 20 20'
-			xmlns='http://www.w3.org/2000/svg'
-		>
-			<path
-				fillRule='evenodd'
-				d='M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z'
-				clipRule='evenodd'
-			></path>
-		</svg>
-	</button>
-)
 interface LanguageIcon {
 	isEnglish: boolean
 	setIsEnglish: SetBoolean
