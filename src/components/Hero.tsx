@@ -31,7 +31,7 @@ const Hero = () => {
 					</div>
 				</div>
 			</motion.div>
-			<HeroImage />
+			<Gopher />
 			<SocialIcons />
 			<ScrollDown />
 		</div>
@@ -43,7 +43,7 @@ const shakeNoseAnimation = {
 	y: [0, -1, 1, -1, 1, -1, 1, 0],
 }
 
-const HeroImage = () => {
+const Gopher = () => {
 	const [isLoaded, setIsLoaded] = useState(false)
 	const [shakeNose, setShakeNose] = useState(false)
 	const [showDialogueBox, setShowDialogueBox] = useState(true)
@@ -132,6 +132,7 @@ const HeroImage = () => {
 								: 'Please Dont!'
 						)
 					}
+					className='cursor-pointer'
 				>
 					<img
 						onLoad={() => setIsLoaded(true)}
@@ -141,7 +142,7 @@ const HeroImage = () => {
 						src={gopherImage}
 						alt='hero-image'
 						loading='lazy'
-						className='z-[1000]'
+						className='z-[1000] filter drop-shadow-[0_0_0.75rem_#000000]'
 					/>
 					{isLoaded && (
 						<>

@@ -30,8 +30,17 @@ type ComponentColors =
 
 interface Project {
 	title: string
-	desc: string
+	desc: {
+		short: string
+		description: string
+		list?: string[]
+		aditional?: string
+	}
 	img: string
+	video: {
+		src: string
+		isPortrait?: boolean
+	}
 	details: {
 		status: 'Stable' | 'Work on Progress' | 'Final' | 'Discontinued'
 		demo: 'Available' | 'Prototype' | 'Unavailable'

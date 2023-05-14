@@ -23,9 +23,9 @@ const ProjectSlider = () => (
 			dynamicBullets: true,
 		}}
 	>
-		{projects.map((project, index) => (
+		{projects.map((_, index) => (
 			<SwiperSlide key={index}>
-				<ProjectCard project={project} />
+				<ProjectCard projectIndex={index} projects={projects} />
 			</SwiperSlide>
 		))}
 	</Swiper>

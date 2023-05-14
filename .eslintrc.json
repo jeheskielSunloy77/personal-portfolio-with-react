@@ -25,7 +25,7 @@
 		"linebreak-style": "off",
 		"quotes": ["error", "single"],
 		"semi": ["error", "never"],
-		"react/jsx-props-no-spreading": 2,
+		"react/jsx-props-no-spreading": "off",
 		"@typescript-eslint/no-unused-vars": ["error"],
 		"padding-line-between-statements": [
 			"error",
