@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { lazy, ReactNode, Suspense, useContext } from 'react'
+import background from './assets/backgrounds/background.svg'
 import { Hero, Loader, Navbar } from './components'
 import SkillsSlideshow from './components/SkillsSlideshow'
 import { AppContext } from './utils/AppContext'
-// import background from "./assets/backgrounds/background.svg"
 const About = lazy(() => import('./components/About'))
 const Timeline = lazy(() => import('./components/Timeline'))
 const Projects = lazy(() => import('./components/Projects'))
@@ -17,45 +17,33 @@ export default function App() {
 	if (loading) return <Loader />
 
 	return (
-		<div className='bg-gradient-to-r from-gray-200 to-white dark:from-[#042c41] dark:to-black'>
-			{/* <div style={{ backgroundImage: `url(${background})` }}> */}
-			<Navbar />
-			<div className='from-gray-300 to-white dark:from-[#042c41] dark:to-black bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]'>
-				<Hero />
+		<>
+			<div className='bg-gradient-to-r from-gray-200 to-white dark:from-[#042638] dark:to-black'>
+				<div style={{ backgroundImage: `url(${background})` }}>
+					<Hero />
+					<Suspense fallback={<span>Loading...</span>}>
+						<About />
+						<AnimatedSection>
+							<Timeline />
+						</AnimatedSection>
+						<AnimatedSection>
+							<SkillsSlideshow />
+						</AnimatedSection>
+						<AnimatedSection>
+							<Projects />
+						</AnimatedSection>
+						<AnimatedSection>
+							<Contributions />
+						</AnimatedSection>
+						<AnimatedSection>
+							<Contact />
+						</AnimatedSection>
+						<Footer />
+					</Suspense>
+				</div>
 			</div>
-			<Suspense fallback={<span>Loading...</span>}>
-				<About />
-			</Suspense>
-			<Suspense fallback={<span>Loading...</span>}>
-				<AnimatedSection>
-					<Timeline />
-				</AnimatedSection>
-			</Suspense>
-			<Suspense fallback={<span>Loading...</span>}>
-				<AnimatedSection>
-					<SkillsSlideshow />
-				</AnimatedSection>
-			</Suspense>
-			<Suspense fallback={<span>Loading...</span>}>
-				<AnimatedSection>
-					<Projects />
-				</AnimatedSection>
-			</Suspense>
-			<Suspense fallback={<span>Loading...</span>}>
-				<AnimatedSection>
-					<Contributions />
-				</AnimatedSection>
-			</Suspense>
-			<Suspense fallback={<span>Loading...</span>}>
-				<AnimatedSection>
-					<Contact />
-				</AnimatedSection>
-			</Suspense>
-			<Suspense fallback={<span>Loading...</span>}>
-				<Footer />
-			</Suspense>
-			{/* </div> */}
-		</div>
+			<Navbar />
+		</>
 	)
 }
 

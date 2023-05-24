@@ -13,28 +13,31 @@ const Hero = () => {
 	const ref = useSetOnScreen('hero')
 
 	return (
-		<div id='home' ref={ref} className='relative flex h-screen myContainer'>
-			<motion.div
-				transition={{ duration: 1.5, type: 'spring' }}
-				initial={{ x: -50, y: 50, opacity: 0 }}
-				animate={{ x: 0, y: 0, opacity: 1 }}
-				className='flex items-center'
-			>
-				<div className='w-full px-6 py-4 rounded-md h-fit bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 dark:bg-opacity-30 '>
-					<div className='relative w-full max-w-lg'>
-						<div className='absolute top-0 bg-purple-300 rounded-full dark:bg-lime-900 -left-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob'></div>
-						<div className='absolute top-0 bg-yellow-300 rounded-full dark:bg-teal-900 -right-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000'></div>
-						<div className='absolute bg-pink-300 rounded-full dark:bg-emerald-900 -bottom-8 left-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000'></div>
-						<div className='relative'>
-							<IntroTypewriter />
+		<>
+			<div id='home' ref={ref} className='relative flex h-screen myContainer'>
+				<motion.div
+					transition={{ duration: 1.5, type: 'spring' }}
+					initial={{ x: -50, y: 50, opacity: 0 }}
+					animate={{ x: 0, y: 0, opacity: 1 }}
+					className='flex items-center'
+				>
+					<div className='w-full px-6 py-4 rounded-md h-fit bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 dark:bg-opacity-30 '>
+						<div className='relative w-full max-w-lg'>
+							<div className='absolute top-0 bg-purple-300 rounded-full dark:bg-lime-900 -left-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob'></div>
+							<div className='absolute top-0 bg-yellow-300 rounded-full dark:bg-teal-900 -right-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000'></div>
+							<div className='absolute bg-pink-300 rounded-full dark:bg-emerald-900 -bottom-8 left-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000'></div>
+							<div className='relative'>
+								<IntroTypewriter />
+							</div>
 						</div>
 					</div>
-				</div>
-			</motion.div>
-			<Gopher />
-			<SocialIcons />
-			<ScrollDown />
-		</div>
+				</motion.div>
+				<Gopher />
+				<SocialIcons />
+				<ScrollDown />
+			</div>
+			<div className='h-10' />
+		</>
 	)
 }
 
@@ -142,7 +145,7 @@ const Gopher = () => {
 						src={gopherImage}
 						alt='hero-image'
 						loading='lazy'
-						className='z-[1000] filter drop-shadow-[0_0_0.75rem_#000000]'
+						className='z-[1000] filter drop-shadow-[0_0_0.75rem_#a3a3a3] dark:drop-shadow-none'
 					/>
 					{isLoaded && (
 						<>
