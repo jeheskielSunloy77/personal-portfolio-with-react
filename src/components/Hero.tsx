@@ -13,7 +13,7 @@ const Hero = () => {
 	const ref = useSetOnScreen('hero')
 
 	return (
-		<>
+		<div className='from-gray-300 to-white dark:from-[#042638] dark:to-black bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]'>
 			<div id='home' ref={ref} className='relative flex h-screen myContainer'>
 				<motion.div
 					transition={{ duration: 1.5, type: 'spring' }}
@@ -37,7 +37,7 @@ const Hero = () => {
 				<ScrollDown />
 			</div>
 			<div className='h-10' />
-		</>
+		</div>
 	)
 }
 

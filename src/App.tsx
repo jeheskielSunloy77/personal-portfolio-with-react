@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { lazy, ReactNode, Suspense, useContext } from 'react'
-import background from './assets/backgrounds/background.svg'
 import { Hero, Loader, Navbar } from './components'
 import SkillsSlideshow from './components/SkillsSlideshow'
 import { AppContext } from './utils/AppContext'
@@ -19,28 +18,26 @@ export default function App() {
 	return (
 		<>
 			<div className='bg-gradient-to-r from-gray-200 to-white dark:from-[#042638] dark:to-black'>
-				<div style={{ backgroundImage: `url(${background})` }}>
-					<Hero />
-					<Suspense fallback={<span>Loading...</span>}>
-						<About />
-						<AnimatedSection>
-							<Timeline />
-						</AnimatedSection>
-						<AnimatedSection>
-							<SkillsSlideshow />
-						</AnimatedSection>
-						<AnimatedSection>
-							<Projects />
-						</AnimatedSection>
-						<AnimatedSection>
-							<Contributions />
-						</AnimatedSection>
-						<AnimatedSection>
-							<Contact />
-						</AnimatedSection>
-						<Footer />
-					</Suspense>
-				</div>
+				<Hero />
+				<Suspense fallback={<span>Loading...</span>}>
+					<About />
+					<AnimatedSection>
+						<Timeline />
+					</AnimatedSection>
+					<AnimatedSection>
+						<SkillsSlideshow />
+					</AnimatedSection>
+					<AnimatedSection>
+						<Projects />
+					</AnimatedSection>
+					<AnimatedSection>
+						<Contributions />
+					</AnimatedSection>
+					<AnimatedSection>
+						<Contact />
+					</AnimatedSection>
+					<Footer />
+				</Suspense>
 			</div>
 			<Navbar />
 		</>
