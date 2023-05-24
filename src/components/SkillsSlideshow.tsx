@@ -37,28 +37,28 @@ export default function SkillsSlideshow() {
 			<article className='flex flex-col gap-4 m-auto max-w-[100vw]'>
 				<div className='flex gap-4 overflow-hidden marquee'>
 					<div className='flex items-center justify-around flex-shrink-0 min-w-full gap-4 marquee__group'>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#prisma' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#typescript' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#golang' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#react' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#linux' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#tailwind' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#aws' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#postgres' />
 						</svg>
 					</div>
@@ -67,28 +67,28 @@ export default function SkillsSlideshow() {
 						aria-hidden='true'
 						className='flex items-center justify-around flex-shrink-0 min-w-full gap-4 marquee__group'
 					>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#prisma' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#typescript' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#golang' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#react' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#linux' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#tailwind' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#aws' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#postgres' />
 						</svg>
 					</div>
@@ -96,28 +96,28 @@ export default function SkillsSlideshow() {
 
 				<div className='flex gap-4 overflow-hidden marquee marquee--reverse'>
 					<div className='flex items-center justify-around flex-shrink-0 min-w-full gap-4 marquee__group'>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#redux' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#github' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#mongodb' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#jest' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#vercel' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#nodejs' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#nextjs' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#docker' />
 						</svg>
 					</div>
@@ -126,28 +126,28 @@ export default function SkillsSlideshow() {
 						aria-hidden='true'
 						className='flex items-center justify-around flex-shrink-0 min-w-full gap-4 marquee__group'
 					>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#redux' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#github' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#mongodb' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#jest' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#vercel' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#nodejs' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#nextjs' />
 						</svg>
-						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[16/9] p-4 rounded-md hover:fill-cyan-400'>
+						<svg className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'>
 							<use xlinkHref='#docker' />
 						</svg>
 					</div>
