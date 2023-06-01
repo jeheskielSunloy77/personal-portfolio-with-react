@@ -27,20 +27,24 @@ import Navbar from 'src/components/Navbar'
 	</body>
 </html>
 <script is:inline>
-	const getTheme = () => {
-		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme'))
+	const theme = (() => {
+		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
 			return localStorage.getItem('theme')
+		}
+		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			return 'dark'
+		}
 		return 'dark'
-	}
+	})()
 
-	window.localStorage.setItem('theme', theme)
-	if (getTheme() === 'light') {
+	if (theme === 'light') {
 		document.documentElement.classList.remove('dark')
 		document.documentElement.style.colorScheme = 'light'
-		return
+	} else {
+		document.documentElement.classList.add('dark')
+		document.documentElement.style.colorScheme = 'dark'
 	}
-	document.documentElement.classList.add('dark')
-	document.documentElement.style.colorScheme = 'dark'
+	window.localStorage.setItem('theme', theme)
 </script>
 <style is:global>
 	html,
