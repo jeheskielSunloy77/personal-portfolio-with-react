@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
-import { ComponentColors } from 'src/utils/types'
+import type { ReactNode } from 'react'
+import type { ComponentColors } from 'src/utils/types'
 
 interface BadgeProps {
 	children: ReactNode

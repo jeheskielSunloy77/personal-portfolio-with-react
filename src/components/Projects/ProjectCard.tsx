@@ -46,7 +46,7 @@ const ProjectDescriptions = ({
 	toggleModal: () => void
 }) => (
 	<div className='product-details sm:w-[45%] h-1/2 sm:h-full text-left overflow-hidden px-4 sm:px-10 flex flex-col justify-center'>
-		<h1 className='flex items-center gap-2 mb-2 text-lg text-high'>
+		<h1 className='flex items-center gap-2 mb-2 text-lg text-gray-900 dark:text-gray-100'>
 			{title}
 			{badge && (
 				<Badge color={badge.color} className='animate-pulse'>
@@ -54,7 +54,7 @@ const ProjectDescriptions = ({
 				</Badge>
 			)}
 		</h1>
-		<p className='text-light'>{desc.short}</p>
+		<p className='text-gray-500 dark:text-gray-400'>{desc.short}</p>
 		<div className='flex mt-4'>
 			<button
 				onClick={toggleModal}
@@ -94,7 +94,7 @@ const ProjectImage = ({ img }: Pick<Project, 'img' | 'details'>) => (
 		/>
 
 		{/* <div className='group-hover:translate-x-0 bg-gray-900 bg-opacity-95 transition-all duration-300 ease-out -translate-x-[100%] absolute leading-loose cursor-no-drop text-white h-full w-full left-0 top-0'>
-			<ul className='h-full text-center centerAll'>
+			<ul className='h-full text-center flex flex-col items-center justify-center'>
 				<li>
 					<strong>Status : </strong>
 					<Badge color={statusColor[details.status]}>{details.status}</Badge>

@@ -1,13 +1,12 @@
 import { motion } from 'framer-motion'
-import { useContext } from 'react'
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax'
 import BGclouds from '../assets/backgrounds/clouds.webp'
 import BGmoon from '../assets/backgrounds/moon.webp'
 import useSetOnScreen from '../hooks/useSetOnScreen'
-import { AppContext } from '../utils/AppContext'
+import useTheme from '../hooks/useTheme'
 
 const About = () => {
-	const { theme } = useContext(AppContext)
+	const { theme } = useTheme()
 	const ref = useSetOnScreen('about')
 
 	return (
@@ -35,10 +34,10 @@ const Text = () => (
 		transition={{ duration: 1, type: 'spring' }}
 		whileInView={{ y: 0, opacity: 1 }}
 		viewport={{ once: true }}
-		className='absolute inset-0 z-10 flex items-center justify-center myContainer'
+		className='absolute inset-0 z-10 flex items-center justify-center container px-6 mx-auto py-14'
 	>
 		<div className='mx-auto text-center sm:w-1/2 sm:text-left'>
-			<h1 className='mb-4 text-intro flex gap-2'>
+			<h1 className='mb-4 text-2xl font-semibold text-gray-900 dark:text-gray-100 sm:text-4xl flex gap-2'>
 				<motion.div
 					initial={{ y: -50 }}
 					whileInView={{ y: 0 }}
@@ -50,7 +49,7 @@ const Text = () => (
 				</motion.div>
 				me a bit
 			</h1>
-			<p className='text-lg text-medium'>
+			<p className='text-lg text-gray-700 dark:text-gray-200'>
 				My
 				<span className='mx-1 font-semibold text-cyan-500 w-fit'>passion</span>
 				is programing, i've been seriously started to jump into the programing world

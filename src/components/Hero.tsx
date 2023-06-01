@@ -1,11 +1,10 @@
-/* eslint-disable indent */
 import { motion } from 'framer-motion'
-import { useContext, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Typewriter from 'typewriter-effect'
 import gopherNoseImage from '../assets/images/gopher-nose.webp'
 import gopherImage from '../assets/images/gopher.webp'
 import useSetOnScreen from '../hooks/useSetOnScreen'
-import { AppContext } from '../utils/AppContext'
+import useTheme from '../hooks/useTheme'
 import { socialLinks } from '../utils/constants'
 import ButtonSpecial from './buttons/ButtonSpecial'
 
@@ -14,9 +13,13 @@ const Hero = () => {
 
 	return (
 		<div className='from-gray-300 to-white dark:from-[#042638] dark:to-black bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]'>
-			<div id='home' ref={ref} className='relative flex h-screen myContainer'>
+			<div
+				id='home'
+				ref={ref}
+				className='relative flex h-screen container px-6 mx-auto py-14'
+			>
 				<motion.div
-					transition={{ duration: 1.5, type: 'spring' }}
+					transition={{ duration: 1.5, delay: 2.2, type: 'spring' }}
 					initial={{ x: -50, y: 50, opacity: 0 }}
 					animate={{ x: 0, y: 0, opacity: 1 }}
 					className='flex items-center'
@@ -24,8 +27,14 @@ const Hero = () => {
 					<div className='w-full px-6 py-4 rounded-md h-fit bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 dark:bg-opacity-30 '>
 						<div className='relative w-full max-w-lg'>
 							<div className='absolute top-0 bg-purple-300 rounded-full dark:bg-lime-900 -left-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob'></div>
-							<div className='absolute top-0 bg-yellow-300 rounded-full dark:bg-teal-900 -right-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000'></div>
-							<div className='absolute bg-pink-300 rounded-full dark:bg-emerald-900 -bottom-8 left-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000'></div>
+							<div
+								style={{ animationDelay: '2s' }}
+								className='absolute top-0 bg-yellow-300 rounded-full dark:bg-teal-900 -right-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob'
+							></div>
+							<div
+								style={{ animationDelay: '4s' }}
+								className='absolute bg-pink-300 rounded-full dark:bg-emerald-900 -bottom-8 left-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob'
+							></div>
 							<div className='relative'>
 								<IntroTypewriter />
 							</div>
@@ -53,7 +62,7 @@ const Gopher = () => {
 	const [timesHited, setTimesHited] = useState(0)
 	const [dialogueBox, setDialogueBox] = useState({
 		text: 'Hello World!',
-		delay: 2,
+		delay: 4,
 		duration: 0.5,
 	})
 	const leftEye = useRef(null)
@@ -120,7 +129,7 @@ const Gopher = () => {
 	return (
 		<>
 			<motion.div
-				transition={{ duration: 1.5, type: 'spring' }}
+				transition={{ duration: 1.5, delay: 2.2, type: 'spring' }}
 				initial={{ x: 50, y: 50, opacity: 0 }}
 				animate={{ x: 0, y: 0, opacity: 1 }}
 				className='relative hidden my-auto ml-auto sm:block'
@@ -198,10 +207,10 @@ const Gopher = () => {
 
 const ScrollDown = () => (
 	<motion.p
-		transition={{ duration: 4, type: 'spring' }}
+		transition={{ duration: 4, delay: 2.2, type: 'spring' }}
 		initial={{ opacity: 0 }}
 		animate={{ opacity: 1 }}
-		className='absolute flex flex-row items-center text-xs transition-all duration-300 cursor-default bottom-10 right-3 sm:right-0 text-medium hover:translate-y-6'
+		className='absolute flex flex-row items-center text-xs transition-all duration-300 cursor-default bottom-10 right-3 sm:right-0 text-gray-700 dark:text-gray-200 hover:translate-y-6'
 		style={{ writingMode: 'vertical-rl' }}
 	>
 		SCROLL DOWN
@@ -223,11 +232,10 @@ const ScrollDown = () => (
 )
 
 const SocialIcons = () => {
-	const { theme, switchTheme } = useContext(AppContext)
-
+	const { theme, toggleTheme } = useTheme()
 	return (
 		<motion.div
-			transition={{ duration: 4, type: 'spring' }}
+			transition={{ duration: 4, delay: 2.2, type: 'spring' }}
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			className='absolute flex flex-col items-center justify-center bottom-10 left-3 sm:left-0'
@@ -236,10 +244,7 @@ const SocialIcons = () => {
 				<svg
 					id='sun'
 					xmlns='http://www.w3.org/2000/svg'
-					onClick={() => {
-						switchTheme()
-						localStorage.setItem('theme', 'light')
-					}}
+					onClick={() => toggleTheme()}
 					className='hover:rotate-[360deg] transition-transform duration-1000 w-5 h-5 my-1 text-gray-600 cursor-pointer dark:text-gray-300 hover:text-black dark:hover:text-white'
 					viewBox='0 0 20 20'
 					fill='currentColor'
@@ -254,10 +259,7 @@ const SocialIcons = () => {
 				<svg
 					id='moon'
 					xmlns='http://www.w3.org/2000/svg'
-					onClick={() => {
-						switchTheme()
-						localStorage.setItem('theme', 'dark')
-					}}
+					onClick={() => toggleTheme()}
 					className='w-5 h-5 my-1 text-gray-600 cursor-pointer hover:rotate-[360deg] transition-transform duration-1000 dark:text-gray-300 hover:text-black dark:hover:text-white'
 					viewBox='0 0 20 20'
 					fill='currentColor'
@@ -353,7 +355,7 @@ const SocialIcons = () => {
 }
 
 const IntroTypewriter = () => {
-	const { loading } = useContext(AppContext)
+	// const { loading } = useContext(AppContext)
 
 	return (
 		<div className='flex max-w-xl my-auto h-fit'>
@@ -368,7 +370,7 @@ const IntroTypewriter = () => {
 					</h2>
 
 					<div className='text-3xl'>
-						{!loading && (
+						{true && (
 							<Typewriter
 								options={{
 									autoStart: true,
@@ -395,7 +397,7 @@ const IntroTypewriter = () => {
 						)}
 					</div>
 				</div>
-				<p className='text-md text-medium'>
+				<p className='text-md text-gray-700 dark:text-gray-200'>
 					Hey thank you for passing by, my fullname is Jeheskiel Ventioky Sunloy but
 					my friends call me Jay. I am a student majoring Informatics Engineering at
 					Satya Wacana Christian University. I am currently 21 years old and im

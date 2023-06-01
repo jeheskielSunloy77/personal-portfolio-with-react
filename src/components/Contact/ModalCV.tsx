@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { SetBoolean } from 'src/utils/types'
+import type { SetBoolean } from 'src/utils/types'
 import Modal, { ModalProps } from '../Modal'
 
 type ModalCvProps = Pick<ModalProps, 'toggleModal' | 'isClosing'>
@@ -14,7 +14,9 @@ export default function ModalCv({ toggleModal, isClosing }: ModalCvProps) {
 			toggleModal={toggleModal}
 			title={
 				<>
-					<h3 className='text-xl font-medium text-high'>View My Resume</h3>
+					<h3 className='text-xl font-medium text-gray-900 dark:text-gray-100'>
+						View My Resume
+					</h3>
 					<IndonesianIcon setIsEnglish={setIsEnglish} isEnglish={isEnglish} />
 					<EnglishIcon setIsEnglish={setIsEnglish} isEnglish={isEnglish} />
 				</>

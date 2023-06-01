@@ -1,34 +1,24 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useStore } from '@nanostores/react'
+import { theme } from '../stores/appStores'
 
 const useTheme = () => {
-	const [theme, setTheme] = useState<Theme>('dark')
+	const $theme = useStore(theme)
 
-	useEffect(() => {
-		const storedTheme = localStorage.getItem('theme') as Theme | null
-		storedTheme && setTheme(storedTheme)
-	}, [])
+	const toggleTheme = () => {
+		const themeToChange = $theme === 'light' ? 'dark' : 'light'
+		theme.set(themeToChange)
+		if (themeToChange === 'dark') {
+			document.documentElement.classList.add('dark')
+			document.documentElement.style.colorScheme = 'dark'
+		} else {
+			document.documentElement.classList.remove('dark')
+			document.documentElement.style.colorScheme = 'light'
+		}
 
-	const themeToSwitch = theme === 'dark' ? 'light' : 'dark'
-
-	const toggleColorMode = useCallback(
-		() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark')),
-		[]
-	)
-
-	useEffect(() => {
-		const root = window.document.documentElement
-		root.classList.remove(themeToSwitch)
-		root.classList.add(theme)
-	}, [theme])
-
-	const switchTheme = () => {
-		toggleColorMode()
-		localStorage.setItem('theme', themeToSwitch)
+		localStorage.setItem('theme', themeToChange)
 	}
 
-	return { switchTheme, theme }
+	return { theme: $theme, toggleTheme }
 }
-
-type Theme = 'light' | 'dark'
 
 export default useTheme

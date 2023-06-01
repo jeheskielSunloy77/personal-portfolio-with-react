@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
-import { OnClickButton } from 'src/utils/types'
+import type { ReactNode } from 'react'
+import type { OnClickButton } from '../../utils/types'
 
 const Button = ({
 	children,

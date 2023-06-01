@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Project } from '../../utils/types'
+import type { Project } from 'src/utils/types'
 import Badge from '../Badge'
 import Modal from '../Modal'
 import Button from '../buttons/Button'
@@ -46,7 +46,7 @@ export default function ProjectDetailModal({
 			<div className='flex flex-col-reverse xl:grid xl:grid-cols-2 place-items-center max-h-[70vh] overflow-y-auto'>
 				<div className='px-4 py-2 space-y-4'>
 					<p>{project.desc.description}</p>
-					<ul className='list-disc pl-6 text-medium'>
+					<ul className='list-disc pl-6 text-gray-700 dark:text-gray-200'>
 						{project.desc.list?.map((listItem, i) => (
 							<li key={i}>{listItem}</li>
 						))}
@@ -108,7 +108,9 @@ const ModalHeader = ({
 	navigateProject: (direction: 'next' | 'prev') => void
 }) => (
 	<>
-		<h3 className='text-xl font-bold text-high mr-4'>{title}</h3>
+		<h3 className='text-xl font-bold text-gray-900 dark:text-gray-100 mr-4'>
+			{title}
+		</h3>
 		<nav
 			className='inline-flex items-center -space-x-px cursor-pointer'
 			aria-label='Page navigation example'

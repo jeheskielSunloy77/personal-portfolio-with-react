@@ -1,4 +1,4 @@
-import { Href } from 'src/utils/types'
+import type { Href } from '../../utils/types'
 
 const ButtonSpecial = ({ text, href }: ButtonSpecial) => (
 	<a href={href}>

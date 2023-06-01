@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 
 export type ModalProps = {
@@ -21,7 +21,7 @@ export default function Modal({
 	className,
 }: ModalProps) {
 	return createPortal(
-		<div className='fixed z-40 w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 bg-opacity-50 centerAll'>
+		<div className='fixed z-40 w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 bg-opacity-50 flex flex-col items-center justify-center'>
 			<motion.form
 				initial={{
 					opacity: 0,
@@ -44,7 +44,9 @@ export default function Modal({
 				) : (
 					<div className='flex justify-between items-center p-5 rounded-t'>
 						{typeof title === 'string' ? (
-							<h3 className='text-xl font-bold text-high'>{title}</h3>
+							<h3 className='text-xl font-bold text-gray-900 dark:text-gray-100'>
+								{title}
+							</h3>
 						) : (
 							title
 						)}

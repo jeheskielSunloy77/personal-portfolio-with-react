@@ -10,7 +10,7 @@ import weatherAppVideoFw from '../assets/projects/weatherApp.mp4'
 import weatherAppImg from '../assets/projects/weatherApp.webp'
 import webscraperVideo from '../assets/projects/webscraper.mp4'
 import webscraper from '../assets/projects/webscraper.webp'
-import { Project } from './types'
+import type { Project } from './types'
 
 export const socialLinks = {
 	instagram: 'https://www.instagram.com/schlittschuhlaufen_/',

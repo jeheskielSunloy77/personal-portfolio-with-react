@@ -1,12 +1,11 @@
-import { useContext } from 'react'
+import { useState } from 'react'
 import Typewriter from 'typewriter-effect'
-import { AppContext } from '../utils/AppContext'
 
 const Loader = () => {
-	const { setLoading } = useContext(AppContext)
-
+	const [isLoading, setIsLoading] = useState(true)
+	if (!isLoading) return null
 	return (
-		<div className='font-consolas text-xl sm:text-4xl text-[#C6C6C6] bg-[#1E1E1E] h-screen w-screen fixed z-50 centerAll'>
+		<div className='font-consolas text-xl sm:text-4xl text-[#C6C6C6] bg-[#1E1E1E] h-screen w-screen flex flex-col items-center justify-center z-50 fixed'>
 			<div className='min-h-[240px] w-[150px] sm:w-[260px]'>
 				<Typewriter
 					options={{
@@ -32,7 +31,7 @@ const Loader = () => {
 							)
 							.typeString('<span class="text-purple-600">}</span>')
 							.pauseFor(1000)
-							.callFunction(() => setLoading(false))
+							.callFunction(() => setIsLoading(false))
 							.start()
 					}}
 				/>

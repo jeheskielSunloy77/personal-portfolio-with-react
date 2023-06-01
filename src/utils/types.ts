@@ -1,4 +1,4 @@
-import {
+import type {
 	Dispatch,
 	FormEventHandler,
 	MouseEvent,
@@ -6,7 +6,6 @@ import {
 	RefObject,
 	SetStateAction,
 } from 'react'
-import { Url } from 'url'
 
 type SetBoolean = Dispatch<SetStateAction<boolean>>
 type SetString = Dispatch<SetStateAction<string>>
@@ -17,7 +16,7 @@ type MouseEventButton = MouseEvent<HTMLButtonElement, globalThis.MouseEvent>
 type OnSubmitButton = FormEventHandler<HTMLButtonElement>
 type OnSubmitAnchor = FormEventHandler<HTMLAnchorElement>
 type OnSubmitForm = FormEventHandler<HTMLElement> | undefined
-type Href = Url['href']
+type Href = string
 type RefDiv = RefObject<HTMLDivElement>
 type ComponentColors =
 	| 'primary'

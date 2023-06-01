@@ -1,10 +1,9 @@
-import { useContext, useEffect, useRef, useState } from 'react'
-import { AppContext } from '../utils/AppContext'
+import { useEffect, useRef, useState } from 'react'
+import { blockVisibility } from '../stores/appStores'
 
 export default function useSetOnScreen<T = HTMLDivElement>(page: string) {
 	const ref = useRef<T>(null)
 	const [isIntersecting, setIntersecting] = useState(false)
-	const { setBlockVisibility } = useContext(AppContext)
 	const observer = new IntersectionObserver(([entry]) =>
 		setIntersecting(entry.isIntersecting)
 	)
@@ -18,10 +17,12 @@ export default function useSetOnScreen<T = HTMLDivElement>(page: string) {
 	}, [])
 
 	useEffect(() => {
-		setBlockVisibility((prev) => {
-			if (isIntersecting && !prev.includes(page)) return [...prev, page]
-			else return prev.filter((item) => item !== page)
-		})
+		const prev = blockVisibility.get()
+		blockVisibility.set(
+			isIntersecting && !prev.includes(page)
+				? [...prev, page]
+				: prev.filter((item) => item !== page)
+		)
 	}, [isIntersecting])
 
 	return ref

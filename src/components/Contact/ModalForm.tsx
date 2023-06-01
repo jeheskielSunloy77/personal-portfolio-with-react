@@ -1,6 +1,6 @@
 import emailjs from '@emailjs/browser'
 import { useRef } from 'react'
-import { MouseEventButton } from 'src/utils/types'
+import type { MouseEventButton } from 'src/utils/types'
 import Modal, { ModalProps } from '../Modal'
 import Button from '../buttons/Button'
 

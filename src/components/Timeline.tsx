@@ -1,41 +1,44 @@
 import { motion } from 'framer-motion'
+import AnimatedSection from './AnimatedSection'
 const Timeline = () => (
-	<div className='myContainer'>
-		<h1 className='mb-10 text-center text-intro sm:text-left flex gap-2'>
-			Educational
-			<motion.div
-				initial={{ x: 50 }}
-				whileInView={{ x: 0 }}
-				viewport={{ once: true }}
-				className='text-cyan-500'
-				transition={{ duration: 1 }}
-			>
-				Timeline
-			</motion.div>
-		</h1>
-		<ol className='items-center sm:flex justify-center'>
-			<TimeLineList
-				title='SMA 1, Ambon'
-				date='2014 - 2017'
-				desc='I have a regular times at high school, im not the brightest person in the class but im not the slowest either.'
-			/>
-			<TimeLineList
-				title='Satya Wacana Christian University'
-				date='Enroled on August 1, 2017'
-				desc='I am a student of the Faculty of Information and Technology, majoring Informatics Engineering with the latest GPA of 3.1'
-			/>
-			<TimeLineList
-				title='KreasiX Internship'
-				date='May 5 - July 21, 2022'
-				desc='My first internship experience, one of the project i did during my internship was to build a backend for the company website using Node.js and Firebase'
-			/>
-			<TimeLineList
-				title='Refactory Bootcamp'
-				date='August 8 - September 18, 2022'
-				desc='A 6-week intensive bootcamp to implement my skills of web development using ReactJS and Go, i got an opertunity to work with a real work project and mentored by a great senior engineer.'
-			/>
-		</ol>
-	</div>
+	<AnimatedSection>
+		<div className='container px-6 mx-auto py-14'>
+			<h1 className='mb-10 text-center text-2xl font-semibold text-gray-900 dark:text-gray-100 sm:text-4xl sm:text-left flex gap-2'>
+				Educational
+				<motion.div
+					initial={{ x: 50 }}
+					whileInView={{ x: 0 }}
+					viewport={{ once: true }}
+					className='text-cyan-500'
+					transition={{ duration: 1 }}
+				>
+					Timeline
+				</motion.div>
+			</h1>
+			<ol className='items-center sm:flex justify-center'>
+				<TimeLineList
+					title='SMA 1, Ambon'
+					date='2014 - 2017'
+					desc='I have a regular times at high school, im not the brightest person in the class but im not the slowest either.'
+				/>
+				<TimeLineList
+					title='Satya Wacana Christian University'
+					date='Enroled on August 1, 2017'
+					desc='I am a student of the Faculty of Information and Technology, majoring Informatics Engineering with the latest GPA of 3.1'
+				/>
+				<TimeLineList
+					title='KreasiX Internship'
+					date='May 5 - July 21, 2022'
+					desc='My first internship experience, one of the project i did during my internship was to build a backend for the company website using Node.js and Firebase'
+				/>
+				<TimeLineList
+					title='Refactory Bootcamp'
+					date='August 8 - September 18, 2022'
+					desc='A 6-week intensive bootcamp to implement my skills of web development using ReactJS and Go, i got an opertunity to work with a real work project and mentored by a great senior engineer.'
+				/>
+			</ol>
+		</div>
+	</AnimatedSection>
 )
 const TimeLineList = ({ title, date, desc }: TimeLineList) => (
 	<li className='relative mb-6 sm:mb-0 h-36'>
@@ -57,11 +60,15 @@ const TimeLineList = ({ title, date, desc }: TimeLineList) => (
 			<div className='hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700'></div>
 		</div>
 		<div className='mt-3 sm:pr-8'>
-			<p className='font-semibold text-md text-high'>{title}</p>
-			<time className='block mb-2 text-sm font-normal leading-none text-lightest'>
+			<p className='font-semibold text-md text-gray-900 dark:text-gray-100'>
+				{title}
+			</p>
+			<time className='block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
 				{date}
 			</time>
-			<p className='text-base font-normal text-light'>{desc}</p>
+			<p className='text-base font-normal text-gray-500 dark:text-gray-400'>
+				{desc}
+			</p>
 		</div>
 	</li>
 )

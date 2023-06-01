@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import useModal from '../../hooks/useModal'
 import { socialLinks } from '../../utils/constants'
+import AnimatedSection from '../AnimatedSection'
 import Button from '../buttons/Button'
 import ModalCV from './ModalCV'
 import ModalForm from './ModalForm'
@@ -21,8 +22,8 @@ const Contact = () => {
 	}
 
 	return (
-		<>
-			<div className='myContainer'>
+		<AnimatedSection>
+			<div className='container px-6 mx-auto py-14'>
 				<div className='w-full max-w-4xl px-6 py-4 mx-auto rounded-md'>
 					<Text />
 					<SocialIcons />
@@ -40,12 +41,12 @@ const Contact = () => {
 			{modal === 'cv' && (
 				<ModalCV toggleModal={closeModal} isClosing={isClosing} />
 			)}
-		</>
+		</AnimatedSection>
 	)
 }
 const Text = () => (
 	<>
-		<h1 className='flex gap-2 mb-10 text-intro justify-center'>
+		<h1 className='flex gap-2 mb-10 text-2xl font-semibold text-gray-900 dark:text-gray-100 sm:text-4xl justify-center'>
 			Get in
 			<motion.div
 				initial={{ y: -50 }}
@@ -57,7 +58,7 @@ const Text = () => (
 				Touch
 			</motion.div>
 		</h1>
-		<p className='text-medium text-lg text-center'>
+		<p className='text-gray-700 dark:text-gray-200 text-lg text-center'>
 			<span className='mx-1 text-cyan-500 font-semibold'>Thank you</span>
 			for visiting my site, this site is
 			<span className='mx-1 text-cyan-500 font-semibold'>100% open-source</span>

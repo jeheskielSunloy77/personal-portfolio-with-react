@@ -1,0 +1,135 @@
+---
+import Navbar from 'src/components/Navbar'
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='description' content='Astro description' />
+		<meta name='viewport' content='width=device-width' />
+		<meta name='generator' content={Astro.generator} />
+		<link rel='icon' type='image/svg+xml' href='/logo.webp' />
+		<meta
+			name='description'
+			content='Personal site of Jeheskiel Ventioky Sunloy,an Informatics Engineering student at Satya Wacana Christian University and a passionate software developer from Ambon, Indonesia.'
+		/>
+		<title>Jeheskiel Sunloy</title>
+	</head>
+	<body>
+		<main
+			class='bg-gradient-to-r from-gray-200 to-white dark:from-[#042638] dark:to-black'
+		>
+			<slot />
+			<Navbar client:load />
+		</main>
+		<div id='portal'></div>
+	</body>
+</html>
+<script is:inline>
+	const theme = (() => {
+		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+			return localStorage.getItem('theme')
+		}
+		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			return 'dark'
+		}
+		return 'light'
+	})()
+
+	if (theme === 'light') {
+		document.documentElement.classList.remove('dark')
+		document.documentElement.style.colorScheme = 'light'
+	} else {
+		document.documentElement.classList.add('dark')
+		document.documentElement.style.colorScheme = 'dark'
+	}
+	window.localStorage.setItem('theme', theme)
+</script>
+<style is:global>
+	html,
+	body {
+		scroll-behavior: smooth;
+		overflow-x: hidden;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	@font-face {
+		font-family: 'Roboto';
+		src: url('/fonts/roboto-regular-webfont.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Staatliches';
+		src: url('/fonts/staatliches-regular-webfont.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Consolas';
+		src: url('/fonts/consolas-webfont.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	h1 {
+		font-family: 'Staatliches', cursive;
+	}
+	.smallGrid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		column-gap: 2px;
+		row-gap: 20px;
+	}
+	@media only screen and (max-width: 640px) {
+		.smallGrid {
+			grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+			row-gap: 10px;
+		}
+	}
+
+	.swiper {
+		padding-bottom: 50px !important;
+	}
+	.swiper-pagination-bullet {
+		background-color: #0891b2 !important;
+		opacity: 0.5 !important;
+		width: 10px !important;
+		height: 10px !important;
+	}
+	.swiper-pagination-bullet-active {
+		opacity: 1 !important;
+	}
+
+	.marquee {
+		mask-image: linear-gradient(
+			var(--mask-direction, to right),
+			hsl(0 0% 0% / 0),
+			hsl(0 0% 0% / 1) 20%,
+			hsl(0 0% 0% / 1) 80%,
+			hsl(0 0% 0% / 0)
+		);
+	}
+
+	.marquee__group {
+		animation: scroll-x 60s linear infinite;
+	}
+
+	.marquee--reverse .marquee__group {
+		animation-direction: reverse;
+		animation-delay: -3s;
+	}
+
+	@keyframes scroll-x {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(calc(-100% - 1rem));
+		}
+	}
+</style>

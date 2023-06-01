@@ -1,0 +1,24 @@
+---
+import About from 'src/components/About'
+import Contact from 'src/components/Contact'
+import Contributions from 'src/components/Contributions'
+import Footer from 'src/components/Footer'
+import Hero from 'src/components/Hero'
+import Loader from 'src/components/Loader'
+import Projects from 'src/components/Projects'
+import SkillsSlideshow from 'src/components/SkillsSlideshow'
+import Timeline from 'src/components/Timeline'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout>
+	<Loader client:load />
+	<Hero client:idle />
+	<About client:visible />
+	<Timeline client:visible />
+	<SkillsSlideshow client:visible />
+	<Projects client:visible />
+	<Contributions client:only />
+	<Contact client:visible />
+	<Footer client:visible />
+</Layout>

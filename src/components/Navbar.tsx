@@ -1,23 +1,21 @@
+import { useStore } from '@nanostores/react'
 import { motion } from 'framer-motion'
-import { useContext } from 'react'
-import { AppContext } from '../utils/AppContext'
-import { Href } from '../utils/types'
+import { blockVisibility } from '../stores/appStores'
+import type { Href } from '../utils/types'
 
 const Navbar = () => {
-	const { blockVisibility, theme } = useContext(AppContext)
+	const $blockVisibility = useStore(blockVisibility)
 
 	return (
 		<motion.nav
 			initial={{ bottom: '20px' }}
-			animate={blockVisibility.includes('footer') ? { top: '20px' } : undefined}
-			className={`${
-				theme === 'light' ? 'bg-black' : 'bg-white'
-			} shadow-xl bg-opacity-10 backdrop-blur-3xl drop-shadow-lg sm:w-80 h-14 rounded-full fixed left-1/2 -translate-x-1/2 flex justify-center items-center z-30 transition-all duration-700`}
+			animate={$blockVisibility.includes('footer') ? { top: '20px' } : undefined}
+			className={`shadow-xl bg-opacity-5 backdrop-blur-3xl drop-shadow-lg dark:bg-opacity-5 dark:backdrop-blur-3xl dark:drop-shadow-lg sm:w-80 h-14 bg-black dark:bg-white rounded-full fixed left-1/2 -translate-x-1/2 flex justify-center items-center z-30 transition-all duration-700`}
 		>
-			<MenuItem href='#home' active={blockVisibility[0] === 'hero'} />
-			<MenuItem href='#about' active={blockVisibility[0] === 'about'} />
-			<MenuItem href='#skills' active={blockVisibility[0] === 'skills'} />
-			<MenuItem href='#projects' active={blockVisibility[0] === 'projects'} />
+			<MenuItem href='#home' active={$blockVisibility[0] === 'hero'} />
+			<MenuItem href='#about' active={$blockVisibility[0] === 'about'} />
+			<MenuItem href='#skills' active={$blockVisibility[0] === 'skills'} />
+			<MenuItem href='#projects' active={$blockVisibility[0] === 'projects'} />
 		</motion.nav>
 	)
 }
@@ -26,9 +24,9 @@ const MenuItem = ({ href, active }: { href: Href; active: boolean }) => (
 	<div
 		className={`${
 			active
-				? 'bg-gray-900 bg-opacity-80'
-				: 'bg-opacity-10 bg-gray-900 dark:bg-white dark:bg-opacity-10'
-		} w-10 h-10 mx-1 rounded-full flex justify-center items-center`}
+				? 'bg-gray-900 bg-opacity-80 shadow-lg shadow-gray-600 dark:shadow-[#00000070] -translate-y-0.5'
+				: 'bg-opacity-10 bg-gray-900 dark:bg-white dark:bg-opacity-5'
+		} w-10 h-10 mx-1 rounded-full flex justify-center items-center transition-all duration-700`}
 	>
 		<a href={href}>
 			{href === '#home' && <Home active={active} />}

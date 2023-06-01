@@ -1,13 +1,12 @@
-import { useContext } from 'react'
+import useTheme from 'src/hooks/useTheme'
 import logo from '../assets/icons/logo.webp'
 import loveIcon from '../assets/icons/love.svg'
 import useSetOnScreen from '../hooks/useSetOnScreen'
-import { AppContext } from '../utils/AppContext'
 import { socialLinks } from '../utils/constants'
 
 const Footer = () => {
 	const ref = useSetOnScreen('footer')
-	const { theme } = useContext(AppContext)
+	const { theme } = useTheme()
 
 	return (
 		<footer
