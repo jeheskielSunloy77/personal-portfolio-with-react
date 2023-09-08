@@ -1,5 +1,5 @@
 import useModal from '../../hooks/useModal'
-import { Project } from '../../utils/types'
+import type { Project } from '../../utils/types'
 import Badge from '../Badge'
 import ProjectDetailModal from './ProjectDetailModal'
 
@@ -66,22 +66,6 @@ const ProjectDescriptions = ({
 	</div>
 )
 
-// const statusColor: Record<Project['details']['status'], ComponentColors> = {
-// 	'Work on Progress': 'warning',
-// 	Final: 'accent',
-// 	Stable: 'primary',
-// 	Discontinued: 'error',
-// }
-// const demoColor: Record<Project['details']['demo'], ComponentColors> = {
-// 	Available: 'primary',
-// 	Prototype: 'warning',
-// 	Unavailable: 'error',
-// }
-// const codeColor: Record<Project['details']['code'], ComponentColors> = {
-// 	Private: 'error',
-// 	Public: 'accent',
-// }
-
 const ProjectImage = ({ img }: Pick<Project, 'img' | 'details'>) => (
 	<div className='w-full sm:w-[55%] h-1/2 sm:h-full relative overflow-hidden'>
 		<img
@@ -92,33 +76,6 @@ const ProjectImage = ({ img }: Pick<Project, 'img' | 'details'>) => (
 			width='495'
 			height='350'
 		/>
-
-		{/* <div className='group-hover:translate-x-0 bg-gray-900 bg-opacity-95 transition-all duration-300 ease-out -translate-x-[100%] absolute leading-loose cursor-no-drop text-white h-full w-full left-0 top-0'>
-			<ul className='h-full text-center flex flex-col items-center justify-center'>
-				<li>
-					<strong>Status : </strong>
-					<Badge color={statusColor[details.status]}>{details.status}</Badge>
-				</li>
-				<li>
-					<strong>Live Demo : </strong>
-					<Badge color={demoColor[details.demo]}>{details.demo}</Badge>
-				</li>
-				<li>
-					<strong>Source Code : </strong>
-					<Badge color={codeColor[details.code]}>{details.code}</Badge>
-				</li>
-				<li>
-					<strong>Stack: </strong>
-					<div className='flex gap-1'>
-						{details.stack.map((stack, i) => (
-							<Badge key={i} color={stack.badgeColor}>
-								{stack.name}
-							</Badge>
-						))}
-					</div>
-				</li>
-			</ul>
-		</div> */}
 	</div>
 )
 

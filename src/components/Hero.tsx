@@ -355,8 +355,6 @@ const SocialIcons = () => {
 }
 
 const IntroTypewriter = () => {
-	// const { loading } = useContext(AppContext)
-
 	return (
 		<div className='flex max-w-xl my-auto h-fit'>
 			<div className='my-auto'>

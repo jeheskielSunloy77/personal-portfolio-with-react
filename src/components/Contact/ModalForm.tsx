@@ -28,7 +28,7 @@ const ModalForm = ({ toggleModal, isClosing }: ModalFormProps) => {
 					alert('Message failed to send!')
 				},
 				(error) => {
-					console.log(error.text)
+					console.error(error.text)
 				}
 			)
 	}
