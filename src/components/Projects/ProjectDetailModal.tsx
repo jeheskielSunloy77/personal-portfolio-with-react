@@ -16,6 +16,7 @@ export default function ProjectDetailModal({
 	projectIndex: number
 }) {
 	const [projectIndex, setProjectIndex] = useState(initialProjectIndex)
+	const [isVideoLoaded, setIsVideoLoaded] = useState(false)
 	const project = projects[projectIndex]
 	const isOpenSource = project.links.code ? true : false
 	const isLiveDemo = project.links.demo ? true : false
@@ -32,6 +33,7 @@ export default function ProjectDetailModal({
 				return prev + 1
 			}
 		})
+		setIsVideoLoaded(false)
 	}
 
 	return (
@@ -61,12 +63,17 @@ export default function ProjectDetailModal({
 					</div>
 				</div>
 				<video
+					onLoadedData={() => setIsVideoLoaded(true)}
+					className={isVideoLoaded ? undefined : 'hidden'}
 					src={project.video.src}
 					autoPlay
 					loop
 					width={project.video.isPortrait ? '40%' : undefined}
 					height={project.video.isPortrait ? undefined : '50%'}
 				></video>
+				{!isVideoLoaded && (
+					<div className='bg-gray-300 dark:bg-gray-700 xl:w-full min-h-[20rem] rounded-md animate-pulse aspect-video' />
+				)}
 			</div>
 			<div className='flex items-center p-6 space-x-2 rounded-b'>
 				<a href={project.links.code} target='_blank' rel='noreferrer'>
