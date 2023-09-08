@@ -62,7 +62,7 @@ const Gopher = () => {
 	const [timesHited, setTimesHited] = useState(0)
 	const [dialogueBox, setDialogueBox] = useState({
 		text: 'Hello World!',
-		delay: 4,
+		delay: 3,
 		duration: 0.5,
 	})
 	const leftEye = useRef(null)
@@ -103,7 +103,7 @@ const Gopher = () => {
 			() => {
 				setShowDialogueBox(false)
 			},
-			timesHited === 0 ? 3000 : 2000
+			timesHited === 0 ? 4000 : 2000
 		)
 
 		return () => clearTimeout(timer)
