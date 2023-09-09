@@ -1,6 +1,7 @@
-import SwiperCore, { Autoplay, Pagination } from 'swiper'
+import SwiperCore from 'swiper'
 import 'swiper/css'
 import 'swiper/css/autoplay'
+import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { projects } from '../../utils/constants'
 import ProjectCard from './ProjectCard'
