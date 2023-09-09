@@ -20,9 +20,7 @@ const ProjectSlider = () => (
 		}}
 		mousewheel={{ invert: false }}
 		autoHeight
-		pagination={{
-			dynamicBullets: true,
-		}}
+		pagination={{ dynamicBullets: true }}
 	>
 		{projects.map((_, index) => (
 			<SwiperSlide key={index}>
