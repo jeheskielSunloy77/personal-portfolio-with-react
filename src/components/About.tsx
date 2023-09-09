@@ -53,7 +53,7 @@ const Text = () => (
 				My
 				<span className='mx-1 font-semibold text-cyan-500 w-fit'>passion</span>
 				is programing, i've been seriously started to jump into the programing world
-				about 6 month ago and i am absolutly loving it. My weapon of choice is
+				about a year ago and i am absolutly loving it. My weapon of choice is
 				<span className='mx-1 font-semibold text-cyan-500'>Typescript and Go.</span>
 				I am currently married to
 				<span className='mx-1 font-semibold text-cyan-500'>ReactJS</span> but i also
