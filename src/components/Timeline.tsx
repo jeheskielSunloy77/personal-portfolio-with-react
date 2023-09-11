@@ -24,7 +24,7 @@ const Timeline = () => (
 				<TimeLineList
 					title='Satya Wacana Christian University'
 					date='Enroled on August 1, 2017'
-					desc='I am a student of the Faculty of Information and Technology, majoring Informatics Engineering with the latest GPA of 3.1'
+					desc='I am a student of the Faculty of Information and Technology, majoring Informatics Engineering with the latest GPA of 3.3'
 				/>
 				<TimeLineList
 					title='KreasiX Internship'
