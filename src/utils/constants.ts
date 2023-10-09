@@ -26,10 +26,10 @@ export const cvLinks = {
 
 export const projects: Project[] = [
 	{
-		title: 'Student Information System',
+		title: 'Academic Information System',
 		desc: {
 			short:
-				'An information system for IAKN Kupang university student, Build with Next.js, Postgresql, Supabase, and Tailwindcss.',
+				'An information system for IAKN Kupang university, Build with Next.js, Postgresql, Supabase, and Tailwindcss.',
 			description:
 				'The Information System for IAKN Kupang University Students is a web-based application built using Next.js, Postgresql, Supabase, and Tailwindcss. The primary goal of the system is to provide students of IAKN Kupang University with a centralized platform to access academic information and manage their academic progress more efficiently. The system offers the following features:',
 			list: [
@@ -38,6 +38,7 @@ export const projects: Project[] = [
 				'Course Management: Students can view all their enrolled courses, including course descriptions, schedules, and instructors. They can also submit assignments, view grades, and receive notifications for course-related updates.',
 				'Academic Calendar: The system provides a comprehensive academic calendar that lists all the important dates, such as exam schedules, assignment deadlines, and class schedules.',
 				'Personal Information Management: Students can update their personal information, such as their name, address, and contact details, through the system. They can also view their academic transcript, including their GPA and credit hours.',
+				'And More...',
 			],
 			aditional:
 				'The Information System for IAKN Kupang University Students is an efficient tool for managing academic information, improving communication between students and instructors, and facilitating student success. It is a modern, user-friendly platform that streamlines academic processes and helps students stay on top of their academic responsibilities.',

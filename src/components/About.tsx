@@ -59,7 +59,7 @@ const Text = () => (
 				<span className='mx-1 font-semibold text-cyan-500'>ReactJS</span> but i also
 				like to work with other frameworks such as
 				<span className='mx-1 font-semibold text-cyan-500'>
-					Express, React Native and Gin
+					Express, React Native and Next.js
 				</span>
 			</p>
 		</div>

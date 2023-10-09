@@ -34,7 +34,7 @@ const Timeline = () => (
 				<TimeLineList
 					title='Refactory Bootcamp'
 					date='August 8 - September 18, 2022'
-					desc='A 6-week intensive bootcamp to implement my skills of web development using ReactJS and Go, i got an opertunity to work with a real work project and mentored by a great senior engineer.'
+					desc='A 7-week intensive bootcamp to implement my skills of web development using ReactJS and Go, i got an opportunity to work with a real work project and mentored by a great senior engineer.'
 				/>
 			</ol>
 		</div>

@@ -165,7 +165,7 @@ function FirstRow() {
 			</svg>
 			<svg
 				data-for='skills-slides-show-tooltip'
-				data-tip='ReactJS'
+				data-tip='ReactJS & React Native'
 				className='grid place-items-center fill-cyan-500 bg-white dark:bg-black aspect-[2/1] min-h-[3rem] p-2 md:p-4 rounded-md hover:fill-cyan-400'
 			>
 				<use xlinkHref='#react' />
