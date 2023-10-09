@@ -10,7 +10,6 @@ import type {
 type SetBoolean = Dispatch<SetStateAction<boolean>>
 type SetString = Dispatch<SetStateAction<string>>
 type SetNumber = Dispatch<SetStateAction<number>>
-type OnClickButton = MouseEventHandler<HTMLButtonElement>
 type OnClickAnchor = MouseEventHandler<HTMLAnchorElement>
 type MouseEventButton = MouseEvent<HTMLButtonElement, globalThis.MouseEvent>
 type OnSubmitButton = FormEventHandler<HTMLButtonElement>
@@ -57,17 +56,16 @@ interface Project {
 }
 
 export type {
-	Project,
 	ComponentColors,
-	SetBoolean,
-	SetString,
-	SetNumber,
+	Href,
+	MouseEventButton,
 	OnClickAnchor,
 	OnSubmitAnchor,
-	OnClickButton,
-	MouseEventButton,
 	OnSubmitButton,
 	OnSubmitForm,
-	Href,
+	Project,
 	RefDiv,
+	SetBoolean,
+	SetNumber,
+	SetString,
 }

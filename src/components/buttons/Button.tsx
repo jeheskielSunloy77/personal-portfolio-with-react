@@ -1,5 +1,4 @@
-import type { ReactNode } from 'react'
-import type { OnClickButton } from '../../utils/types'
+import type { MouseEventHandler, ReactNode } from 'react'
 
 const Button = ({
 	children,
@@ -18,7 +17,7 @@ const Button = ({
 interface ButtonProps {
 	children: ReactNode
 	className?: string
-	onClick?: OnClickButton
+	onClick?: MouseEventHandler<HTMLButtonElement>
 	color?: keyof typeof style.color
 }
 

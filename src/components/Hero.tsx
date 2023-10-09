@@ -401,7 +401,9 @@ const IntroTypewriter = () => {
 					Satya Wacana Christian University. I am currently 21 years old and im
 					hailing from Ambon, Indonesia
 				</p>
-				<ButtonSpecial text='EXPLORE' href='#about' />
+				<a href='#about'>
+					<ButtonSpecial>EXPLORE</ButtonSpecial>
+				</a>
 			</div>
 		</div>
 	)

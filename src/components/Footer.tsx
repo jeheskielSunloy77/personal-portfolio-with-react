@@ -1,4 +1,3 @@
-import useTheme from 'src/hooks/useTheme'
 import logo from '../assets/icons/logo.webp'
 import loveIcon from '../assets/icons/love.svg'
 import useSetOnScreen from '../hooks/useSetOnScreen'
@@ -6,7 +5,6 @@ import { socialLinks } from '../utils/constants'
 
 const Footer = () => {
 	const ref = useSetOnScreen('footer')
-	const { theme } = useTheme()
 
 	return (
 		<footer
@@ -40,10 +38,10 @@ const Footer = () => {
 						cx='0'
 						cy='0'
 						r='2.05'
-						fill={theme === 'light' ? '#2096b7' : '#61dafb'}
+						className='dark:fill-[#61dafb] fill-[#2096b7]'
 					/>
 					<g
-						stroke={theme === 'light' ? '#2096b7' : '#61dafb'}
+						className='dark:stroke-[#61dafb] stroke-[#2096b7]'
 						strokeWidth='1'
 						fill='none'
 					>
