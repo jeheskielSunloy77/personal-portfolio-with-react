@@ -15,7 +15,7 @@ const ProjectCard = ({
 
 	return (
 		<>
-			<div className='bg-gray-200 dark:bg-gray-800 rounded-lg mx-auto h-[500px] sm:h-[350px] sm:w-[900px] flex flex-col sm:flex-row justify-center items-center shadow-2xl'>
+			<div className='bg-gray-200 dark:bg-gray-800 rounded-lg mx-auto h-[500px] sm:h-[350px] sm:w-[900px] flex flex-col sm:flex-row justify-center items-center shadow-2xl m-20'>
 				<ProjectImage img={project.img} details={project.details} />
 				<ProjectDescriptions
 					title={project.title}

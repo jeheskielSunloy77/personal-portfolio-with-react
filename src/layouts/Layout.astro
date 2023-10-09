@@ -27,24 +27,24 @@ import Navbar from 'src/components/Navbar'
 	</body>
 </html>
 <script is:inline>
-	const theme = (() => {
-		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-			return localStorage.getItem('theme')
-		}
-		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			return 'dark'
-		}
-		return 'dark'
-	})()
-
-	if (theme === 'light') {
-		document.documentElement.classList.remove('dark')
-		document.documentElement.style.colorScheme = 'light'
-	} else {
-		document.documentElement.classList.add('dark')
-		document.documentElement.style.colorScheme = 'dark'
+const theme = (() => {
+	if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+		return localStorage.getItem('theme')
 	}
-	window.localStorage.setItem('theme', theme)
+	if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		return 'dark'
+	}
+	return 'dark'
+})()
+
+if (theme === 'light') {
+	document.documentElement.classList.remove('dark')
+	document.documentElement.style.colorScheme = 'light'
+} else {
+	document.documentElement.classList.add('dark')
+	document.documentElement.style.colorScheme = 'dark'
+}
+window.localStorage.setItem('theme', theme)
 </script>
 <style is:global>
 	html,
@@ -92,9 +92,6 @@ import Navbar from 'src/components/Navbar'
 		}
 	}
 
-	.swiper {
-		padding-bottom: 50px !important;
-	}
 	.swiper-pagination-bullet {
 		background-color: #0891b2 !important;
 		opacity: 0.5 !important;

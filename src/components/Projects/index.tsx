@@ -21,7 +21,7 @@ const Projects = () => {
 						Projects
 					</motion.div>
 				</h1>
-				<div className='flex items-center justify-center'>
+				<div className='flex items-center justify-center p-20'>
 					<ProjectSlider />
 				</div>
 			</div>
