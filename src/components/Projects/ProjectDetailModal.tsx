@@ -66,6 +66,7 @@ export default function ProjectDetailModal({
 					onLoadedData={() => setIsVideoLoaded(true)}
 					className={isVideoLoaded ? undefined : 'hidden'}
 					src={project.video.src}
+					controls
 					autoPlay
 					loop
 					width={project.video.isPortrait ? '40%' : undefined}
