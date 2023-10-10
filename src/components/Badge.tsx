@@ -11,7 +11,7 @@ interface BadgeProps {
 const badgeStyle = {
 	colors: {
 		primary: 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300',
-		secondary: 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300',
+		secondary: 'bg-gray-100 text-gray-800 dark:bg-gray-950 dark:text-gray-300',
 		accent:
 			'bg-violet-100 text-violet-800 dark:bg-violet-900 dark:text-violet-300',
 		error: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',

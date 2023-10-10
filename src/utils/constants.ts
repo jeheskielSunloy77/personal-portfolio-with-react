@@ -2,10 +2,10 @@ import coffeeShopAppImage from '../assets/projects/coffeeShopApp.png'
 import coffeeShopAppVideo from '../assets/projects/coffeeShopApp.webm'
 import crudAppVideo from '../assets/projects/crudApp.mp4'
 import crudAppImg from '../assets/projects/crudApp.webp'
-import fapertaUnipaVideo from '../assets/projects/fapertaUnipa.mp4'
-import fapertaUnipaImg from '../assets/projects/fapertaUnipa.webp'
 import iaknKupangVideo from '../assets/projects/iaknKupang.mp4'
 import iaknKupangImg from '../assets/projects/iaknKupang.webp'
+import iaknProfileVideo from '../assets/projects/iaknProfile.mp4'
+import iaknProfileImg from '../assets/projects/iaknProfile.webp'
 import weatherAppVideoFw from '../assets/projects/weatherApp.mp4'
 import weatherAppImg from '../assets/projects/weatherApp.webp'
 import webscraperVideo from '../assets/projects/webscraper.mp4'
@@ -29,9 +29,9 @@ export const projects: Project[] = [
 		title: 'Academic Information System',
 		desc: {
 			short:
-				'An information system for IAKN Kupang university, Build with Next.js, Postgresql, Supabase, and Tailwindcss.',
+				'An information system for IAKN Kupang university, Build with Next.js, Postgresql, and Tailwindcss.',
 			description:
-				'The Information System for IAKN Kupang University Students is a web-based application built using Next.js, Postgresql, Supabase, and Tailwindcss. The primary goal of the system is to provide students of IAKN Kupang University with a centralized platform to access academic information and manage their academic progress more efficiently. The system offers the following features:',
+				'The Information System for IAKN Kupang University Students is a web-based application built using Next.js, Postgresql, and Tailwindcss. The primary goal of the system is to provide students of IAKN Kupang University with a centralized platform to access academic information and manage their academic progress more efficiently. The system offers the following features:',
 			list: [
 				'User Authentication: The system allows students to register and login to their accounts securely. The authentication system ensures that only registered students can access the systems features.',
 				'Dashboard: Once logged in, students can view their academic progress and other relevant information on their dashboard. The dashboard provides quick access to critical information, such as grades, course schedules, and assignments.',
@@ -59,10 +59,6 @@ export const projects: Project[] = [
 				{
 					name: 'Postgresql',
 					badgeColor: 'primary',
-				},
-				{
-					name: 'Supabase',
-					badgeColor: 'success',
 				},
 				{
 					name: 'Typescript',
@@ -122,25 +118,25 @@ export const projects: Project[] = [
 		},
 	},
 	{
-		title: 'Official Faculty Website',
+		title: 'IAKN Kupang Profile Website',
 		desc: {
 			short:
-				'A Fullstack web app for Faculty of Argiculture, Papua University build with Next.js, Tailwindcss and Mongodb.',
+				'A Fullstack web app for IAKN Kupang University build with Next.js, Tailwindcss and Postgresql.',
 			description:
-				'The Faculty of Agriculture, Papua University Web App is a full-stack web application built using Next.js, Tailwindcss, and MongoDB. The app is designed to provide students and faculty members of the Faculty of Agriculture at Papua University with an online platform to access academic resources, manage their academic progress, and stay up-to-date with the latest news and events.',
+				'IAKN Kupang University Web App is a full-stack web application built using Next.js, Tailwindcss, and MongoDB. The app is designed to provide students and university members of the IAKN Kupang University with an online platform to access academic resources, manage their academic progress, and stay up-to-date with the latest news and events.',
 			aditional:
-				'The Faculty of Agriculture, Papua University Web App is a comprehensive platform that streamlines academic processes, promotes collaboration, and facilitates communication between students and faculty members. It is a modern, user-friendly app that offers a seamless experience for accessing academic resources and staying up-to-date with the latest news and events.',
+				'IAKN Kupang University Web App is a comprehensive platform that streamlines academic processes, promotes collaboration, and facilitates communication between students and university members. It is a modern, user-friendly app that offers a seamless experience for accessing academic resources and staying up-to-date with the latest news and events.',
 			list: [
-				'University Landing Page: The app includes a beautiful landing page that showcases the Faculty of Agricultures strengths, achievements, and facilities. The landing page features stunning visuals, animations, and interactive elements that engage users and leave a lasting impression.',
-				'About Page: The app includes an about page that provides information about the Faculty of Agriculture, Papua University. Users can learn about the history, vision, and mission of the faculty.',
-				'Gallery: The app includes a gallery feature that showcases photos and videos related to the Faculty of Agriculture. Users can browse through different categories of media, such as events, campus life, and student activities.',
-				'News and Events: The app provides news and event updates related to the Faculty of Agriculture. Users can view the latest news, upcoming events, and important announcements.',
-				'Research and Publication: The app offers features that allow students and faculty members to share their research findings and publications. Users can upload research papers, articles, and other scholarly materials to the app.',
+				'University Landing Page: The app includes a beautiful landing page that showcases the university strengths, achievements, and facilities. The landing page features stunning visuals, animations, and interactive elements that engage users and leave a lasting impression.',
+				'About Page: The app includes an about page that provides information about IAKN Kupang University. Users can learn about the history, vision, and mission of the university.',
+				'Gallery: The app includes a gallery feature that showcases photos and videos related to the university. Users can browse through different categories of media, such as events, campus life, and student activities.',
+				'News and Events: The app provides news and event updates related to the university. Users can view the latest news, upcoming events, and important announcements.',
+				'Research and Publication: The app offers features that allow students and university members to share their research findings and publications. Users can upload research papers, articles, and other scholarly materials to the app.',
 			],
 		},
-		img: fapertaUnipaImg,
+		img: iaknProfileImg,
 		video: {
-			src: fapertaUnipaVideo,
+			src: iaknProfileVideo,
 		},
 		details: {
 			status: 'Work on Progress',
@@ -148,20 +144,16 @@ export const projects: Project[] = [
 			demo: 'Prototype',
 			stack: [
 				{
-					name: 'Next.js',
+					name: 'Astro',
 					badgeColor: 'secondary',
-				},
-				{
-					name: 'Mongodb',
-					badgeColor: 'success',
-				},
-				{
-					name: 'Auth0',
-					badgeColor: 'warning',
 				},
 				{
 					name: 'Typescript',
 					badgeColor: 'info',
+				},
+				{
+					name: 'Postgresql',
+					badgeColor: 'success',
 				},
 				{
 					name: 'Tailwindcss',
