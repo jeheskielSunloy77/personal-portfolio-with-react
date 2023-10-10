@@ -13,7 +13,8 @@ import Layout from '../layouts/Layout.astro'
 
 <Layout>
 	<Loader client:load />
-	<Hero client:idle />
+	<!-- client:only on Hero component makes a hydration error -->
+	<Hero client:only />
 	<About client:visible />
 	<Timeline client:visible />
 	<SkillsSlideshow client:visible />
