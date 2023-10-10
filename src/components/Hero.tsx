@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import Typewriter from 'typewriter-effect'
-import gopherNoseImage from '../assets/images/gopher-nose.webp'
-import gopherImage from '../assets/images/gopher.webp'
 import useSetOnScreen from '../hooks/useSetOnScreen'
 import useTheme from '../hooks/useTheme'
 import { socialLinks } from '../utils/constants'
@@ -151,7 +149,7 @@ const Gopher = () => {
 						id='anchor-image'
 						width='500'
 						height='500'
-						src={gopherImage}
+						src='/images/gopher.webp'
 						alt='hero-image'
 						loading='lazy'
 						className='z-[1000] filter drop-shadow-[0_0_0.75rem_#a3a3a3] dark:drop-shadow-none'
@@ -168,6 +166,7 @@ const Gopher = () => {
 								<div className='rounded-full bg-red-900 w-6 h-6 lg:w-10 lg:h-10 hover:scale-90 transition-transform' />
 							</div>
 							<div
+								id='right-eye'
 								className='w-10 h-10 lg:w-14 lg:h-14 flex items-start justify-center absolute md:top-28 md:left-40 lg:top-36 lg:left-52 xl:top-40 xl:left-56'
 								ref={rightEye}
 								style={{
@@ -179,7 +178,7 @@ const Gopher = () => {
 							<motion.img
 								animate={shakeNose ? shakeNoseAnimation : undefined}
 								whileHover={shakeNoseAnimation}
-								src={gopherNoseImage}
+								src='/images/gopher-nose.webp'
 								alt='gopher nose'
 								className='flex items-start justify-center lg:w-5 lg:h-5 md:w-[14px] md:h-[14px] absolute md:top-[134px] md:left-[210px] xl:top-48 xl:left-[308px] lg:top-[180px] lg:left-[284px]'
 							/>

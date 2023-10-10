@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion'
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax'
-import BGclouds from '../assets/backgrounds/clouds.webp'
-import BGmoon from '../assets/backgrounds/moon.webp'
 import useSetOnScreen from '../hooks/useSetOnScreen'
 import useTheme from '../hooks/useTheme'
 
@@ -16,7 +14,8 @@ const About = () => {
 					className='aspect-[2/1] h-[500px]'
 					layers={[
 						{
-							image: theme === 'light' ? BGclouds : BGmoon,
+							image:
+								theme === 'dark' ? 'backgrounds/moon.webp' : '/backgrounds/clouds.webp',
 
 							speed: -30,
 						},

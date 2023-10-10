@@ -1,5 +1,3 @@
-import logo from '../assets/icons/logo.webp'
-import loveIcon from '../assets/icons/love.svg'
 import useSetOnScreen from '../hooks/useSetOnScreen'
 import { socialLinks } from '../utils/constants'
 
@@ -12,7 +10,7 @@ const Footer = () => {
 			className='flex flex-col items-center justify-between px-6 py-2 sm:flex-row'
 		>
 			<img
-				src={logo}
+				src='/images/logo.webp'
 				className='rounded w-14 h-14 dark:grayscale'
 				alt='logo-footer'
 				loading='lazy'
@@ -22,7 +20,7 @@ const Footer = () => {
 				Build with
 				<img
 					className='w-5 h-5 mx-1  animate-pulse'
-					src={loveIcon}
+					src='/images/love.webp'
 					alt='love'
 					loading='lazy'
 				/>

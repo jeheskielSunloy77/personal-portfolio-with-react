@@ -1,15 +1,3 @@
-import coffeeShopAppImage from '../assets/projects/coffeeShopApp.png'
-import coffeeShopAppVideo from '../assets/projects/coffeeShopApp.webm'
-import crudAppVideo from '../assets/projects/crudApp.mp4'
-import crudAppImg from '../assets/projects/crudApp.webp'
-import iaknKupangVideo from '../assets/projects/iaknKupang.mp4'
-import iaknKupangImg from '../assets/projects/iaknKupang.webp'
-import iaknProfileVideo from '../assets/projects/iaknProfile.mp4'
-import iaknProfileImg from '../assets/projects/iaknProfile.webp'
-import weatherAppVideoFw from '../assets/projects/weatherApp.mp4'
-import weatherAppImg from '../assets/projects/weatherApp.webp'
-import webscraperVideo from '../assets/projects/webscraper.mp4'
-import webscraper from '../assets/projects/webscraper.webp'
 import type { Project } from './types'
 
 export const socialLinks = {
@@ -43,9 +31,9 @@ export const projects: Project[] = [
 			aditional:
 				'The Information System for IAKN Kupang University Students is an efficient tool for managing academic information, improving communication between students and instructors, and facilitating student success. It is a modern, user-friendly platform that streamlines academic processes and helps students stay on top of their academic responsibilities.',
 		},
-		img: iaknKupangImg,
+		img: '/projects/iaknKupang.webp',
 		video: {
-			src: iaknKupangVideo,
+			src: '/projects/iaknKupang.mp4',
 		},
 		details: {
 			status: 'Work on Progress',
@@ -93,9 +81,9 @@ export const projects: Project[] = [
 			aditional:
 				'The Product Web Scraper with GO is a powerful tool that can help businesses and individuals automate their product research processes. It is a highly scalable solution that can handle a large volume of web scraping requests without compromising on performance. With its cloud-based storage and serverless computing architecture, the system offers a cost-effective solution for web scraping that can help businesses save time and resources.',
 		},
-		img: webscraper,
+		img: '/projects/webscraper.webp',
 		video: {
-			src: webscraperVideo,
+			src: '/projects/webscraper.mp4',
 		},
 		details: {
 			status: 'Stable',
@@ -134,9 +122,9 @@ export const projects: Project[] = [
 				'Research and Publication: The app offers features that allow students and university members to share their research findings and publications. Users can upload research papers, articles, and other scholarly materials to the app.',
 			],
 		},
-		img: iaknProfileImg,
+		img: '/projects/iaknProfile.webp',
 		video: {
-			src: iaknProfileVideo,
+			src: '/projects/iaknProfile.mp4',
 		},
 		details: {
 			status: 'Work on Progress',
@@ -180,9 +168,9 @@ export const projects: Project[] = [
 			aditional:
 				'The Antd CRUD Application is a simple and practical web application that demonstrates how to build a CRUD application using Antd and mockapi.io. It is an ideal starting point for developers who want to learn how to create web applications using modern frontend frameworks and mock APIs.',
 		},
-		img: crudAppImg,
+		img: '/projects/crudApp.webp',
 		video: {
-			src: crudAppVideo,
+			src: '/projects/crudApp.mp4',
 		},
 		details: {
 			status: 'Final',
@@ -223,9 +211,9 @@ export const projects: Project[] = [
 				'PWA Features: The app offers PWA features, such as installability, push notifications, and app-like experiences. Users can install the app on their devices and access it from the home screen, just like a native app.',
 			],
 		},
-		img: weatherAppImg,
+		img: '/projects/weatherApp.webp',
 		video: {
-			src: weatherAppVideoFw,
+			src: '/projects/weatherAppVideoFw.mp4',
 		},
 		details: {
 			status: 'Stable',
@@ -268,9 +256,9 @@ export const projects: Project[] = [
 				'Notifications: The app offers push notifications to keep users informed about the status of their orders. Users receive notifications when their orders are accepted, when their orders are ready for pickup, and when their orders are complete.',
 			],
 		},
-		img: coffeeShopAppImage,
+		img: '/projects/coffeeShopApp.png',
 		video: {
-			src: coffeeShopAppVideo,
+			src: '/projects/coffeeShopApp.webm',
 			isPortrait: true,
 		},
 		details: {
