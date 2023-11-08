@@ -108,6 +108,9 @@ export const projects: Project[] = [
 		links: {
 			code: 'https://github.com/jeheskielSunloy77/laravel-ecommerce',
 		},
+		badge: {
+			text: 'New',
+		},
 	},
 	{
 		title: 'Ecommerce Web Scraper',
@@ -334,9 +337,6 @@ export const projects: Project[] = [
 		},
 		links: {
 			code: 'https://github.com/jeheskielSunloy77/react-native-coffee-shop',
-		},
-		badge: {
-			text: 'New',
 		},
 	},
 ]
