@@ -66,6 +66,50 @@ export const projects: Project[] = [
 		},
 	},
 	{
+		title: 'Ecommerce App',
+		desc: {
+			short:
+				'A fullstack ecommerce application with unique and bold design build with PHP, Laravel, and Tailwindcss.',
+			description:
+				'The Ecommerce App is a full-stack web application built using PHP, Laravel, and Tailwindcss. The app is designed to provide users with a seamless shopping experience, from browsing products to placing orders. The app offers the following features:',
+			list: [
+				'User Authentication: The app allows users to register and login to their accounts securely. The authentication system ensures that only registered users can access the apps features.',
+				'Product Catalog: The app offers a comprehensive product catalog that allows users to browse through different categories of products. Users can filter products by category, price range, and other attributes.',
+				'Cart Management: Users can add products to their cart and checkout securely using their preferred payment method. The app supports popular payment gateways, such as Stripe and PayPal.',
+				'Wishlist: The app allows users to save products to their wishlist for future reference. Users can view their wishlist and add products to their cart directly from the wishlist page.',
+				'Transaction History: The app keeps track of all the transactions made by the user. Users can view their transaction history and download receipts for their purchases.',
+			],
+			aditional:
+				'The Ecommerce App is a modern, user-friendly application that offers a seamless shopping experience for users. It is a great example of how to build a full-stack web application using modern frontend frameworks and payment gateways.',
+		},
+		img: '/projects/ecommerce.webp',
+		video: {
+			src: '/projects/ecommerce.mp4',
+		},
+		details: {
+			status: 'Stable',
+			code: 'Public',
+			demo: 'Unavailable',
+			stack: [
+				{
+					name: 'PHP',
+					badgeColor: 'info',
+				},
+				{
+					name: 'Laravel',
+					badgeColor: 'error',
+				},
+				{
+					name: 'Tailwindcss',
+					badgeColor: 'primary',
+				},
+			],
+		},
+		links: {
+			code: 'https://github.com/jeheskielSunloy77/laravel-ecommerce',
+		},
+	},
+	{
 		title: 'Ecommerce Web Scraper',
 		desc: {
 			short:
