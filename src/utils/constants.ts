@@ -197,7 +197,7 @@ export const projects: Project[] = [
 			],
 		},
 		links: {
-			demo: 'https://faperta-unipa-prototype.vercel.app/',
+			demo: 'https://iakn-kupang-profile.vercel.app/',
 		},
 	},
 	{
